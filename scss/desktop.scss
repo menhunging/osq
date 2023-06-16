@@ -1,0 +1,117 @@
+.grettings {
+  overflow: hidden;
+}
+
+.grettings__slider {
+  overflow: visible;
+
+  .swiper-wrapper {
+  }
+
+  .swiper-slide {
+    // @include filter(drop-shadow(0px 30px 90px #bbb4af));
+    @include transition(all 0.3s);
+    @include box-shadow(0px 30px 90px #bbb4af);
+    @include border-radius(27px);
+    // @include filter(grayscale(100%) contrast(80%));
+    position: relative;
+
+    @include after {
+      // background: linear-gradient(88.76deg, #d9c7ac 18.89%, #a59781 79.73%);
+      background-color: #d9c7ac;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      z-index: 5;
+      left: 0;
+      top: 0;
+      @include transition(all 1s);
+    }
+  }
+
+  .swiper-slide-active {
+    @include filter(grayscale(0%) contrast(100%));
+
+    &:after {
+      opacity: 0;
+    }
+  }
+
+  .swiper-pagination {
+  }
+
+  .swiper-button-prev {
+    left: -165px;
+  }
+  .swiper-button-next {
+    right: -165px;
+  }
+}
+
+.grettings__slide {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 90px;
+  height: 705px;
+  width: 100%;
+  overflow: hidden;
+  @include border-radius(27px);
+
+  @include before {
+    position: absolute;
+    width: 684px;
+    height: 684px;
+    left: -88px;
+    top: 176px;
+    background-color: $colorSite;
+    @include border-radius(50%);
+    z-index: 0;
+  }
+
+  .btn {
+    margin-top: 60px;
+  }
+
+  .slogan {
+    position: absolute;
+    left: 0;
+    top: -10px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .picture {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    @include border-radius(27px);
+    overflow: hidden;
+    z-index: -1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.grettings__text {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  z-index: 3;
+}
+
+.grettings__caption {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: -0.025em;
+  color: $colorWhite;
+}
