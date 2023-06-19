@@ -3,12 +3,14 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 addEventListener("scroll", (event) => {
   currentScroll = $(window).scrollTop();
 
-  console.log(currentScroll);
+  // console.log(currentScroll);
 
-  if (currentScroll > "4200") {
-    $(".animation-text").addClass("show");
-  } else {
-    $(".animation-text").removeClass("show");
+  if ($(".animation-text").length > 0) {
+    if (currentScroll > "4200") {
+      $(".animation-text").addClass("show");
+    } else {
+      $(".animation-text").removeClass("show");
+    }
   }
 });
 
@@ -148,6 +150,21 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".production__slider").length > 0) {
+    const swiper = new Swiper(".production__slider", {
+      slidesPerView: 1,
+      autoHeight: true,
+      navigation: {
+        nextEl: ".production__slider .swiper-button-next",
+        prevEl: ".production__slider .swiper-button-prev",
+      },
+      pagination: {
+        el: ".production__slider .swiper-pagination",
+        type: "progressbar",
+      },
+    });
+  }
+
   if ($(".thisYear").length > 0) {
     let date = new Date();
     $(".thisYear").text(date.getFullYear());
@@ -180,6 +197,37 @@ $(document).ready(function () {
         duration: 1000,
         once: true,
       });
+    });
+  }
+
+  if ($("select").length > 0) {
+    $("select").map(function () {
+      $(this).selectric({
+        onOpen: function () {},
+        onChange: function (element) {},
+        onClose: function () {},
+      });
+    });
+  }
+
+  if ($(".modal").length > 0) {
+    MicroModal.init({
+      openTrigger: "data-custom-open",
+      disableScroll: true,
+      awaitOpenAnimation: true,
+      awaitCloseAnimation: true,
+
+      onShow: () => {
+        $("body").addClass("modal-open");
+      },
+
+      onClose: () => {
+        $("body").removeClass("modal-open");
+      },
+    });
+
+    $("a[data-custom-open]").map(function () {
+      $(this).click((e) => e.preventDefault());
     });
   }
 
@@ -304,66 +352,5 @@ $(document).ready(function () {
       //   );
       // });
     }
-  }
-
-  // -----------------------------------------
-
-  if ($(".modal").length > 0) {
-    MicroModal.init({
-      openTrigger: "data-custom-open",
-      disableScroll: true,
-      awaitOpenAnimation: true,
-      awaitCloseAnimation: true,
-
-      onShow: () => {
-        $("body").addClass("modal-open");
-      },
-
-      onClose: () => {
-        $("body").removeClass("modal-open");
-      },
-    });
-
-    $("a[data-custom-open]").map(function () {
-      $(this).click((e) => e.preventDefault());
-    });
-  }
-
-  if ($("select").length > 0) {
-    if ($(window).width() >= 1200) {
-      $("select").map(function () {
-        let inputTime = $(this).parents(".input-item").find(".input-time");
-
-        $(this).selectric({
-          onOpen: function () {
-            inputTime.addClass("visible");
-            inputTime.find("input").focus();
-          },
-          onChange: function (element) {
-            let current = $(element).val();
-
-            $(inputTime.find("input")).val(current);
-          },
-          onClose: function () {
-            inputTime.removeClass("visible");
-          },
-        });
-      });
-    }
-  }
-
-  if ($(".menu-burger").length) {
-    $(".menu-burger").on("click", function () {
-      $("body").toggleClass("hidden");
-      $(".menu-burger").stop().toggleClass("open");
-      $(".menu-open").stop().slideToggle();
-    });
-  }
-
-  if ($(".linkFancyBox").length > 0) {
-    Fancybox.bind("[data-fancybox]", {
-      speedIn: 600,
-      speedOut: 600,
-    });
   }
 });
