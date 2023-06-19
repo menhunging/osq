@@ -6,10 +6,16 @@ addEventListener("scroll", (event) => {
   // console.log(currentScroll);
 
   if ($(".animation-text").length > 0) {
-    if (currentScroll > "4200") {
+    if (currentScroll >= "4200") {
       $(".animation-text").addClass("show");
     } else {
       $(".animation-text").removeClass("show");
+    }
+
+    if (currentScroll >= "13300") {
+      $(".incision").addClass("show");
+    } else {
+      $(".incision").removeClass("show");
     }
   }
 });
@@ -334,20 +340,120 @@ $(document).ready(function () {
 
       // incision
 
-      // gsap.fromTo(
-      //   ".animation-text",
-      //   { x: 1000, position: "relative" },
-      //   {
-      //     x: 0,
-      //     position: "fixed",
-      //     scrollTrigger: {
-      //       trigger: ".animation-text",
-      //       start: "-1000",
-      //       end: "2500",
-      //       scrub: true,
-      //     },
-      //   }
-      // );
+      gsap.fromTo(
+        ".incision",
+        { opacity: 0, position: "relative" },
+        {
+          opacity: 1,
+          position: "fixed",
+          scrollTrigger: {
+            trigger: ".incision",
+            start: "-1500",
+            end: "2500",
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        ".incision-one",
+        { x: 500 },
+        {
+          x: 0,
+          scrollTrigger: {
+            trigger: ".incision",
+            start: "-2500",
+            end: "bottom",
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        ".incision-two",
+        { x: -1000 },
+        {
+          x: 0,
+          scrollTrigger: {
+            trigger: ".incision",
+            start: "1500",
+            end: "2500",
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        ".incision-three",
+        { x: 1000 },
+        {
+          x: 0,
+          scrollTrigger: {
+            trigger: ".incision",
+            start: "2500",
+            end: "3500",
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        ".incision-four",
+        { x: -1000 },
+        {
+          x: 0,
+          scrollTrigger: {
+            trigger: ".incision",
+            start: "3500",
+            end: "4500",
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        ".incision-five",
+        { x: 1000 },
+        {
+          x: 0,
+          scrollTrigger: {
+            trigger: ".incision",
+            start: "4500",
+            end: "5500",
+            scrub: true,
+          },
+        }
+      );
+
+      // food-item
+
+      gsap.fromTo(
+        ".food-item--line1",
+        { x: 2000 },
+        {
+          x: 0,
+          scrollTrigger: {
+            trigger: ".food-type",
+            start: "-550",
+            end: "0",
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        ".food-item--line2",
+        { x: -2000 },
+        {
+          x: 0,
+          scrollTrigger: {
+            trigger: ".food-type",
+            start: "-750",
+            end: "0",
+            scrub: true,
+          },
+        }
+      );
 
       // gsap.fromTo(
       //   ".animation-text",

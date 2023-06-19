@@ -19,6 +19,7 @@
   svg {
     path {
       stroke: $colorWhite;
+      @include transition(all 0.3s);
     }
   }
 
@@ -79,6 +80,11 @@
     &::before {
       display: none;
     }
+
+    &:hover {
+      color: $colorWhite;
+      border-color: rgba(76, 185, 184);
+    }
   }
 
   &--border-white {
@@ -93,6 +99,21 @@
 
     &::before {
       display: none;
+    }
+
+    &:hover {
+      background-color: $colorWhite;
+      color: $colorBlack;
+
+      svg {
+        path {
+          stroke: $colorBlack;
+        }
+      }
+
+      &::before {
+        border-color: $colorWhite;
+      }
     }
   }
 }

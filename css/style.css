@@ -756,7 +756,7 @@ div::-webkit-scrollbar-thumb {
 }
 
 .animation-main {
-  height: 5800px;
+  height: 13500px;
   display: flex;
   flex-direction: column;
 }
@@ -791,6 +791,10 @@ div::-webkit-scrollbar-thumb {
 }
 .btn svg path {
   stroke: rgb(255, 255, 255);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .btn::before {
   content: "";
@@ -854,6 +858,10 @@ div::-webkit-scrollbar-thumb {
 .btn--border-green::before {
   display: none;
 }
+.btn--border-green:hover {
+  color: rgb(255, 255, 255);
+  border-color: rgb(76, 185, 184);
+}
 .btn--border-white {
   background-color: transparent;
   border: solid 1px rgb(255, 255, 255);
@@ -869,6 +877,16 @@ div::-webkit-scrollbar-thumb {
 }
 .btn--border-white::before {
   display: none;
+}
+.btn--border-white:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+.btn--border-white:hover svg path {
+  stroke: rgb(0, 0, 0);
+}
+.btn--border-white:hover::before {
+  border-color: rgb(255, 255, 255);
 }
 
 .caption {
@@ -2126,7 +2144,7 @@ div::-webkit-scrollbar-thumb {
 }
 
 .product-main {
-  margin-top: auto;
+  margin-top: 3500px;
   padding: 140px 0;
   position: relative;
 }
@@ -2181,7 +2199,7 @@ div::-webkit-scrollbar-thumb {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
-  box-shadow: -40px 30px 80px 10px #D9D3CF, -30px 0px 30px rgba(220, 204, 199, 0.7);
+  box-shadow: -40px 30px 80px 10px #d9d3cf, -30px 0px 30px rgba(220, 204, 199, 0.7);
 }
 .product-main .name {
   font-weight: 700;
@@ -2351,7 +2369,18 @@ div::-webkit-scrollbar-thumb {
 }
 
 .incision {
-  padding: 214px 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 100px 0;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+.incision.show {
+  opacity: 0 !important;
 }
 
 .incision__inner {
