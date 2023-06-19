@@ -188,6 +188,13 @@ $(document).ready(function () {
       attribute: "href",
       animation: true,
     });
+
+    // исправление бага в chrome
+    $(".tabs-links li").eq(0).find("a").trigger("click");
+
+    $(".tabs").on("_after", function () {
+      $(".tabs-body").removeClass("swiper-wait");
+    });
   }
 
   if ($("[data-aos]").length > 0) {
