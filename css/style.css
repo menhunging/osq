@@ -2152,12 +2152,36 @@ div::-webkit-scrollbar-thumb {
   width: 154px;
 }
 .product-main .picture {
+  position: relative;
   width: 100%;
   height: 154px;
   background-position: center;
   background-repeat: no-repeat;
   margin-left: auto;
   margin-right: auto;
+  box-shadow: inset -14px 14px 3px rgba(189, 170, 162, 0.4), inset 0px 0px 2px rgba(255, 255, 255, 0.25);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+.product-main .picture::before {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  box-shadow: -40px 30px 80px 10px #D9D3CF, -30px 0px 30px rgba(220, 204, 199, 0.7);
 }
 .product-main .name {
   font-weight: 700;
@@ -2324,6 +2348,168 @@ div::-webkit-scrollbar-thumb {
   -ms-border-radius: 27px;
   border-radius: 27px;
   z-index: -1;
+}
+
+.incision {
+  padding: 214px 0;
+}
+
+.incision__inner {
+  position: relative;
+}
+.incision__inner .logo-invis {
+  width: 100%;
+  left: 0;
+  top: -90px;
+  z-index: -1;
+}
+.incision__inner .logo-invis img {
+  width: 100%;
+}
+
+.incision__head .caption {
+  font-size: 96px;
+  line-height: 87px;
+}
+.incision__head .desc {
+  font-size: 48px;
+  line-height: 44px;
+  letter-spacing: -0.09em;
+}
+
+.incision-list {
+  width: 100%;
+  height: 395px;
+  position: relative;
+}
+
+.incision-item {
+  position: relative;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: #202020;
+  background: rgb(255, 255, 255);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
+  display: flex;
+  gap: 10px;
+  padding: 40px;
+  position: absolute;
+}
+.incision-item .circle {
+  position: absolute;
+  left: -90px;
+  top: -81px;
+  width: 180px;
+  height: 180px;
+  pointer-events: none;
+}
+.incision-item--left .circle {
+  left: auto;
+  right: -90px;
+}
+.incision-item:nth-child(1) {
+  max-width: 390px;
+  top: -129px;
+  left: calc(50% + 86px);
+}
+.incision-item:nth-child(2) {
+  max-width: 397px;
+  left: 0;
+  top: 84px;
+}
+.incision-item:nth-child(3) {
+  max-width: 433px;
+  right: 0;
+  top: 55px;
+}
+.incision-item:nth-child(4) {
+  max-width: 367px;
+  bottom: 0;
+  left: 0;
+}
+.incision-item:nth-child(5) {
+  max-width: 259px;
+  bottom: 0;
+  right: 0;
+}
+
+.incision-item__num {
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 25px;
+  color: rgba(170, 159, 142, 0.6);
+}
+
+.incision-adv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 70px;
+}
+
+.incision-adv__item {
+  cursor: pointer;
+  width: calc(20% - 30px);
+}
+.incision-adv__item.active .incision-adv__num {
+  line-height: 25px;
+  color: rgb(0, 161, 154);
+}
+.incision-adv__item.active .incision-adv__num::before {
+  background-color: rgb(0, 161, 154);
+}
+.incision-adv__item.active .incision-adv__text {
+  color: #2e2e2e;
+}
+
+.incision-adv__num {
+  position: relative;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 25px;
+  color: rgba(46, 46, 46, 0.6);
+  display: block;
+  padding-bottom: 10px;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.incision-adv__num::before {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(170, 159, 142, 0.4);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.incision-adv__text {
+  display: block;
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: rgba(46, 46, 46, 0.6);
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 /*# sourceMappingURL=style.css.map */

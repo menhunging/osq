@@ -207,6 +207,13 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".incision-adv__item").length > 0) {
+    $(".incision-adv__item").on("click", function () {
+      $(".incision-adv__item").removeClass("active");
+      $(this).addClass("active");
+    });
+  }
+
   if ($("select").length > 0) {
     $("select").map(function () {
       $(this).selectric({
@@ -309,6 +316,23 @@ $(document).ready(function () {
           },
         }
       );
+
+      gsap.fromTo(
+        ".animation-text",
+        { x: 1000, position: "relative" },
+        {
+          x: 0,
+          position: "fixed",
+          scrollTrigger: {
+            trigger: ".animation-text",
+            start: "-1000",
+            end: "2500",
+            scrub: true,
+          },
+        }
+      );
+
+      // incision
 
       gsap.fromTo(
         ".animation-text",
