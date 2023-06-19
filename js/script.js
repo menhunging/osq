@@ -334,20 +334,20 @@ $(document).ready(function () {
 
       // incision
 
-      gsap.fromTo(
-        ".animation-text",
-        { x: 1000, position: "relative" },
-        {
-          x: 0,
-          position: "fixed",
-          scrollTrigger: {
-            trigger: ".animation-text",
-            start: "-1000",
-            end: "2500",
-            scrub: true,
-          },
-        }
-      );
+      // gsap.fromTo(
+      //   ".animation-text",
+      //   { x: 1000, position: "relative" },
+      //   {
+      //     x: 0,
+      //     position: "fixed",
+      //     scrollTrigger: {
+      //       trigger: ".animation-text",
+      //       start: "-1000",
+      //       end: "2500",
+      //       scrub: true,
+      //     },
+      //   }
+      // );
 
       // gsap.fromTo(
       //   ".animation-text",
