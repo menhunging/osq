@@ -1,3 +1,17 @@
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+addEventListener("scroll", (event) => {
+  currentScroll = $(window).scrollTop();
+
+  console.log(currentScroll);
+
+  if (currentScroll > "4200") {
+    $(".animation-text").addClass("show");
+  } else {
+    $(".animation-text").removeClass("show");
+  }
+});
+
 $(document).ready(function () {
   if ($(".grettings__slider").length > 0) {
     const swiper = new Swiper(".grettings__slider", {
@@ -159,7 +173,7 @@ $(document).ready(function () {
     });
   }
 
-  if ($("[data-aos]").length) {
+  if ($("[data-aos]").length > 0) {
     $("[data-aos]").each((i, el) => {
       AOS.init({
         offset: 200,
@@ -167,6 +181,129 @@ $(document).ready(function () {
         once: true,
       });
     });
+  }
+
+  if ($(".animation-main").length > 0) {
+    if (ScrollTrigger.isTouch !== 1) {
+      gsap.fromTo(
+        ".catalog-main",
+        { x: 0 },
+        {
+          x: -1000,
+          scrollTrigger: {
+            trigger: ".catalog-main",
+            start: "200",
+            end: "bottom",
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        ".animation-text .caption",
+        { x: 500 },
+        {
+          x: 0,
+          scrollTrigger: {
+            trigger: ".animation-text",
+            start: "-500",
+            end: "bottom",
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        ".animation-text p",
+        { x: 500 },
+        {
+          x: 0,
+          scrollTrigger: {
+            trigger: ".animation-text",
+            start: "0",
+            end: "bottom",
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        ".animation-text__controls",
+        { x: 1500 },
+        {
+          x: 0,
+          scrollTrigger: {
+            trigger: ".animation-text",
+            start: "0",
+            end: "bottom",
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        ".animation-text .line",
+        { opacity: 0 },
+        {
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".animation-text",
+            start: "1000",
+            end: "bottom",
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        ".animation-text",
+        { x: 1000, position: "relative" },
+        {
+          x: 0,
+          position: "fixed",
+          scrollTrigger: {
+            trigger: ".animation-text",
+            start: "-1000",
+            end: "2500",
+            scrub: true,
+          },
+        }
+      );
+
+      // gsap.fromTo(
+      //   ".animation-text",
+      //   { x: 5000, position: "relative" },
+      //   {
+      //     x: 0,
+      //     position: "fixed",
+      //     scrollTrigger: {
+      //       trigger: ".animation-text",
+      //       start: "-2000",
+      //       end: "bottom",
+      //       scrub: true,
+      //     },
+      //   }
+      // );
+
+      // let itemsR = gsap.utils.toArray(".anim");
+
+      // itemsR.forEach((item) => {
+      //   gsap.fromTo(
+      //     item,
+      //     { opacity: 0, x: 500, borderWith: 0 },
+      //     {
+      //       opacity: 1,
+      //       x: 0,
+      //       scrollTrigger: {
+      //         trigger: item,
+      //         start: "-1750",
+      //         end: "bottom",
+      //         scrub: true,
+      //       },
+      //     }
+      //   );
+      // });
+    }
   }
 
   // -----------------------------------------

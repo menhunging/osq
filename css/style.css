@@ -746,11 +746,85 @@ div::-webkit-scrollbar-thumb {
   position: absolute;
 }
 
+.animation-main {
+  height: 5000px;
+}
+
 #lottie-1 {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
+  pointer-events: none;
+}
+
+.animation-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #2e2e2e;
+  position: relative;
+  margin: 140px 0;
+  width: 100%;
+  height: 644px;
+  left: 0;
+  top: 0;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+.animation-text .caption {
+  margin-bottom: 30px;
+  font-size: 96px;
+  line-height: 98px;
+}
+.animation-text .caption--middle {
+  font-size: 48px;
+  line-height: 44px;
+  margin-bottom: 10px;
+}
+.animation-text .animation-text__wrap {
+  position: relative;
+  width: 100%;
+  padding: 140px 80px;
+}
+.animation-text__inner {
+  max-width: 500px;
+  margin-left: auto;
+}
+.animation-text__controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  gap: 20px;
+}
+.animation-text__controls .btn {
+  width: calc(50% - 10px);
+}
+.animation-text .logo-invis {
+  left: 0;
+  top: -70px;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  z-index: -1;
+}
+.animation-text .line {
+  border: dashed 3px rgb(187, 177, 163);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.animation-text.show {
+  opacity: 0;
   pointer-events: none;
 }
 
