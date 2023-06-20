@@ -84,6 +84,18 @@
     &:hover {
       color: $colorWhite;
       border-color: rgba(76, 185, 184);
+
+      svg {
+        path {
+          stroke: $colorWhite;
+        }
+      }
+    }
+
+    svg {
+      path {
+        stroke: $colorSite;
+      }
     }
   }
 
@@ -116,10 +128,103 @@
       }
     }
   }
+
+  &--border-gray {
+    background-color: transparent;
+    border: solid 1px #aa9f8e;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2e2e2e;
+    @include border-radius(50px);
+
+    &::before {
+      display: none;
+    }
+
+    &:hover {
+      background-color: #aa9f8e;
+      border-color: #aa9f8e;
+      color: $colorWhite;
+
+      svg {
+        path {
+          stroke: $colorWhite;
+        }
+      }
+    }
+
+    svg {
+      path {
+        stroke: #2e2e2e;
+      }
+    }
+  }
 }
 
-.btn-search {
+.btn-clear {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  color: #2e2e2e;
+  border: 1px solid #aa9f8e;
+  @include border-radius(20px);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 5px 13px;
+
+  svg {
+    path {
+      stroke: $colorBlack;
+    }
+  }
 }
 
-.btn-location {
+.btn-favorite {
+  &:hover,
+  &.favorite {
+    svg {
+      path {
+        fill: $colorSite;
+        stroke: $colorSite;
+      }
+    }
+  }
+
+  svg {
+    path {
+      stroke: #aa9f8e;
+    }
+  }
+}
+
+.btn-loadFile {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #2e2e2e;
+
+  .size {
+    font-size: 14px;
+    line-height: 21px;
+    color: rgba(46, 46, 46, 0.5);
+    margin-left: auto;
+    @include transition(color 0.3s);
+  }
+
+  &:hover {
+    .size {
+      color: $colorWhite;
+    }
+  }
+}
+
+.btn-360 {
+  cursor: pointer;
+  position: absolute;
+  right: 56px;
+  top: 59px;
+  z-index: 5;
 }

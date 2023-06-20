@@ -6,6 +6,12 @@
   text-transform: uppercase;
   color: #2e2e2e;
 
+  &--big {
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 74px;
+  }
+
   &--middle {
     font-weight: 700;
     font-size: 42px;

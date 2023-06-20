@@ -11,7 +11,9 @@ addEventListener("scroll", (event) => {
     } else {
       $(".animation-text").removeClass("show");
     }
+  }
 
+  if ($(".incision").length > 0) {
     if (currentScroll >= "13300") {
       $(".incision").addClass("show");
     } else {
@@ -171,6 +173,85 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".universal-containers").length > 0) {
+    const swiper = new Swiper(".universal-containers__slider", {
+      slidesPerView: 1,
+      autoHeight: true,
+      initialSlide: 1,
+      navigation: {
+        nextEl: ".universal-containers .swiper-button-next",
+        prevEl: ".universal-containers .swiper-button-prev",
+      },
+      pagination: {
+        el: ".universal-containers__slider .swiper-pagination",
+        type: "fraction",
+        renderFraction: function (currentClass, totalClass) {
+          return (
+            '<span class="' +
+            currentClass +
+            '"></span>' +
+            " из " +
+            '<span class="' +
+            totalClass +
+            '"></span>'
+          );
+        },
+      },
+    });
+  }
+
+  if ($(".reviews-product").length > 0) {
+    const swiper = new Swiper(".reviews-product__slider", {
+      slidesPerView: 1,
+      autoHeight: true,
+      navigation: {
+        nextEl: ".reviews-product .swiper-button-next",
+        prevEl: ".reviews-product .swiper-button-prev",
+      },
+      pagination: {
+        el: ".reviews-product__slider .swiper-pagination",
+        type: "progressbar",
+      },
+    });
+  }
+
+  if ($(".product__picture").length > 0) {
+    const swiperNavigation = new Swiper(".swiper-navigation", {
+      loop: false,
+      spaceBetween: 10,
+      slidesPerView: 5,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+
+    const swiper = new Swiper(".product__picture__slider", {
+      slidesPerView: 1,
+      autoHeight: true,
+      navigation: {
+        nextEl: ".product__picture .swiper-button-next",
+        prevEl: ".product__picture .swiper-button-prev",
+      },
+      pagination: {
+        el: ".product__picture .swiper-pagination",
+        type: "fraction",
+        renderFraction: function (currentClass, totalClass) {
+          return (
+            '<span class="' +
+            currentClass +
+            '"></span>' +
+            " из " +
+            '<span class="' +
+            totalClass +
+            '"></span>'
+          );
+        },
+      },
+      thumbs: {
+        swiper: swiperNavigation,
+      },
+    });
+  }
+
   if ($(".thisYear").length > 0) {
     let date = new Date();
     $(".thisYear").text(date.getFullYear());
@@ -222,11 +303,23 @@ $(document).ready(function () {
 
   if ($("select").length > 0) {
     $("select").map(function () {
-      $(this).selectric({
-        onOpen: function () {},
-        onChange: function (element) {},
-        onClose: function () {},
-      });
+      if ($(this).attr("multiple")) {
+        console.log("true");
+        $(this).selectric({
+          multiple: {
+            separator: ", ",
+            keepMenuOpen: true,
+            maxLabelEntries: false,
+          },
+        });
+      } else {
+        console.log("false");
+        $(this).selectric({
+          onOpen: function () {},
+          onChange: function (element) {},
+          onClose: function () {},
+        });
+      }
     });
   }
 

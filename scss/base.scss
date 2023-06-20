@@ -125,21 +125,21 @@ input {
 }
 
 .selectric {
-  border: 0;
-  border-bottom: 1px solid $colorBlack;
-  background: transparent;
+  border-color: transparent;
+  background-color: $colorWhite;
+  height: 43px;
   width: 100%;
-  height: 47px;
-  width: 100%;
-  @include border-radius(0);
+  max-width: 200px;
+  @include transition(all 0.3s);
+  @include border-radius(20px);
 
   .label {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    color: transparent;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2e2e2e;
     height: 100%;
-    padding: 14px 0;
+    padding: 8px 41px 8px 22px;
     margin: 0;
   }
 
@@ -148,6 +148,9 @@ input {
     height: 100%;
     background: transparent;
     display: flex;
+    background-image: url("../img/selectric-arrow.svg");
+    background-position: center;
+    background-repeat: no-repeat;
 
     &::after {
       display: none;
@@ -158,20 +161,31 @@ input {
 .selectric-wrapper {
   border: 0;
   outline: none;
+  @include transition(all 0.3s);
 
   &.selectric-hover {
+    border-color: $colorSite;
+
     .selectric {
-      border-color: $colorBlack;
+      border-color: $colorSite;
+    }
+
+    .button {
+      background-image: url("../img/selectric-arrow-active.svg");
     }
   }
 
   &.selectric-open {
     .selectric {
-      border-color: $colorBlack;
+      border-color: $colorSite;
 
       .button {
         @include transform(scale(1, -1));
       }
+    }
+
+    .button {
+      background-image: url("../img/selectric-arrow-active.svg");
     }
   }
 
@@ -187,37 +201,69 @@ input {
 
 .selectric-items {
   background: transparent;
-  background-color: #fbf9f8;
-  border: 1px solid $colorBlack;
-  border-top: 0;
+  background-color: $colorWhite;
+  border: 0;
   overflow: hidden;
-  @include border-radius(0);
+  @include border-radius(10px);
   @include box-shadow(none);
   z-index: -1;
+  min-width: 257px !important;
+  max-height: 336px !important;
+  margin-top: 8px;
+
+  li.disabled {
+    display: none;
+  }
 }
 
 .selectric-scroll {
   border: 0;
   ul {
-    padding-top: 5px;
-
     li {
-      font-weight: 400;
       font-size: 14px;
-      line-height: 18px;
-      color: #7b7b7b;
-      padding: 10px 10px;
+      line-height: 28px;
+      color: #2e2e2e;
+      padding: 7px 5px 7px 29px;
       @include transition(all 0.3s);
+      position: relative;
+
+      @include before {
+        border: 1px solid #aa9f8e;
+        @include border-radius(50%);
+        width: 14px;
+        height: 14px;
+        top: 50%;
+        margin-top: -7px;
+        left: 12px;
+      }
+
+      @include after {
+        background-color: $colorSite;
+        @include border-radius(50%);
+        width: 8px;
+        height: 8px;
+        top: 50%;
+        margin-top: -4px;
+        left: 15px;
+        opacity: 0;
+      }
 
       &.highlighted,
       &.selected {
+        font-weight: 700;
         background: transparent !important;
-        text-decoration: underline;
-        color: $colorBlack;
+
+        &::after {
+          opacity: 1;
+        }
       }
       &:hover {
-        background: transparent !important;
-        color: $colorBlack;
+        background: $colorSite !important;
+        color: $colorWhite;
+
+        &::before {
+          border-color: $colorWhite;
+        }
       }
     }
   }
@@ -485,9 +531,6 @@ div {
 }
 
 .input-wrapper {
-  max-width: 692px;
-  width: 100%;
-  display: flex;
   position: relative;
 
   input {
@@ -523,9 +566,11 @@ div {
 #lottie-1 {
   position: fixed;
   top: 0;
-  left: 0;
+  left: 80px;
   z-index: 999;
   pointer-events: none;
+  width: 250px;
+  height: 250px;
 }
 
 .animation-main {
@@ -536,4 +581,35 @@ div {
 
 .swiper-wait {
   display: block !important;
+}
+
+.inner-page {
+  .header__inner {
+    border-bottom: solid 1px rgba(182, 170, 155, 0.5);
+  }
+}
+
+.tags {
+  li {
+    background-color: #aa9f8e;
+    @include border-radius(20px);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 5px 13px;
+    color: $colorWhite;
+    font-size: 14px;
+    line-height: 28px;
+
+    &.clear {
+      padding: 0;
+      background-color: transparent;
+    }
+  }
+
+  svg {
+    path {
+      stroke: $colorWhite;
+    }
+  }
 }
