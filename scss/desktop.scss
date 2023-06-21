@@ -70,6 +70,8 @@
 
   .btn {
     margin-top: 60px;
+    position: relative;
+    z-index: 6;
   }
 
   .slogan {
@@ -104,7 +106,6 @@
   width: 100%;
   max-width: 500px;
   position: relative;
-  z-index: 3;
 }
 
 .grettings__caption {
@@ -384,7 +385,10 @@
   width: 100%;
   height: 476px;
   @include border-radius(30px);
-  border: dashed 3px rgba(187, 177, 163, 1);
+  background-image: url("../img/line-your-line.svg");
+  background-position: 0 0;
+  background-size: contain;
+  background-repeat: no-repeat;
   padding: 80px;
   margin-top: 180px;
   max-width: 1570px;
@@ -681,9 +685,20 @@
   }
 }
 
+.catalog-main__wrapper {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
 .catalog-main {
   padding: 80px 0;
   overflow: hidden;
+  left: 0;
+  top: 0;
+  position: relative;
+  width: 100%;
 }
 
 .catalog-main__slider {
@@ -894,6 +909,7 @@
     position: relative;
     width: 100%;
     padding: 140px 80px;
+    min-height: 662px;
   }
 
   &__inner {
@@ -923,13 +939,17 @@
   }
 
   .line {
-    border: dashed 3px rgb(187, 177, 163);
+    // border: dashed 3px rgb(187, 177, 163);
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     @include transition(opacity 0.3s);
+    background-image: url("../img/line-anim-text.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   &.show {
@@ -1005,7 +1025,6 @@
   }
 
   .line {
-    border: dashed 3px rgb(187, 177, 163);
     position: absolute;
     left: 3px;
     bottom: -68px;
@@ -1013,6 +1032,10 @@
     height: 220px;
     @include border-radius(27px);
     @include transition(opacity 0.3s);
+    background-image: url("../img/line-product.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     z-index: -1;
   }
 
@@ -1165,7 +1188,6 @@
   }
 
   .line {
-    border: dashed 3px rgb(187, 177, 163);
     position: absolute;
     left: 0;
     top: 0;
@@ -1174,6 +1196,9 @@
     @include transition(opacity 0.3s);
     @include border-radius(27px);
     z-index: -1;
+    background-image: url("../img/delivery-line.svg");
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
 
@@ -1210,10 +1235,12 @@
     font-size: 96px;
     line-height: 87px;
   }
+
   .desc {
     font-size: 48px;
     line-height: 44px;
     letter-spacing: -0.09em;
+    display: block;
   }
 }
 

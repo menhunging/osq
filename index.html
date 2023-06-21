@@ -22,7 +22,7 @@
 
 <body>
 
-  <div id=lottie-1></div>
+  <!-- <div id=lottie-1></div> -->
 
   <div class="siteWrapper">
     <header class="header">
@@ -99,7 +99,7 @@
       </div>
     </header>
     <main class="main">
-      <div class="grettings">
+      <div class="grettings" data-aos="fade-up">
         <div class="container">
           <div class="swiper grettings__slider">
             <div class="swiper-wrapper">
@@ -148,13 +148,13 @@
                 </picture>
               </div>
             </div>
-            <div class="swiper-pagination"></div>
-            <button class="swiper-button-prev">
+            <div class="swiper-pagination" data-aos="zoom-out" data-aos-delay="500"></div>
+            <button class="swiper-button-prev" data-aos="zoom-in-down" data-aos-delay="1000">
               <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path opacity="0.6" d="M8 13L2 7L8 1" stroke="#AA9F8E" stroke-width="2" />
               </svg>
             </button>
-            <button class="swiper-button-next">
+            <button class="swiper-button-next" data-aos="zoom-in-down" data-aos-delay="1000">
               <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 1L7 7L1 13" stroke="#ECEDE8" stroke-width="2" stroke-linecap="round" />
               </svg>
@@ -164,96 +164,98 @@
       </div>
 
       <div class="animation-main">
-        <div class="container">
-          <div class="catalog-main">
-            <div class="catalog-main__slider">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="catalog-main__item">
-                    <img src="img/product1.png" alt="">
-                    <a href="#" class="eye">
-                      <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M27.2178 9.69091C26.1486 6.92514 24.2923 4.53329 21.8785 2.81099C19.4647 1.08869 16.5991 0.11143 13.636 0C10.6728 0.11143 7.80724 1.08869 5.39343 2.81099C2.97963 4.53329 1.1234 6.92514 0.0541587 9.69091C-0.0180529 9.89064 -0.0180529 10.1094 0.0541587 10.3091C1.1234 13.0749 2.97963 15.4667 5.39343 17.189C7.80724 18.9113 10.6728 19.8886 13.636 20C16.5991 19.8886 19.4647 18.9113 21.8785 17.189C24.2923 15.4667 26.1486 13.0749 27.2178 10.3091C27.29 10.1094 27.29 9.89064 27.2178 9.69091ZM13.636 18.1818C8.81779 18.1818 3.72689 14.6091 1.88143 10C3.72689 5.39091 8.81779 1.81818 13.636 1.81818C18.4542 1.81818 23.5451 5.39091 25.3905 10C23.5451 14.6091 18.4542 18.1818 13.636 18.1818Z"
-                          fill="#00A19A" />
-                        <path
-                          d="M13.6362 4.54547C12.5574 4.54547 11.5028 4.86538 10.6058 5.46473C9.70881 6.06408 9.00969 6.91596 8.59685 7.91265C8.184 8.90934 8.07599 10.0061 8.28645 11.0641C8.49692 12.1222 9.01641 13.0941 9.77924 13.857C10.5421 14.6198 11.514 15.1393 12.5721 15.3498C13.6301 15.5602 14.7269 15.4522 15.7236 15.0394C16.7202 14.6265 17.5721 13.9274 18.1715 13.0304C18.7708 12.1334 19.0907 11.0788 19.0907 10C19.0907 8.55338 18.5161 7.166 17.4931 6.14307C16.4702 5.12015 15.0828 4.54547 13.6362 4.54547ZM13.6362 13.6364C12.917 13.6364 12.2139 13.4231 11.6159 13.0235C11.0179 12.624 10.5519 12.0561 10.2766 11.3916C10.0014 10.7271 9.92939 9.99598 10.0697 9.2906C10.21 8.58521 10.5563 7.93727 11.0649 7.42872C11.5734 6.92016 12.2214 6.57383 12.9268 6.43352C13.6322 6.29321 14.3633 6.36523 15.0278 6.64045C15.6922 6.91568 16.2601 7.38176 16.6597 7.97976C17.0593 8.57776 17.2726 9.28081 17.2726 10C17.2726 10.9644 16.8894 11.8894 16.2075 12.5713C15.5255 13.2533 14.6006 13.6364 13.6362 13.6364Z"
-                          fill="#00A19A" />
-                      </svg>
-                    </a>
+        <div class="catalog-main__wrapper">
+          <div class="container">
+            <div class="catalog-main">
+              <div class="catalog-main__slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="catalog-main__item" data-aos="fade-up" data-aos-delay="1000">
+                      <img src="img/product1.png" alt="">
+                      <a href="#" class="eye">
+                        <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M27.2178 9.69091C26.1486 6.92514 24.2923 4.53329 21.8785 2.81099C19.4647 1.08869 16.5991 0.11143 13.636 0C10.6728 0.11143 7.80724 1.08869 5.39343 2.81099C2.97963 4.53329 1.1234 6.92514 0.0541587 9.69091C-0.0180529 9.89064 -0.0180529 10.1094 0.0541587 10.3091C1.1234 13.0749 2.97963 15.4667 5.39343 17.189C7.80724 18.9113 10.6728 19.8886 13.636 20C16.5991 19.8886 19.4647 18.9113 21.8785 17.189C24.2923 15.4667 26.1486 13.0749 27.2178 10.3091C27.29 10.1094 27.29 9.89064 27.2178 9.69091ZM13.636 18.1818C8.81779 18.1818 3.72689 14.6091 1.88143 10C3.72689 5.39091 8.81779 1.81818 13.636 1.81818C18.4542 1.81818 23.5451 5.39091 25.3905 10C23.5451 14.6091 18.4542 18.1818 13.636 18.1818Z"
+                            fill="#00A19A" />
+                          <path
+                            d="M13.6362 4.54547C12.5574 4.54547 11.5028 4.86538 10.6058 5.46473C9.70881 6.06408 9.00969 6.91596 8.59685 7.91265C8.184 8.90934 8.07599 10.0061 8.28645 11.0641C8.49692 12.1222 9.01641 13.0941 9.77924 13.857C10.5421 14.6198 11.514 15.1393 12.5721 15.3498C13.6301 15.5602 14.7269 15.4522 15.7236 15.0394C16.7202 14.6265 17.5721 13.9274 18.1715 13.0304C18.7708 12.1334 19.0907 11.0788 19.0907 10C19.0907 8.55338 18.5161 7.166 17.4931 6.14307C16.4702 5.12015 15.0828 4.54547 13.6362 4.54547ZM13.6362 13.6364C12.917 13.6364 12.2139 13.4231 11.6159 13.0235C11.0179 12.624 10.5519 12.0561 10.2766 11.3916C10.0014 10.7271 9.92939 9.99598 10.0697 9.2906C10.21 8.58521 10.5563 7.93727 11.0649 7.42872C11.5734 6.92016 12.2214 6.57383 12.9268 6.43352C13.6322 6.29321 14.3633 6.36523 15.0278 6.64045C15.6922 6.91568 16.2601 7.38176 16.6597 7.97976C17.0593 8.57776 17.2726 9.28081 17.2726 10C17.2726 10.9644 16.8894 11.8894 16.2075 12.5713C15.5255 13.2533 14.6006 13.6364 13.6362 13.6364Z"
+                            fill="#00A19A" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="catalog-main__item" data-aos="fade-up" data-aos-delay="1500">
+                      <img src="img/product2.png" alt="">
+                      <a href="#" class="eye">
+                        <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M27.2178 9.69091C26.1486 6.92514 24.2923 4.53329 21.8785 2.81099C19.4647 1.08869 16.5991 0.11143 13.636 0C10.6728 0.11143 7.80724 1.08869 5.39343 2.81099C2.97963 4.53329 1.1234 6.92514 0.0541587 9.69091C-0.0180529 9.89064 -0.0180529 10.1094 0.0541587 10.3091C1.1234 13.0749 2.97963 15.4667 5.39343 17.189C7.80724 18.9113 10.6728 19.8886 13.636 20C16.5991 19.8886 19.4647 18.9113 21.8785 17.189C24.2923 15.4667 26.1486 13.0749 27.2178 10.3091C27.29 10.1094 27.29 9.89064 27.2178 9.69091ZM13.636 18.1818C8.81779 18.1818 3.72689 14.6091 1.88143 10C3.72689 5.39091 8.81779 1.81818 13.636 1.81818C18.4542 1.81818 23.5451 5.39091 25.3905 10C23.5451 14.6091 18.4542 18.1818 13.636 18.1818Z"
+                            fill="#00A19A" />
+                          <path
+                            d="M13.6362 4.54547C12.5574 4.54547 11.5028 4.86538 10.6058 5.46473C9.70881 6.06408 9.00969 6.91596 8.59685 7.91265C8.184 8.90934 8.07599 10.0061 8.28645 11.0641C8.49692 12.1222 9.01641 13.0941 9.77924 13.857C10.5421 14.6198 11.514 15.1393 12.5721 15.3498C13.6301 15.5602 14.7269 15.4522 15.7236 15.0394C16.7202 14.6265 17.5721 13.9274 18.1715 13.0304C18.7708 12.1334 19.0907 11.0788 19.0907 10C19.0907 8.55338 18.5161 7.166 17.4931 6.14307C16.4702 5.12015 15.0828 4.54547 13.6362 4.54547ZM13.6362 13.6364C12.917 13.6364 12.2139 13.4231 11.6159 13.0235C11.0179 12.624 10.5519 12.0561 10.2766 11.3916C10.0014 10.7271 9.92939 9.99598 10.0697 9.2906C10.21 8.58521 10.5563 7.93727 11.0649 7.42872C11.5734 6.92016 12.2214 6.57383 12.9268 6.43352C13.6322 6.29321 14.3633 6.36523 15.0278 6.64045C15.6922 6.91568 16.2601 7.38176 16.6597 7.97976C17.0593 8.57776 17.2726 9.28081 17.2726 10C17.2726 10.9644 16.8894 11.8894 16.2075 12.5713C15.5255 13.2533 14.6006 13.6364 13.6362 13.6364Z"
+                            fill="#00A19A" />
+                        </svg>
+
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="catalog-main__item" data-aos="fade-up" data-aos-delay="2000">
+                      <img src="img/product3.png" alt="">
+                      <a href="#" class="eye">
+                        <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M27.2178 9.69091C26.1486 6.92514 24.2923 4.53329 21.8785 2.81099C19.4647 1.08869 16.5991 0.11143 13.636 0C10.6728 0.11143 7.80724 1.08869 5.39343 2.81099C2.97963 4.53329 1.1234 6.92514 0.0541587 9.69091C-0.0180529 9.89064 -0.0180529 10.1094 0.0541587 10.3091C1.1234 13.0749 2.97963 15.4667 5.39343 17.189C7.80724 18.9113 10.6728 19.8886 13.636 20C16.5991 19.8886 19.4647 18.9113 21.8785 17.189C24.2923 15.4667 26.1486 13.0749 27.2178 10.3091C27.29 10.1094 27.29 9.89064 27.2178 9.69091ZM13.636 18.1818C8.81779 18.1818 3.72689 14.6091 1.88143 10C3.72689 5.39091 8.81779 1.81818 13.636 1.81818C18.4542 1.81818 23.5451 5.39091 25.3905 10C23.5451 14.6091 18.4542 18.1818 13.636 18.1818Z"
+                            fill="#00A19A" />
+                          <path
+                            d="M13.6362 4.54547C12.5574 4.54547 11.5028 4.86538 10.6058 5.46473C9.70881 6.06408 9.00969 6.91596 8.59685 7.91265C8.184 8.90934 8.07599 10.0061 8.28645 11.0641C8.49692 12.1222 9.01641 13.0941 9.77924 13.857C10.5421 14.6198 11.514 15.1393 12.5721 15.3498C13.6301 15.5602 14.7269 15.4522 15.7236 15.0394C16.7202 14.6265 17.5721 13.9274 18.1715 13.0304C18.7708 12.1334 19.0907 11.0788 19.0907 10C19.0907 8.55338 18.5161 7.166 17.4931 6.14307C16.4702 5.12015 15.0828 4.54547 13.6362 4.54547ZM13.6362 13.6364C12.917 13.6364 12.2139 13.4231 11.6159 13.0235C11.0179 12.624 10.5519 12.0561 10.2766 11.3916C10.0014 10.7271 9.92939 9.99598 10.0697 9.2906C10.21 8.58521 10.5563 7.93727 11.0649 7.42872C11.5734 6.92016 12.2214 6.57383 12.9268 6.43352C13.6322 6.29321 14.3633 6.36523 15.0278 6.64045C15.6922 6.91568 16.2601 7.38176 16.6597 7.97976C17.0593 8.57776 17.2726 9.28081 17.2726 10C17.2726 10.9644 16.8894 11.8894 16.2075 12.5713C15.5255 13.2533 14.6006 13.6364 13.6362 13.6364Z"
+                            fill="#00A19A" />
+                        </svg>
+
+                      </a>
+                    </div>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="catalog-main__item">
-                    <img src="img/product2.png" alt="">
-                    <a href="#" class="eye">
-                      <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M27.2178 9.69091C26.1486 6.92514 24.2923 4.53329 21.8785 2.81099C19.4647 1.08869 16.5991 0.11143 13.636 0C10.6728 0.11143 7.80724 1.08869 5.39343 2.81099C2.97963 4.53329 1.1234 6.92514 0.0541587 9.69091C-0.0180529 9.89064 -0.0180529 10.1094 0.0541587 10.3091C1.1234 13.0749 2.97963 15.4667 5.39343 17.189C7.80724 18.9113 10.6728 19.8886 13.636 20C16.5991 19.8886 19.4647 18.9113 21.8785 17.189C24.2923 15.4667 26.1486 13.0749 27.2178 10.3091C27.29 10.1094 27.29 9.89064 27.2178 9.69091ZM13.636 18.1818C8.81779 18.1818 3.72689 14.6091 1.88143 10C3.72689 5.39091 8.81779 1.81818 13.636 1.81818C18.4542 1.81818 23.5451 5.39091 25.3905 10C23.5451 14.6091 18.4542 18.1818 13.636 18.1818Z"
-                          fill="#00A19A" />
-                        <path
-                          d="M13.6362 4.54547C12.5574 4.54547 11.5028 4.86538 10.6058 5.46473C9.70881 6.06408 9.00969 6.91596 8.59685 7.91265C8.184 8.90934 8.07599 10.0061 8.28645 11.0641C8.49692 12.1222 9.01641 13.0941 9.77924 13.857C10.5421 14.6198 11.514 15.1393 12.5721 15.3498C13.6301 15.5602 14.7269 15.4522 15.7236 15.0394C16.7202 14.6265 17.5721 13.9274 18.1715 13.0304C18.7708 12.1334 19.0907 11.0788 19.0907 10C19.0907 8.55338 18.5161 7.166 17.4931 6.14307C16.4702 5.12015 15.0828 4.54547 13.6362 4.54547ZM13.6362 13.6364C12.917 13.6364 12.2139 13.4231 11.6159 13.0235C11.0179 12.624 10.5519 12.0561 10.2766 11.3916C10.0014 10.7271 9.92939 9.99598 10.0697 9.2906C10.21 8.58521 10.5563 7.93727 11.0649 7.42872C11.5734 6.92016 12.2214 6.57383 12.9268 6.43352C13.6322 6.29321 14.3633 6.36523 15.0278 6.64045C15.6922 6.91568 16.2601 7.38176 16.6597 7.97976C17.0593 8.57776 17.2726 9.28081 17.2726 10C17.2726 10.9644 16.8894 11.8894 16.2075 12.5713C15.5255 13.2533 14.6006 13.6364 13.6362 13.6364Z"
-                          fill="#00A19A" />
-                      </svg>
-
-                    </a>
-                  </div>
+                <div class="swiper-controls">
+                  <button class="swiper-button-prev">
+                    <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path opacity="0.6" d="M8 13L2 7L8 1" stroke="#AA9F8E" stroke-width="2" />
+                    </svg>
+                    Назад
+                  </button>
+                  <button class="swiper-button-next">
+                    Вперед
+                    <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path opacity="0.6" d="M1 13L7 7L0.999999 1" stroke="#AA9F8E" stroke-width="2" />
+                    </svg>
+                  </button>
                 </div>
-                <div class="swiper-slide">
-                  <div class="catalog-main__item">
-                    <img src="img/product3.png" alt="">
-                    <a href="#" class="eye">
-                      <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M27.2178 9.69091C26.1486 6.92514 24.2923 4.53329 21.8785 2.81099C19.4647 1.08869 16.5991 0.11143 13.636 0C10.6728 0.11143 7.80724 1.08869 5.39343 2.81099C2.97963 4.53329 1.1234 6.92514 0.0541587 9.69091C-0.0180529 9.89064 -0.0180529 10.1094 0.0541587 10.3091C1.1234 13.0749 2.97963 15.4667 5.39343 17.189C7.80724 18.9113 10.6728 19.8886 13.636 20C16.5991 19.8886 19.4647 18.9113 21.8785 17.189C24.2923 15.4667 26.1486 13.0749 27.2178 10.3091C27.29 10.1094 27.29 9.89064 27.2178 9.69091ZM13.636 18.1818C8.81779 18.1818 3.72689 14.6091 1.88143 10C3.72689 5.39091 8.81779 1.81818 13.636 1.81818C18.4542 1.81818 23.5451 5.39091 25.3905 10C23.5451 14.6091 18.4542 18.1818 13.636 18.1818Z"
-                          fill="#00A19A" />
-                        <path
-                          d="M13.6362 4.54547C12.5574 4.54547 11.5028 4.86538 10.6058 5.46473C9.70881 6.06408 9.00969 6.91596 8.59685 7.91265C8.184 8.90934 8.07599 10.0061 8.28645 11.0641C8.49692 12.1222 9.01641 13.0941 9.77924 13.857C10.5421 14.6198 11.514 15.1393 12.5721 15.3498C13.6301 15.5602 14.7269 15.4522 15.7236 15.0394C16.7202 14.6265 17.5721 13.9274 18.1715 13.0304C18.7708 12.1334 19.0907 11.0788 19.0907 10C19.0907 8.55338 18.5161 7.166 17.4931 6.14307C16.4702 5.12015 15.0828 4.54547 13.6362 4.54547ZM13.6362 13.6364C12.917 13.6364 12.2139 13.4231 11.6159 13.0235C11.0179 12.624 10.5519 12.0561 10.2766 11.3916C10.0014 10.7271 9.92939 9.99598 10.0697 9.2906C10.21 8.58521 10.5563 7.93727 11.0649 7.42872C11.5734 6.92016 12.2214 6.57383 12.9268 6.43352C13.6322 6.29321 14.3633 6.36523 15.0278 6.64045C15.6922 6.91568 16.2601 7.38176 16.6597 7.97976C17.0593 8.57776 17.2726 9.28081 17.2726 10C17.2726 10.9644 16.8894 11.8894 16.2075 12.5713C15.5255 13.2533 14.6006 13.6364 13.6362 13.6364Z"
-                          fill="#00A19A" />
-                      </svg>
-
-                    </a>
-                  </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-lines" data-aos="fade-up"></div>
+                <div class="logo-invis">
+                  <img src="img/logo-invis.svg" alt="">
                 </div>
               </div>
-              <div class="swiper-controls">
-                <button class="swiper-button-prev">
-                  <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.6" d="M8 13L2 7L8 1" stroke="#AA9F8E" stroke-width="2" />
+              <div class="catalog-main__text" data-aos="fade-up">
+                <h2 class="caption">Каталог</h2>
+                <div class="catalog-main__right">
+                  <h3 class="caption caption--small">Универсальные контейнеры</h3>
+                  <p> Упаковка из линейки Showcase с прозрачными крышками. Многофункциональная упаковка из линейки Ready
+                    to go для доставки любых блюд.</p>
+                </div>
+                <a href="#" class="btn">
+
+                  Перейти в каталог
+
+                  <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.6085 16.3042L18.6085 1.69576M18.6085 1.69576L4 1.69576M18.6085 1.69576L1 19.3042"
+                      stroke="white" stroke-width="2" stroke-linecap="round" />
                   </svg>
-                  Назад
-                </button>
-                <button class="swiper-button-next">
-                  Вперед
-                  <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.6" d="M1 13L7 7L0.999999 1" stroke="#AA9F8E" stroke-width="2" />
-                  </svg>
-                </button>
+
+
+                </a>
               </div>
-              <div class="swiper-pagination"></div>
-              <div class="swiper-lines"></div>
-              <div class="logo-invis">
-                <img src="img/logo-invis.svg" alt="">
-              </div>
-            </div>
-            <div class="catalog-main__text">
-              <h2 class="caption">Каталог</h2>
-              <div class="catalog-main__right">
-                <h3 class="caption caption--small">Универсальные контейнеры</h3>
-                <p> Упаковка из линейки Showcase с прозрачными крышками. Многофункциональная упаковка из линейки Ready
-                  to go для доставки любых блюд.</p>
-              </div>
-              <a href="#" class="btn">
-
-                Перейти в каталог
-
-                <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M18.6085 16.3042L18.6085 1.69576M18.6085 1.69576L4 1.69576M18.6085 1.69576L1 19.3042"
-                    stroke="white" stroke-width="2" stroke-linecap="round" />
-                </svg>
-
-
-              </a>
             </div>
           </div>
         </div>
@@ -284,35 +286,36 @@
         <div class="product-main">
           <div class="container">
             <div class="product-main__inner">
-              <h2 class="caption caption--middle">OSQ ROUND </h2>
-              <h2 class="caption">BOWL 400</h2>
+              <h2 class="caption caption--middle" data-aos="fade-right" data-aos-offset="-1000" data-aos-once="false">
+                OSQ ROUND </h2>
+              <h2 class="caption" data-aos="fade-right" data-aos-offset="-1000" data-aos-once="false">BOWL 400</h2>
 
               <div class="list">
-                <div class="item">
+                <div class="item" data-aos="fade-up" data-aos-delay="1000" data-aos-offset="-1500">
                   <div class="picture" style="background-image: url(img/product-main1.png);"></div>
                   <span class="name">супы</span>
                 </div>
-                <div class="item">
+                <div class="item" data-aos="fade-up" data-aos-delay="1500" data-aos-offset="-1500">
                   <div class="picture" style="background-image: url(img/product-main1.png);"></div>
                   <span class="name">каши</span>
                 </div>
-                <div class="item">
+                <div class="item" data-aos="fade-up" data-aos-delay="2000" data-aos-offset="-1500">
                   <div class="picture" style="background-image: url(img/product-main1.png);"></div>
                   <span class="name">мороженое</span>
                 </div>
-                <div class="item">
+                <div class="item" data-aos="fade-up" data-aos-delay="2500" data-aos-offset="-1500">
                   <div class="picture" style="background-image: url(img/product-main1.png);"></div>
                   <span class="name">холодные закуски</span>
                 </div>
-                <div class="item">
+                <div class="item" data-aos="fade-up" data-aos-delay="3000" data-aos-offset="-1500">
                   <div class="picture" style="background-image: url(img/product-main1.png);"></div>
                   <span class="name">молочная продукция</span>
                 </div>
 
-                <div class="line"></div>
+                <div class="line" data-aos="fade-up" data-aos-delay="1000" data-aos-offset="-1500"></div>
               </div>
 
-              <div class="logo-invis">
+              <div class="logo-invis" data-aos="fade-up" data-aos-delay="1000" data-aos-offset="-1500">
                 <img src="img/logo-invis.svg" alt="">
               </div>
             </div>
@@ -396,10 +399,10 @@
         <div class="container">
           <div class="production__inner">
             <div class="production__leftSide">
-              <h2 class="caption">Производство</h2>
+              <h2 class="caption" data-aos="fade-right">Производство</h2>
             </div>
-            <div class="production__rightSide">
-              <div class="swiper production__slider">
+            <div class="production__rightSide" data-aos="fade-left" data-aos-duration="2000">
+              <div class="swiper production__slider" data-aos-duration="2000">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <h2 class="caption caption--small">Мы являемся производителем и разработчиком предлагаемой нами
@@ -468,18 +471,18 @@
 
       <div class="delivery delivery--v1">
         <div class="container">
-          <h2 class="caption">Доставка </h2>
-          <span class="desc">по всей россии</span>
+          <h2 class="caption" data-aos="fade-right">Доставка </h2>
+          <span class="desc" data-aos="fade-right">по всей россии</span>
         </div>
       </div>
 
       <div class="delivery delivery--v2">
         <div class="container">
           <div class="delivery__inner">
-            <h2 class="caption">Доставка </h2>
-            <span class="desc">по всей россии</span>
-            <a href="#" class="btn">Подробнее</a>
-            <div class="line"></div>
+            <h2 class="caption" data-aos="fade-right" data-aos-delay="0">Доставка </h2>
+            <span class="desc" data-aos="fade-right" data-aos-delay="500">по всей россии</span>
+            <a href="#" class="btn" data-aos="fade-right" data-aos-delay="1000">Подробнее</a>
+            <div class="line" data-aos="fade-right" data-aos-delay="1500"></div>
           </div>
         </div>
       </div>
@@ -487,34 +490,36 @@
       <div class="food-type">
         <div class="container">
           <div class="food-type__head">
-            <h2 class="caption">Виды еды</h2>
-            <h3 class="caption caption--small">Готовые решения для вашего бизнеса</h3>
-            <p>Выберите упаковку, которая подходит для вашего бизнеса. Тут будет описание про данный товар, который
+            <h2 class="caption" data-aos="fade-left" data-aos-delay="0">Виды еды</h2>
+            <h3 class="caption caption--small" data-aos="fade-left" data-aos-delay="500">Готовые решения для вашего
+              бизнеса</h3>
+            <p data-aos="fade-left" data-aos-delay="1000">Выберите упаковку, которая подходит для вашего бизнеса. Тут
+              будет описание про данный товар, который
               займет две, а может быть максимум три строки описания</p>
           </div>
           <div class="food-list">
-            <div class="food-item food-item--line1">
+            <div class="food-item" data-aos="fade-left" data-aos-delay="0">
               <div class="picture">
                 <a href="#"></a>
                 <img src="img/pic-food1.jpg" alt="">
               </div>
               <a href="#" class="food-item__link">Готовые блюда и салаты</a>
             </div>
-            <div class="food-item food-item--line1">
+            <div class="food-item" data-aos="fade-left" data-aos-delay="400">
               <div class="picture">
                 <a href="#"></a>
                 <img src="img/pic-food1.jpg" alt="">
               </div>
               <a href="#" class="food-item__link">Бургеры, хот-доги, пицца и снеки</a>
             </div>
-            <div class="food-item food-item--line1">
+            <div class="food-item" data-aos="fade-left" data-aos-delay="800">
               <div class="picture">
                 <a href="#"></a>
                 <img src="img/pic-food1.jpg" alt="">
               </div>
               <a href="#" class="food-item__link">Сендвичи и багеты</a>
             </div>
-            <div class="food-item food-item--line1">
+            <div class="food-item" data-aos="fade-left" data-aos-delay="1200">
               <div class="picture">
                 <a href="#"></a>
                 <img src="img/pic-food1.jpg" alt="">
@@ -522,28 +527,28 @@
               <a href="#" class="food-item__link">Ягоды и фрукты</a>
             </div>
 
-            <div class="food-item food-item--line2">
+            <div class="food-item" data-aos="fade-left" data-aos-delay="1400">
               <div class="picture">
                 <a href="#"></a>
                 <img src="img/pic-food1.jpg" alt="">
               </div>
               <a href="#" class="food-item__link">Выпечка и десерты</a>
             </div>
-            <div class="food-item food-item--line2">
+            <div class="food-item" data-aos="fade-left" data-aos-delay="1600">
               <div class="picture">
                 <a href="#"></a>
                 <img src="img/pic-food1.jpg" alt="">
               </div>
               <a href="#" class="food-item__link">Суши, паста и лапша</a>
             </div>
-            <div class="food-item food-item--line2">
+            <div class="food-item" data-aos="fade-left" data-aos-delay="2000">
               <div class="picture">
                 <a href="#"></a>
                 <img src="img/pic-food1.jpg" alt="">
               </div>
               <a href="#" class="food-item__link">Роллы и тортильи</a>
             </div>
-            <div class="food-item food-item--line2">
+            <div class="food-item" data-aos="fade-left" data-aos-delay="2400">
               <div class="picture">
                 <a href="#"></a>
                 <img src="img/pic-food1.jpg" alt="">
@@ -551,7 +556,7 @@
               <a href="#" class="food-item__link">Супы и горячие блюда</a>
             </div>
           </div>
-          <div class="food-controls">
+          <div class="food-controls" data-aos="fade-up" data-aos-delay="2000">
             <a href="#" class="btn">Заказать образцы</a>
             <a href="#" class="btn">Получить КП</a>
             <a href="#" class="btn">Скачать каталог</a>
@@ -559,15 +564,15 @@
         </div>
       </div>
 
-      <div class="your-lines">
+      <div class="your-lines" data-aos="fade-up">
         <div class="your-lines__tabs tabs">
-          <h2 class="caption">Наши линейки</h2>
-          <ul class="tabs-links">
+          <h2 class="caption" data-aos="fade-left">Наши линейки</h2>
+          <ul class="tabs-links" data-aos="fade-right" data-aos-delay="500">
             <li><a href="#tab1">OSQ Essential</a></li>
             <li><a href="#tab2">Black Edition</a></li>
             <li><a href="#tab3">Enjoy</a></li>
           </ul>
-          <div class="tabs-body swiper-wait" id="tab1">
+          <div class="tabs-body swiper-wait" id="tab1" data-aos="fade-up" data-aos-delay="1000">
             <div class="swiper your-lines__slider">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -1198,10 +1203,10 @@
 
       <div class="news-main">
         <div class="container">
-          <h2 class="caption">Новости</h2>
+          <h2 class="caption" data-aos="fade-left">Новости</h2>
 
           <div class="news-main__inner">
-            <div class="news-item news-item--big">
+            <div class="news-item news-item--big" data-aos="fade-right" data-aos-delay="0">
               <picture class='picture news-item__picture'>
                 <source type="image/webp" srcset="img/pic-new-item1.webp" />
                 <img src="img/pic-new-item1.jpg" alt="" />
@@ -1215,46 +1220,44 @@
               </div>
             </div>
             <div class="news-list">
-              <div class="news-item">
-                <div class="news-item">
-                  <picture class='picture news-item__picture'>
-                    <source type="image/webp" srcset="img/pic-new-item1.webp" />
-                    <img src="/img/pic-new-item1.jpg" alt="" />
-                  </picture>
-                  <div class="news-item__content">
-                    <span class="news-item__date">Сентября 12, 2023</span>
-                    <a href="#" class="news-item__name">Original Superior Quality</a>
-                    <p>OSQ Group – один из крупнейших в России производителей технологичной упаковки для пищевой
-                      промышленностиупаковки для пищевой промышленности</p>
-                  </div>
+              <div class="news-item" data-aos="fade-left" data-aos-delay="500">
+                <picture class='picture news-item__picture'>
+                  <source type="image/webp" srcset="img/pic-new-item1.webp" />
+                  <img src="/img/pic-new-item1.jpg" alt="" />
+                </picture>
+                <div class="news-item__content">
+                  <span class="news-item__date">Сентября 12, 2023</span>
+                  <a href="#" class="news-item__name">Original Superior Quality</a>
+                  <p>OSQ Group – один из крупнейших в России производителей технологичной упаковки для пищевой
+                    промышленностиупаковки для пищевой промышленности</p>
                 </div>
-                <div class="news-item">
-                  <picture class='picture news-item__picture'>
-                    <source type="image/webp" srcset="img/pic-new-item1.webp" />
-                    <img src="img/pic-new-item1.jpg" alt="" />
-                  </picture>
-                  <div class="news-item__content">
-                    <span class="news-item__date">Сентября 12, 2023</span>
-                    <a href="#" class="news-item__name">Original Superior Quality</a>
-                    <p>OSQ Group – один из крупнейших в России производителей технологичной упаковки для пищевой
-                      промышленностиупаковки для пищевой промышленности</p>
-                  </div>
+              </div>
+              <div class="news-item" data-aos="fade-left" data-aos-delay="1000">
+                <picture class='picture news-item__picture'>
+                  <source type="image/webp" srcset="img/pic-new-item1.webp" />
+                  <img src="img/pic-new-item1.jpg" alt="" />
+                </picture>
+                <div class="news-item__content">
+                  <span class="news-item__date">Сентября 12, 2023</span>
+                  <a href="#" class="news-item__name">Original Superior Quality</a>
+                  <p>OSQ Group – один из крупнейших в России производителей технологичной упаковки для пищевой
+                    промышленностиупаковки для пищевой промышленности</p>
                 </div>
-                <div class="news-item">
-                  <picture class='picture news-item__picture'>
-                    <source type="image/webp" srcset="img/pic-new-item1.webp" />
-                    <img src="img/pic-new-item1.jpg" alt="" />
-                  </picture>
-                  <div class="news-item__content">
-                    <span class="news-item__date">Сентября 12, 2023</span>
-                    <a href="#" class="news-item__name">Original Superior Quality</a>
-                    <p>OSQ Group – один из крупнейших в России производителей технологичной упаковки для пищевой
-                      промышленностиупаковки для пищевой промышленности</p>
-                  </div>
+              </div>
+              <div class="news-item" data-aos="fade-left" data-aos-delay="1500">
+                <picture class='picture news-item__picture'>
+                  <source type="image/webp" srcset="img/pic-new-item1.webp" />
+                  <img src="img/pic-new-item1.jpg" alt="" />
+                </picture>
+                <div class="news-item__content">
+                  <span class="news-item__date">Сентября 12, 2023</span>
+                  <a href="#" class="news-item__name">Original Superior Quality</a>
+                  <p>OSQ Group – один из крупнейших в России производителей технологичной упаковки для пищевой
+                    промышленностиупаковки для пищевой промышленности</p>
                 </div>
               </div>
             </div>
-            <a href="#" class="btn btn-green btn-new-all">
+            <a href="#" class="btn btn-green btn-new-all" data-aos="fade-left" data-aos-delay="2000">
 
               Все новости
 
@@ -1272,14 +1275,15 @@
         <div class="container">
           <div class="subscribe-news__inner">
             <div class="subscribe-news__leftSide">
-              <h3 class="caption caption--middle">Подписаться на Новости</h3>
-              <span class="subscribe-news__desc">OSQ Group – один из крупнейших в России производителей технологичной
+              <h3 class="caption caption--middle" data-aos="fade-right" data-aos-delay="0">Подписаться на Новости</h3>
+              <span class="subscribe-news__desc" data-aos="fade-left" data-aos-delay="500">OSQ Group – один из
+                крупнейших в России производителей технологичной
                 упаковки.</span>
             </div>
             <div class="subscribe-news__rightSide">
               <div class="input-wrapper">
-                <input type="text" placeholder="Электронная почта">
-                <button class="btn btn--green">Отправить заявку</button>
+                <input type="text" placeholder="Электронная почта" data-aos="fade-right" data-aos-delay="0">
+                <button class="btn btn--green" data-aos="fade-left" data-aos-delay="500">Отправить заявку</button>
               </div>
             </div>
           </div>
@@ -1288,8 +1292,8 @@
 
       <div class="sertificate">
         <div class="container">
-          <h2 class="caption">Сертификаты и аккредитация</h2>
-          <div class="sertificate__slider swiper">
+          <h2 class="caption" data-aos="fade-right">Сертификаты и аккредитация</h2>
+          <div class="sertificate__slider swiper" data-aos="fade-up">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="sertificate-item">
@@ -1365,10 +1369,10 @@
     <footer class="footer">
       <div class="footer__inner">
         <div class="footer-top">
-          <h2 class="footer-top__caption">Оставить заявку</h2>
+          <h2 class="footer-top__caption" data-aos="fade-right" data-aos-delay="0">Оставить заявку</h2>
           <div class="input-wrapper">
-            <input type="text" class="phone-input" placeholder="Номер телефона">
-            <button class="btn btn--green">Отправить заявку</button>
+            <input type="text" class="phone-input" placeholder="Номер телефона" data-aos="fade-right" data-aos-delay="500">
+            <button class="btn btn--green" data-aos="fade-left" data-aos-delay="500">Отправить заявку</button>
           </div>
         </div>
         <div class="footer-content">
@@ -1492,7 +1496,7 @@
   <script src="js/ScrollTrigger.min.js"></script>
   <script src="js/ScrollSmoother.min.js"></script>
 
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.0/lottie.js'></script>
+  <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.0/lottie.js'></script>
   <script>
 
     var theWindow = $(window);
@@ -1531,7 +1535,7 @@
 
     });
 
-  </script>
+  </script> -->
 
   <script src="js/script.js"></script>
 </body>

@@ -472,9 +472,10 @@ div {
       background-color: $colorSite;
     }
   }
+
   .swiper-pagination-bullet-active {
     &::before {
-      animation: animation-dots 4s;
+      animation: animation-dots 5s;
     }
   }
 }

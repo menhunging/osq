@@ -6,7 +6,7 @@ addEventListener("scroll", (event) => {
   // console.log(currentScroll);
 
   if ($(".animation-text").length > 0) {
-    if (currentScroll >= "4200") {
+    if (currentScroll >= "4800") {
       $(".animation-text").addClass("show");
     } else {
       $(".animation-text").removeClass("show");
@@ -14,7 +14,7 @@ addEventListener("scroll", (event) => {
   }
 
   if ($(".incision").length > 0) {
-    if (currentScroll >= "13300") {
+    if (currentScroll >= "13500") {
       $(".incision").addClass("show");
     } else {
       $(".incision").removeClass("show");
@@ -27,9 +27,8 @@ $(document).ready(function () {
     const swiper = new Swiper(".grettings__slider", {
       slidesPerView: 1,
       slidesPerGroup: 1,
-      loop: false,
+      loop: true,
       effect: "cards",
-      grabCursor: true,
       speed: 1000,
       autoplay: {
         delay: 4000,
@@ -84,13 +83,13 @@ $(document).ready(function () {
             },
             on: {
               init: function (swiper) {
-                $(slider)
-                  .find(".swiper-slide")
-                  .map(function (index, element) {
-                    $(this).hover(function (e) {
-                      swiper.slideTo(index);
-                    });
-                  });
+                // $(slider)
+                //   .find(".swiper-slide")
+                //   .map(function (index, element) {
+                //     $(this).hover(function (e) {
+                //       swiper.slideTo(index);
+                //     });
+                //   });
               },
             },
             breakpoints: {
@@ -287,9 +286,9 @@ $(document).ready(function () {
   if ($("[data-aos]").length > 0) {
     $("[data-aos]").each((i, el) => {
       AOS.init({
-        offset: 200,
-        duration: 1000,
-        once: true,
+        offset: 0,
+        duration: 1500,
+        // once: true,
       });
     });
   }
@@ -353,7 +352,7 @@ $(document).ready(function () {
           x: -1000,
           scrollTrigger: {
             trigger: ".catalog-main",
-            start: "200",
+            start: "600",
             end: "bottom",
             scrub: true,
           },
@@ -367,8 +366,8 @@ $(document).ready(function () {
           x: 0,
           scrollTrigger: {
             trigger: ".animation-text",
-            start: "-500",
-            end: "bottom",
+            start: "-800",
+            end: "2500",
             scrub: true,
           },
         }
@@ -381,8 +380,8 @@ $(document).ready(function () {
           x: 0,
           scrollTrigger: {
             trigger: ".animation-text",
-            start: "0",
-            end: "bottom",
+            start: "1000",
+            end: "2500",
             scrub: true,
           },
         }
@@ -395,8 +394,8 @@ $(document).ready(function () {
           x: 0,
           scrollTrigger: {
             trigger: ".animation-text",
-            start: "0",
-            end: "bottom",
+            start: "1600",
+            end: "2500",
             scrub: true,
           },
         }
@@ -409,8 +408,23 @@ $(document).ready(function () {
           opacity: 1,
           scrollTrigger: {
             trigger: ".animation-text",
-            start: "1000",
-            end: "bottom",
+            start: "1500",
+            end: "2500",
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        ".animation-text .logo-invis",
+        { x: 1000, y: 500 },
+        {
+          x: 0,
+          y: 0,
+          scrollTrigger: {
+            trigger: ".animation-text",
+            start: "-1000",
+            end: "2500",
             scrub: true,
           },
         }
@@ -449,14 +463,56 @@ $(document).ready(function () {
       );
 
       gsap.fromTo(
-        ".incision-one",
-        { x: 500 },
+        ".incision .caption",
+        { x: -500 },
         {
           x: 0,
           scrollTrigger: {
             trigger: ".incision",
-            start: "-2500",
-            end: "bottom",
+            start: "-1500",
+            end: "2500",
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        ".incision .desc",
+        { x: -500 },
+        {
+          x: 0,
+          scrollTrigger: {
+            trigger: ".incision",
+            start: "-1300",
+            end: "2500",
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        ".incision-adv",
+        { opacity: 0 },
+        {
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".incision",
+            start: "-1000",
+            end: "2500",
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        ".incision-one",
+        { x: 1500 },
+        {
+          x: 0,
+          scrollTrigger: {
+            trigger: ".incision",
+            start: "1000",
+            end: "2500",
             scrub: true,
           },
         }
@@ -513,36 +569,6 @@ $(document).ready(function () {
             trigger: ".incision",
             start: "4500",
             end: "5500",
-            scrub: true,
-          },
-        }
-      );
-
-      // food-item
-
-      gsap.fromTo(
-        ".food-item--line1",
-        { x: 2000 },
-        {
-          x: 0,
-          scrollTrigger: {
-            trigger: ".food-type",
-            start: "-550",
-            end: "0",
-            scrub: true,
-          },
-        }
-      );
-
-      gsap.fromTo(
-        ".food-item--line2",
-        { x: -2000 },
-        {
-          x: 0,
-          scrollTrigger: {
-            trigger: ".food-type",
-            start: "-750",
-            end: "0",
             scrub: true,
           },
         }

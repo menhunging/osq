@@ -1,4 +1,5 @@
 .btn {
+  cursor: pointer;
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -227,4 +228,20 @@
   right: 56px;
   top: 59px;
   z-index: 5;
+}
+
+.btn-search {
+  @include transition(opacity 0.3s);
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.btn-location {
+  @include transition(opacity 0.3s);
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
