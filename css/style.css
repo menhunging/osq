@@ -813,8 +813,8 @@ div::-webkit-scrollbar-thumb {
   left: 80px;
   z-index: 999;
   pointer-events: none;
-  width: 250px;
-  height: 250px;
+  width: 600px;
+  height: 530px;
 }
 
 .animation-main {
