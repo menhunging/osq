@@ -198,6 +198,13 @@ $(document).ready(function () {
       },
     });
 
+    swiper.on("slideChange", function () {
+      $(".universal-containers__item img").map(function () {
+        let url = $(this).attr("data-picture-dafault");
+        $(this).attr("src", url);
+      });
+    });
+
     $(".universal-gallery__item").hover(function () {
       let url = $(this).attr("data-picture");
 
