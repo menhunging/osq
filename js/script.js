@@ -204,8 +204,7 @@ $(document).ready(function () {
       $(this)
         .parents(".universal-containers__item")
         .find("img")
-        .attr("src", `img/` + url);
-      console.log(url);
+        .attr("src", url);
     });
   }
 
@@ -313,7 +312,6 @@ $(document).ready(function () {
   if ($("select").length > 0) {
     $("select").map(function () {
       if ($(this).attr("multiple")) {
-        console.log("true");
         $(this).selectric({
           multiple: {
             separator: ", ",
@@ -322,7 +320,6 @@ $(document).ready(function () {
           },
         });
       } else {
-        console.log("false");
         $(this).selectric({
           onOpen: function () {},
           onChange: function (element) {},
