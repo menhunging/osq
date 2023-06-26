@@ -197,6 +197,16 @@ $(document).ready(function () {
         },
       },
     });
+
+    $(".universal-gallery__item").hover(function () {
+      let url = $(this).attr("data-picture");
+
+      $(this)
+        .parents(".universal-containers__item")
+        .find("img")
+        .attr("src", `img/` + url);
+      console.log(url);
+    });
   }
 
   if ($(".reviews-product").length > 0) {
