@@ -1518,7 +1518,6 @@
   color: $colorWhite;
   padding: 45px;
   padding-top: 152px;
-  z-index: 2;
   top: 100%;
   @include transition(top 0.3s);
 
@@ -1542,6 +1541,8 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+    z-index: 10;
+    @include text-decoration-hover($colorWhite);
   }
 
   svg {
@@ -2403,6 +2404,7 @@
     height: 90px;
     @include transition(background-color 0.3s);
 
+    &.swiper-slide-thumb-active,
     &:hover {
       background-color: rgba(170, 159, 142, 0.5);
     }

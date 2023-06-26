@@ -149,4 +149,16 @@
   display: flex;
   align-items: center;
   gap: 45px;
+
+  path {
+    @include transition(all 0.3s);
+  }
+
+  a {
+    &:hover {
+      path {
+        fill: $colorSite;
+      }
+    }
+  }
 }

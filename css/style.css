@@ -243,6 +243,7 @@ input {
 }
 .siteWrapper .footer {
   margin-top: auto;
+  padding-bottom: 60px;
 }
 
 .logo-wrapper {
@@ -427,7 +428,7 @@ input {
   background-image: url("../img/selectric-arrow-active.svg");
 }
 .selectric-wrapper.selectric-above .selectric-items {
-  border: solid 1px rgb(0, 0, 0);
+  border: solid 1px transparent;
 }
 .selectric-items {
   background: transparent;
@@ -1021,6 +1022,10 @@ div::-webkit-scrollbar-thumb {
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   border-radius: 20px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -1028,6 +1033,17 @@ div::-webkit-scrollbar-thumb {
 }
 .btn-clear svg path {
   stroke: rgb(0, 0, 0);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.btn-clear:hover {
+  background-color: #aa9f8e;
+  color: rgb(255, 255, 255);
+}
+.btn-clear:hover svg path {
+  stroke: rgb(255, 255, 255);
 }
 
 .btn-favorite:hover svg path, .btn-favorite.favorite svg path {
@@ -1389,6 +1405,15 @@ div::-webkit-scrollbar-thumb {
   display: flex;
   align-items: center;
   gap: 45px;
+}
+.footer-social path {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.footer-social a:hover path {
+  fill: rgb(0, 161, 154);
 }
 
 .grettings__slider {
@@ -2920,7 +2945,6 @@ div::-webkit-scrollbar-thumb {
   color: rgb(255, 255, 255);
   padding: 45px;
   padding-top: 152px;
-  z-index: 2;
   top: 100%;
   -webkit-transition: top 0.3s;
   -moz-transition: top 0.3s;
@@ -2946,6 +2970,16 @@ div::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  z-index: 10;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  -webkit-transition: text-decoration 0.3s;
+  -moz-transition: text-decoration 0.3s;
+  -o-transition: text-decoration 0.3s;
+  transition: text-decoration 0.3s;
+}
+.category-catalog__controls .link:hover {
+  text-decoration-color: rgb(255, 255, 255);
 }
 .category-catalog__controls svg {
   stroke: rgb(255, 255, 255);
@@ -3772,7 +3806,7 @@ div::-webkit-scrollbar-thumb {
   -o-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
-.swiper-navigation .swiper-slide:hover {
+.swiper-navigation .swiper-slide.swiper-slide-thumb-active, .swiper-navigation .swiper-slide:hover {
   background-color: rgba(170, 159, 142, 0.5);
 }
 

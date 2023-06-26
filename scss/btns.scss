@@ -171,6 +171,7 @@
   color: #2e2e2e;
   border: 1px solid #aa9f8e;
   @include border-radius(20px);
+  @include transition(all 0.3s);
   display: flex;
   align-items: center;
   gap: 12px;
@@ -179,6 +180,18 @@
   svg {
     path {
       stroke: $colorBlack;
+      @include transition(all 0.3s);
+    }
+  }
+
+  &:hover {
+    background-color: #aa9f8e;
+    color: $colorWhite;
+
+    svg {
+      path {
+        stroke: $colorWhite;
+      }
     }
   }
 }
