@@ -258,3 +258,20 @@
     opacity: 0.5;
   }
 }
+
+.btn-back {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 25px 10px;
+  background-color: rgba(170, 159, 142, 0.2);
+  @include border-radius(80px);
+  @include transition(all 0.3s);
+  max-width: 203px;
+
+  &:hover {
+    background-color: rgba(170, 159, 142, 0.33);
+  }
+}
