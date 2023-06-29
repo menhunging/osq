@@ -52,10 +52,6 @@ $(document).ready(function () {
       loop: true,
       effect: "cards",
       speed: 1000,
-      autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-      },
       navigation: {
         nextEl: ".typeFood__slider__next",
         prevEl: ".typeFood__slider__prev",
