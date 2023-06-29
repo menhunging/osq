@@ -45,11 +45,78 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".typeFood__slider").length > 0) {
+    const swiper = new Swiper(".typeFood__slider", {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      loop: true,
+      effect: "cards",
+      speed: 1000,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".typeFood__slider__next",
+        prevEl: ".typeFood__slider__prev",
+      },
+      pagination: {
+        el: ".typeFood__slider__pagination",
+        type: "progressbar",
+      },
+    });
+  }
+
+  if ($(".typeFood-picture__slider").length > 0) {
+    const sliders = document.querySelectorAll(".typeFood-picture__slider");
+
+    let mySwipers = [];
+
+    function sliderinit() {
+      sliders.forEach((slider, index) => {
+        if (!slider.swiper) {
+          mySwipers[index] = new Swiper(slider, {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            navigation: {
+              nextEl: ".typeFood-picture__slider .swiper-button-next",
+              prevEl: ".typeFood-picture__slider .swiper-button-prev",
+            },
+            pagination: {
+              el: ".typeFood-picture__slider .swiper-pagination",
+              type: "fraction",
+              renderFraction: function (currentClass, totalClass) {
+                return (
+                  '<span class="' +
+                  currentClass +
+                  '"></span>' +
+                  " из " +
+                  '<span class="' +
+                  totalClass +
+                  '"></span>'
+                );
+              },
+            },
+            on: {
+              init: function (swiper) {},
+            },
+            breakpoints: {},
+          });
+        } else {
+          return;
+        }
+      });
+    }
+
+    sliders.length && sliderinit();
+  }
+
   if ($(".sertificate__slider").length > 0) {
     const swiper = new Swiper(".sertificate__slider", {
       slidesPerView: 1,
       centeredSlides: true,
       spaceBetween: 60,
+      autoHeight: true,
       navigation: {
         nextEl: ".sertificate__slider .swiper-button-next",
         prevEl: ".sertificate__slider .swiper-button-prev",
@@ -333,6 +400,15 @@ $(document).ready(function () {
           onClose: function () {},
         });
       }
+    });
+  }
+
+  if ($(".play-video").length > 0) {
+    $(".play-video").on("click", function (e) {
+      e.preventDefault();
+      $(this).addClass("played");
+      $(this).siblings("video").trigger("play");
+      $(this).siblings("video")[0].setAttribute("controls", true);
     });
   }
 

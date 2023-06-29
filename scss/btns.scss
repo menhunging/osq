@@ -212,6 +212,17 @@
       stroke: #aa9f8e;
     }
   }
+
+  &.favorite {
+    &:hover {
+      svg {
+        path {
+          fill: transparent;
+          stroke: #aa9f8e;
+        }
+      }
+    }
+  }
 }
 
 .btn-loadFile {
