@@ -812,12 +812,12 @@ div::-webkit-scrollbar-thumb {
 
 #lottie-1 {
   position: fixed;
-  top: 0;
-  left: 80px;
+  top: -100px;
+  right: 100px;
   z-index: 999;
   pointer-events: none;
-  width: 900px;
-  height: 830px;
+  width: 1500px;
+  height: 1200px;
 }
 
 .animation-main {
