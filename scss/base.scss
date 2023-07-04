@@ -568,18 +568,59 @@ div {
   position: absolute;
 }
 
-#lottie-1 {
+.lottie {
+  @include transition(opacity 1s);
   position: fixed;
-  top: -100px;
-  right: 100px;
+  top: 50%;
+  left: 50%;
   z-index: 999;
   pointer-events: none;
-  width: 1500px;
-  height: 1200px;
+  width: 1920px;
+  height: 1060px;
+  margin-left: -960px;
+  margin-top: -580px;
+
+  &.show {
+    opacity: 0;
+  }
+}
+
+#lottie-1 {
+  // width: 1920px;
+  // height: 1200px;
+  // margin-left: -960px;
+  // margin-top: -760px;
+}
+
+#lottie-2 {
+  z-index: 0;
+  $trans: width 0.3s, height 0.3s, margin 0.3s, opacity 0.3s;
+  @include transition($trans);
+
+  &.paused {
+    width: 1920px;
+    height: 948px;
+    margin-left: -940px;
+    margin-top: -580px;
+  }
+}
+
+#lottie-3 {
+  // width: 1920px;
+  // height: 1200px;
+  // margin-left: -960px;
+  // margin-top: -760px;
+  opacity: 0;
+  $trans: opacity 0.3s;
+  @include transition($trans);
+
+  &.visible {
+    opacity: 1;
+  }
 }
 
 .animation-main {
-  height: 13500px;
+  height: 22660px;
   display: flex;
   flex-direction: column;
 }

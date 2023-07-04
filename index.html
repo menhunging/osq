@@ -22,7 +22,9 @@
 
 <body>
 
-  <div id=lottie-1></div>
+  <div class="lottie" id=lottie-1></div>
+  <div class="lottie" id=lottie-2></div>
+  <div class="lottie" id=lottie-3></div>
 
   <div class="siteWrapper indexPage">
     <header class="header">
@@ -1496,47 +1498,7 @@
   <script src="js/gsap.min.js"></script>
   <script src="js/ScrollTrigger.min.js"></script>
   <script src="js/ScrollSmoother.min.js"></script>
-
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.0/lottie.js'></script>
-  <script>
-
-    var theWindow = $(window);
-    var winHeight = theWindow.height();
-    var animDuration = 8000;
-    var animData = {
-      container: document.getElementById('lottie-1'),
-      renderer: 'svg',
-      loop: false,
-      autoplay: false,
-      // path: 'https://gist.githubusercontent.com/swan4er/48226dec327dcabf67ff8e58798e89c0/raw/7e3e33560641b1d0fdbad36a22ec942bad3d954b/pyramidtest.json'
-      path: 'primer1.json'
-
-    };
-
-    var anim = bodymovin.loadAnimation(animData);
-    $(window).scroll(function () {
-      animatebodymovin(animDuration, anim);
-    });
-
-    function animatebodymovin(duration, animObject) {
-
-      var scrollPosition = theWindow.scrollTop();
-      var maxFrames = animObject.totalFrames;
-      var frame = (maxFrames / 100) * (scrollPosition / (duration / 100));
-      animObject.goToAndStop(frame, true);
-
-    }
-
-    anim.addEventListener("enterFrame", function (animation) {
-
-      if (animation.currentTime > (anim.totalFrames - 1)) {
-        // animObject.pause();
-        anim.pause();
-      }
-
-    });
-
-  </script>
+  <script src="js/lottie.js"></script>
 
   <script src="js/script.js"></script>
 </body>

@@ -810,18 +810,52 @@ div::-webkit-scrollbar-thumb {
   position: absolute;
 }
 
-#lottie-1 {
+.lottie {
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
   position: fixed;
-  top: -100px;
-  right: 100px;
+  top: 50%;
+  left: 50%;
   z-index: 999;
   pointer-events: none;
-  width: 1500px;
-  height: 1200px;
+  width: 1920px;
+  height: 1060px;
+  margin-left: -960px;
+  margin-top: -580px;
+}
+.lottie.show {
+  opacity: 0;
+}
+
+#lottie-2 {
+  z-index: 0;
+  -webkit-transition: width 0.3s, height 0.3s, margin 0.3s, opacity 0.3s;
+  -moz-transition: width 0.3s, height 0.3s, margin 0.3s, opacity 0.3s;
+  -o-transition: width 0.3s, height 0.3s, margin 0.3s, opacity 0.3s;
+  transition: width 0.3s, height 0.3s, margin 0.3s, opacity 0.3s;
+}
+#lottie-2.paused {
+  width: 1920px;
+  height: 948px;
+  margin-left: -940px;
+  margin-top: -580px;
+}
+
+#lottie-3 {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+#lottie-3.visible {
+  opacity: 1;
 }
 
 .animation-main {
-  height: 13500px;
+  height: 22660px;
   display: flex;
   flex-direction: column;
 }
@@ -2035,7 +2069,7 @@ div::-webkit-scrollbar-thumb {
 }
 
 .food-type {
-  margin-top: 180px;
+  margin-top: 80px;
 }
 
 .food-type__head {
@@ -2418,7 +2452,7 @@ div::-webkit-scrollbar-thumb {
 }
 
 .product-main {
-  margin-top: 3500px;
+  margin-top: 10400px;
   padding: 140px 0;
   position: relative;
 }
@@ -2597,6 +2631,7 @@ div::-webkit-scrollbar-thumb {
 }
 .delivery--v2 {
   background-image: url("../img/bg-map2.png");
+  margin-top: 1540px;
 }
 .delivery .caption {
   font-weight: 700;

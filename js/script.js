@@ -6,7 +6,19 @@ addEventListener("scroll", (event) => {
   // console.log(currentScroll);
 
   if ($(".animation-text").length > 0) {
-    if (currentScroll >= "4800") {
+    if (currentScroll >= "7800") {
+      $("#lottie-1").addClass("show");
+    } else {
+      $("#lottie-1").removeClass("show");
+    }
+
+    if (currentScroll >= "23800") {
+      $("#lottie-3").addClass("visible");
+    } else {
+      $("#lottie-3").removeClass("visible");
+    }
+
+    if (currentScroll >= "10400") {
       $(".animation-text").addClass("show");
     } else {
       $(".animation-text").removeClass("show");
@@ -14,7 +26,7 @@ addEventListener("scroll", (event) => {
   }
 
   if ($(".incision").length > 0) {
-    if (currentScroll >= "13500") {
+    if (currentScroll >= "20200") {
       $(".incision").addClass("show");
     } else {
       $(".incision").removeClass("show");
@@ -429,6 +441,134 @@ $(document).ready(function () {
     });
   }
 
+  if ($("#lottie-1").length > 0) {
+    let number = 1000;
+
+    let theWindow = $(window);
+    let winHeight = theWindow.height();
+    let animDuration = 7000;
+    let animData = {
+      container: document.getElementById("lottie-1"),
+      renderer: "svg",
+      loop: false,
+      autoplay: false,
+      path: "json/block1.json",
+    };
+
+    let anim = bodymovin.loadAnimation(animData);
+    // $(window).scroll(function () {
+    //   animatebodymovin(animDuration, anim);
+    // });
+
+    function animatebodymovin(duration, animObject) {
+      let scrollPosition = theWindow.scrollTop() - number;
+      let maxFrames = animObject.totalFrames;
+      let frame = (maxFrames / 100) * (scrollPosition / (duration / 100));
+      animObject.goToAndStop(frame, true);
+    }
+
+    anim.addEventListener("enterFrame", function (animation) {
+      if (animation.currentTime > anim.totalFrames - 1) {
+        // animObject.pause();
+        anim.pause();
+      }
+    });
+
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > number) {
+        animatebodymovin(animDuration, anim);
+      }
+    });
+  }
+
+  if ($("#lottie-2").length > 0) {
+    let number = 8000;
+
+    let theWindow = $(window);
+    let winHeight = theWindow.height();
+    let animDuration = 10000;
+    let animData = {
+      container: document.getElementById("lottie-2"),
+      renderer: "svg",
+      loop: true,
+      autoplay: false,
+      path: "json/block2.json",
+    };
+
+    let anim = bodymovin.loadAnimation(animData);
+
+    function animatebodymovin(duration, animObject, paused = 0) {
+      let scrollPosition = theWindow.scrollTop() - number - paused;
+      let maxFrames = animObject.totalFrames;
+      let frame = (maxFrames / 100) * (scrollPosition / (duration / 100));
+      animObject.goToAndStop(frame, true);
+    }
+
+    anim.addEventListener("enterFrame", function (animation) {
+      if (animation.currentTime > anim.totalFrames - 1) {
+        // animObject.pause();
+        // anim.pause();
+      }
+    });
+
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > number && currentScroll < "14900") {
+        animatebodymovin(animDuration, anim);
+      }
+
+      if (currentScroll >= "14900" && currentScroll <= "20500") {
+        $("#lottie-2").addClass("paused");
+        anim.pause();
+      }
+
+      if (currentScroll >= "20500" && currentScroll <= "23450") {
+        $("#lottie-2").removeClass("paused");
+        anim.pause();
+
+        animatebodymovin(animDuration, anim, 5600);
+      }
+
+      if (currentScroll >= "23450") {
+      }
+    });
+  }
+
+  if ($("#lottie-3").length > 0) {
+    let number = 22500;
+
+    let theWindow = $(window);
+    let winHeight = theWindow.height();
+    let animDuration = 5000;
+    let animData = {
+      container: document.getElementById("lottie-3"),
+      renderer: "svg",
+      loop: false,
+      autoplay: false,
+      path: "json/block3.json",
+    };
+
+    let anim = bodymovin.loadAnimation(animData);
+
+    function animatebodymovin(duration, animObject) {
+      let scrollPosition = theWindow.scrollTop() - number;
+      let maxFrames = animObject.totalFrames;
+      let frame = (maxFrames / 100) * (scrollPosition / (duration / 100));
+      animObject.goToAndStop(frame, true);
+    }
+
+    anim.addEventListener("enterFrame", function (animation) {
+      if (animation.currentTime > anim.totalFrames - 1) {
+        anim.pause();
+      }
+    });
+
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > number) {
+        animatebodymovin(animDuration, anim);
+      }
+    });
+  }
+
   if ($(".animation-main").length > 0) {
     if (ScrollTrigger.isTouch !== 1) {
       gsap.fromTo(
@@ -438,79 +578,22 @@ $(document).ready(function () {
           x: -1000,
           scrollTrigger: {
             trigger: ".catalog-main",
-            start: "600",
-            end: "bottom",
+            start: "200",
+            end: "1000",
             scrub: true,
           },
         }
       );
 
       gsap.fromTo(
-        ".animation-text .caption",
-        { x: 500 },
+        "#lottie-1",
+        { x: 1000 },
         {
-          x: 0,
+          x: 100,
           scrollTrigger: {
-            trigger: ".animation-text",
-            start: "-800",
-            end: "2500",
-            scrub: true,
-          },
-        }
-      );
-
-      gsap.fromTo(
-        ".animation-text p",
-        { x: 500 },
-        {
-          x: 0,
-          scrollTrigger: {
-            trigger: ".animation-text",
-            start: "1000",
-            end: "2500",
-            scrub: true,
-          },
-        }
-      );
-
-      gsap.fromTo(
-        ".animation-text__controls",
-        { x: 1500 },
-        {
-          x: 0,
-          scrollTrigger: {
-            trigger: ".animation-text",
-            start: "1600",
-            end: "2500",
-            scrub: true,
-          },
-        }
-      );
-
-      gsap.fromTo(
-        ".animation-text .line",
-        { opacity: 0 },
-        {
-          opacity: 1,
-          scrollTrigger: {
-            trigger: ".animation-text",
-            start: "1500",
-            end: "2500",
-            scrub: true,
-          },
-        }
-      );
-
-      gsap.fromTo(
-        ".animation-text .logo-invis",
-        { x: 1000, y: 500 },
-        {
-          x: 0,
-          y: 0,
-          scrollTrigger: {
-            trigger: ".animation-text",
-            start: "-1000",
-            end: "2500",
+            trigger: ".catalog-main",
+            start: "300",
+            end: "1000",
             scrub: true,
           },
         }
@@ -524,8 +607,79 @@ $(document).ready(function () {
           position: "fixed",
           scrollTrigger: {
             trigger: ".animation-text",
-            start: "-1000",
-            end: "2500",
+            start: "4000",
+            end: "5000",
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        ".animation-text .caption",
+        { x: 500 },
+        {
+          x: 0,
+          scrollTrigger: {
+            trigger: ".animation-text",
+            start: "5000",
+            end: "6000",
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        ".animation-text p",
+        { x: 500 },
+        {
+          x: 0,
+          scrollTrigger: {
+            trigger: ".animation-text",
+            start: "6000",
+            end: "7000",
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        ".animation-text__controls",
+        { x: 1500 },
+        {
+          x: 0,
+          scrollTrigger: {
+            trigger: ".animation-text",
+            start: "6500",
+            end: "8000",
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        ".animation-text .line",
+        { opacity: 0 },
+        {
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".animation-text",
+            start: "6500",
+            end: "8000",
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        ".animation-text .logo-invis",
+        { x: 1000, y: 500 },
+        {
+          x: 0,
+          y: 0,
+          scrollTrigger: {
+            trigger: ".animation-text",
+            start: "5000",
+            end: "8000",
             scrub: true,
           },
         }
@@ -578,12 +732,13 @@ $(document).ready(function () {
 
       gsap.fromTo(
         ".incision-adv",
-        { opacity: 0 },
+        { opacity: 0, y: 500 },
         {
           opacity: 1,
+          y: 0,
           scrollTrigger: {
             trigger: ".incision",
-            start: "-1000",
+            start: "0",
             end: "2500",
             scrub: true,
           },
@@ -655,6 +810,34 @@ $(document).ready(function () {
             trigger: ".incision",
             start: "4500",
             end: "5500",
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        "#lottie-2",
+        { y: 0 },
+        {
+          y: -1500,
+          scrollTrigger: {
+            trigger: ".production",
+            start: "0",
+            end: "bottom",
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        "#lottie-3",
+        { y: 0 },
+        {
+          y: -1000,
+          scrollTrigger: {
+            trigger: ".delivery.delivery--v2",
+            start: "-50",
+            end: "bottom",
             scrub: true,
           },
         }
