@@ -596,7 +596,7 @@
 }
 
 .food-type {
-  margin-top: 6610px;
+  margin-top: 6500px;
 }
 
 .food-type__head {
@@ -1088,10 +1088,11 @@
 
 .production {
   left: 0;
-  top: 0;
+  top: 90px;
   width: 100%;
   opacity: 1;
-  @include transition(opacity 0.3s);
+  $trans: opacity 1s, top 1s;
+  @include transition($trans);
 
   &.fixed {
     position: fixed;
@@ -1100,6 +1101,7 @@
 
   &.show {
     opacity: 0;
+    top: -1000px;
   }
 }
 
@@ -1193,7 +1195,8 @@
   padding: 50px 0;
   top: 0;
   left: 0;
-  @include transition(opacity 1s);
+  $trans: opacity 1s, top 1s;
+  @include transition($trans);
   width: 100%;
   opacity: 1;
   overflow: hidden;
@@ -1211,6 +1214,17 @@
 
     &.fixed {
       opacity: 1;
+
+      .desc,
+      .caption {
+        opacity: 1;
+        left: 0;
+        transition-delay: 0s;
+      }
+
+      &.show{
+        top:-1000px
+      }
     }
 
     &.show {
@@ -1228,6 +1242,11 @@
     font-size: 96px;
     line-height: 64px;
     display: block;
+    opacity: 0;
+    transition: all 1s;
+    transition-delay: 0.5s;
+    left: -1500px;
+    position: relative;
   }
 
   .desc {
@@ -1238,6 +1257,11 @@
     text-transform: uppercase;
     color: #2e2e2e;
     display: block;
+    opacity: 0;
+    transition: all 1s;
+    transition-delay: 0.5s;
+    left: -1500px;
+    position: relative;
   }
 
   .btn {

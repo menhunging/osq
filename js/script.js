@@ -3,7 +3,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 addEventListener("scroll", (event) => {
   currentScroll = $(window).scrollTop();
 
-  // console.log(currentScroll);
+  console.log(currentScroll);
 
   if ($(".animation-text").length > 0) {
     if (currentScroll >= "7800") {
@@ -18,7 +18,7 @@ addEventListener("scroll", (event) => {
       $(".animation-text").removeClass("show");
     }
 
-    if (currentScroll >= "11700") {
+    if (currentScroll >= "11700" && currentScroll < "23500") {
       $("#lottie-2").addClass("small");
       $(".product-main").addClass("fixed");
     } else {
@@ -39,10 +39,12 @@ addEventListener("scroll", (event) => {
     }
 
     if (currentScroll >= "23800") {
+      $("#lottie-2").addClass("show");
       $("#lottie-3").addClass("visible");
       $(".production").addClass("show");
       $(".delivery--v1").addClass("fixed");
     } else {
+      $("#lottie-2").removeClass("show");
       $("#lottie-3").removeClass("visible");
       $(".production").removeClass("show");
       $(".delivery--v1").removeClass("fixed");
@@ -51,8 +53,10 @@ addEventListener("scroll", (event) => {
     if (currentScroll >= "29200") {
       $(".delivery--v1").addClass("show");
       $("#lottie-3").removeClass("visible");
+      $("#lottie-3").addClass("show");
     } else {
       $(".delivery--v1").removeClass("show");
+      $("#lottie-3").removeClass("show");
     }
   }
 
@@ -535,13 +539,6 @@ $(document).ready(function () {
       animObject.goToAndStop(frame, true);
     }
 
-    anim.addEventListener("enterFrame", function (animation) {
-      if (animation.currentTime > anim.totalFrames - 1) {
-        // animObject.pause();
-        // anim.pause();
-      }
-    });
-
     $(window).scroll(function () {
       if ($(this).scrollTop() > number && currentScroll < "14900") {
         animatebodymovin(animDuration, anim);
@@ -552,15 +549,20 @@ $(document).ready(function () {
         anim.pause();
       }
 
-      if (currentScroll >= "20500" && currentScroll <= "23450") {
+      if (currentScroll >= "20500" && currentScroll < "23500") {
         $("#lottie-2").removeClass("paused");
+        $("#lottie-2").removeClass("small");
         anim.pause();
-
         animatebodymovin(animDuration, anim, 5600);
       }
 
       if (currentScroll < "14900") {
         $("#lottie-2").removeClass("paused");
+      }
+
+      if (currentScroll > "23500") {
+        $("#lottie-2").removeClass("small");
+        anim.pause();
       }
     });
   }
@@ -589,9 +591,9 @@ $(document).ready(function () {
     }
 
     anim.addEventListener("enterFrame", function (animation) {
-      if (animation.currentTime > anim.totalFrames - 1) {
-        anim.pause();
-      }
+      // if (animation.currentTime > anim.totalFrames - 1) {
+      //   anim.pause();
+      // }
     });
 
     $(window).scroll(function () {
@@ -612,12 +614,12 @@ $(document).ready(function () {
         { x: 0, y: 0, opacity: 1 },
         {
           x: -1000,
-          y: 400,
+          y: 600,
           opacity: 0,
           scrollTrigger: {
             trigger: ".catalog-main",
             start: "500",
-            end: "1300",
+            end: "1500",
             scrub: true,
           },
         }
@@ -630,8 +632,8 @@ $(document).ready(function () {
           x: 100,
           scrollTrigger: {
             trigger: ".catalog-main",
-            start: "300",
-            end: "1000",
+            start: "700",
+            end: "2000",
             scrub: true,
           },
         }
@@ -871,19 +873,19 @@ $(document).ready(function () {
 
       // lottie-2
 
-      gsap.fromTo(
-        "#lottie-2",
-        { y: 0 },
-        {
-          y: -1500,
-          scrollTrigger: {
-            trigger: ".production",
-            start: "0",
-            end: "bottom",
-            scrub: true,
-          },
-        }
-      );
+      // gsap.fromTo(
+      //   "#lottie-2",
+      //   { y: 0 },
+      //   {
+      //     y: -1500,
+      //     scrollTrigger: {
+      //       trigger: ".production",
+      //       start: "0",
+      //       end: "bottom",
+      //       scrub: true,
+      //     },
+      //   }
+      // );
 
       // gsap.fromTo(
       //   "#lottie-3",
