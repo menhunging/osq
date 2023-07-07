@@ -936,8 +936,8 @@ $(document).ready(function () {
           x: 700,
           scrollTrigger: {
             trigger: ".delivery",
-            start: "2000",
-            end: "3000",
+            start: "2500",
+            end: "3500",
             scrub: true,
           },
         }
@@ -950,8 +950,8 @@ $(document).ready(function () {
           opacity: 1,
           scrollTrigger: {
             trigger: ".delivery",
-            start: "2000",
-            end: "3000",
+            start: "2800",
+            end: "3200",
             scrub: true,
           },
         }
@@ -964,8 +964,8 @@ $(document).ready(function () {
           x: 700,
           scrollTrigger: {
             trigger: ".delivery",
-            start: "2500",
-            end: "3000",
+            start: "2800",
+            end: "3200",
             scrub: true,
           },
         }
@@ -978,8 +978,8 @@ $(document).ready(function () {
           x: 700,
           scrollTrigger: {
             trigger: ".delivery",
-            start: "2500",
-            end: "3000",
+            start: "2800",
+            end: "3200",
             scrub: true,
           },
         }
