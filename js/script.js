@@ -50,7 +50,7 @@ addEventListener("scroll", (event) => {
       $(".delivery--v1").removeClass("fixed");
     }
 
-    if (currentScroll >= "29200") {
+    if (currentScroll >= "29500") {
       $(".delivery--v1").addClass("show");
       $("#lottie-3").removeClass("visible");
       $("#lottie-3").addClass("show");
@@ -597,11 +597,11 @@ $(document).ready(function () {
     });
 
     $(window).scroll(function () {
-      if ($(this).scrollTop() > number && currentScroll < "28100") {
+      if ($(this).scrollTop() > number && currentScroll < "29300") {
         animatebodymovin(animDuration, anim);
       }
 
-      if (currentScroll >= "28100") {
+      if (currentScroll >= "29300") {
         anim.pause();
       }
     });
@@ -950,8 +950,8 @@ $(document).ready(function () {
           opacity: 1,
           scrollTrigger: {
             trigger: ".delivery",
-            start: "1500",
-            end: "2500",
+            start: "2000",
+            end: "3000",
             scrub: true,
           },
         }
@@ -964,8 +964,8 @@ $(document).ready(function () {
           x: 700,
           scrollTrigger: {
             trigger: ".delivery",
-            start: "2000",
-            end: "2500",
+            start: "2500",
+            end: "3000",
             scrub: true,
           },
         }
@@ -978,8 +978,8 @@ $(document).ready(function () {
           x: 700,
           scrollTrigger: {
             trigger: ".delivery",
-            start: "2000",
-            end: "2500",
+            start: "2500",
+            end: "3000",
             scrub: true,
           },
         }
