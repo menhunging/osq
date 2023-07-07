@@ -38,7 +38,7 @@ addEventListener("scroll", (event) => {
       $(".production").removeClass("fixed");
     }
 
-    if (currentScroll >= "23800") {
+    if (currentScroll >= "24700") {
       $("#lottie-2").addClass("show");
       $("#lottie-3").addClass("visible");
       $(".production").addClass("show");
@@ -568,7 +568,7 @@ $(document).ready(function () {
   }
 
   if ($("#lottie-3").length > 0) {
-    let number = 23800;
+    let number = 24700;
 
     let theWindow = $(window);
     let winHeight = theWindow.height();
