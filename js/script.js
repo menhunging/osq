@@ -12,16 +12,47 @@ addEventListener("scroll", (event) => {
       $("#lottie-1").removeClass("show");
     }
 
-    if (currentScroll >= "23800") {
-      $("#lottie-3").addClass("visible");
-    } else {
-      $("#lottie-3").removeClass("visible");
-    }
-
     if (currentScroll >= "10400") {
       $(".animation-text").addClass("show");
     } else {
       $(".animation-text").removeClass("show");
+    }
+
+    if (currentScroll >= "11700") {
+      $("#lottie-2").addClass("small");
+      $(".product-main").addClass("fixed");
+    } else {
+      $("#lottie-2").removeClass("small");
+      $(".product-main").removeClass("fixed");
+    }
+
+    if (currentScroll >= "13000") {
+      $(".product-main").addClass("show");
+    } else {
+      $(".product-main").removeClass("show");
+    }
+
+    if (currentScroll >= "21800") {
+      $(".production").addClass("fixed");
+    } else {
+      $(".production").removeClass("fixed");
+    }
+
+    if (currentScroll >= "23800") {
+      $("#lottie-3").addClass("visible");
+      $(".production").addClass("show");
+      $(".delivery--v1").addClass("fixed");
+    } else {
+      $("#lottie-3").removeClass("visible");
+      $(".production").removeClass("show");
+      $(".delivery--v1").removeClass("fixed");
+    }
+
+    if (currentScroll >= "29200") {
+      $(".delivery--v1").addClass("show");
+      $("#lottie-3").removeClass("visible");
+    } else {
+      $(".delivery--v1").removeClass("show");
     }
   }
 
@@ -35,6 +66,16 @@ addEventListener("scroll", (event) => {
 });
 
 $(document).ready(function () {
+  if ($("[data-aos]").length > 0) {
+    $("[data-aos]").each((i, el) => {
+      AOS.init({
+        offset: 0,
+        duration: 1500,
+        // once: true,
+      });
+    });
+  }
+
   if ($(".grettings__slider").length > 0) {
     const swiper = new Swiper(".grettings__slider", {
       slidesPerView: 1,
@@ -154,7 +195,7 @@ $(document).ready(function () {
             cardsEffect: {
               slideShadows: false,
               perSlideRotate: 0,
-              perSlideOffset: 20,
+              perSlideOffset: 15,
             },
             on: {
               init: function (swiper) {
@@ -374,16 +415,6 @@ $(document).ready(function () {
     });
   }
 
-  if ($("[data-aos]").length > 0) {
-    $("[data-aos]").each((i, el) => {
-      AOS.init({
-        offset: 0,
-        duration: 1500,
-        // once: true,
-      });
-    });
-  }
-
   if ($(".incision-adv__item").length > 0) {
     $(".incision-adv__item").on("click", function () {
       $(".incision-adv__item").removeClass("active");
@@ -528,13 +559,14 @@ $(document).ready(function () {
         animatebodymovin(animDuration, anim, 5600);
       }
 
-      if (currentScroll >= "23450") {
+      if (currentScroll < "14900") {
+        $("#lottie-2").removeClass("paused");
       }
     });
   }
 
   if ($("#lottie-3").length > 0) {
-    let number = 22500;
+    let number = 23800;
 
     let theWindow = $(window);
     let winHeight = theWindow.height();
@@ -563,8 +595,12 @@ $(document).ready(function () {
     });
 
     $(window).scroll(function () {
-      if ($(this).scrollTop() > number) {
+      if ($(this).scrollTop() > number && currentScroll < "28100") {
         animatebodymovin(animDuration, anim);
+      }
+
+      if (currentScroll >= "28100") {
+        anim.pause();
       }
     });
   }
@@ -573,13 +609,15 @@ $(document).ready(function () {
     if (ScrollTrigger.isTouch !== 1) {
       gsap.fromTo(
         ".catalog-main",
-        { x: 0 },
+        { x: 0, y: 0, opacity: 1 },
         {
           x: -1000,
+          y: 400,
+          opacity: 0,
           scrollTrigger: {
             trigger: ".catalog-main",
-            start: "200",
-            end: "1000",
+            start: "500",
+            end: "1300",
             scrub: true,
           },
         }
@@ -685,6 +723,22 @@ $(document).ready(function () {
         }
       );
 
+      // product-main
+
+      gsap.fromTo(
+        ".product-main .caption",
+        { x: -500 },
+        {
+          x: 0,
+          scrollTrigger: {
+            trigger: ".product-main",
+            start: "-1500",
+            end: "-1000",
+            scrub: true,
+          },
+        }
+      );
+
       // incision
 
       gsap.fromTo(
@@ -695,7 +749,7 @@ $(document).ready(function () {
           position: "fixed",
           scrollTrigger: {
             trigger: ".incision",
-            start: "-1500",
+            start: "-1300",
             end: "2500",
             scrub: true,
           },
@@ -709,7 +763,7 @@ $(document).ready(function () {
           x: 0,
           scrollTrigger: {
             trigger: ".incision",
-            start: "-1500",
+            start: "-1300",
             end: "2500",
             scrub: true,
           },
@@ -723,7 +777,7 @@ $(document).ready(function () {
           x: 0,
           scrollTrigger: {
             trigger: ".incision",
-            start: "-1300",
+            start: "-1100",
             end: "2500",
             scrub: true,
           },
@@ -815,6 +869,8 @@ $(document).ready(function () {
         }
       );
 
+      // lottie-2
+
       gsap.fromTo(
         "#lottie-2",
         { y: 0 },
@@ -829,15 +885,99 @@ $(document).ready(function () {
         }
       );
 
+      // gsap.fromTo(
+      //   "#lottie-3",
+      //   { y: 0 },
+      //   {
+      //     y: -1000,
+      //     scrollTrigger: {
+      //       trigger: ".delivery.delivery--v1",
+      //       start: "-50",
+      //       end: "1000",
+      //       scrub: true,
+      //     },
+      //   }
+      // );
+
       gsap.fromTo(
-        "#lottie-3",
-        { y: 0 },
+        ".production__leftSide",
+        { x: -1000 },
         {
-          y: -1000,
+          x: 0,
           scrollTrigger: {
-            trigger: ".delivery.delivery--v2",
-            start: "-50",
-            end: "bottom",
+            trigger: ".production",
+            start: "-2500",
+            end: "0",
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        ".production__rightSide",
+        { x: 1000 },
+        {
+          x: 0,
+          scrollTrigger: {
+            trigger: ".production",
+            start: "-2500",
+            end: "0",
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        ".delivery .btn",
+        { x: 2000 },
+        {
+          x: 700,
+          scrollTrigger: {
+            trigger: ".delivery",
+            start: "2000",
+            end: "3000",
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        ".delivery .line",
+        { opacity: 0 },
+        {
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".delivery",
+            start: "1500",
+            end: "2500",
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        ".delivery .desc",
+        { x: 0 },
+        {
+          x: 700,
+          scrollTrigger: {
+            trigger: ".delivery",
+            start: "2000",
+            end: "2500",
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        ".delivery .caption",
+        { x: 0 },
+        {
+          x: 700,
+          scrollTrigger: {
+            trigger: ".delivery",
+            start: "2000",
+            end: "2500",
             scrub: true,
           },
         }

@@ -746,8 +746,8 @@ div::-webkit-scrollbar-thumb {
 
 .swiper-button-prev,
 .swiper-button-next {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -757,7 +757,12 @@ div::-webkit-scrollbar-thumb {
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-  margin-top: -73px;
+  margin-top: -53px;
+}
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  width: 9px;
+  height: 11px;
 }
 .swiper-button-prev svg path,
 .swiper-button-next svg path {
@@ -823,7 +828,7 @@ div::-webkit-scrollbar-thumb {
   width: 1920px;
   height: 1060px;
   margin-left: -960px;
-  margin-top: -580px;
+  margin-top: -700px;
 }
 .lottie.show {
   opacity: 0;
@@ -835,6 +840,12 @@ div::-webkit-scrollbar-thumb {
   -moz-transition: width 0.3s, height 0.3s, margin 0.3s, opacity 0.3s;
   -o-transition: width 0.3s, height 0.3s, margin 0.3s, opacity 0.3s;
   transition: width 0.3s, height 0.3s, margin 0.3s, opacity 0.3s;
+}
+#lottie-2.small {
+  width: 1600px;
+  height: 700px;
+  margin-left: -830px;
+  margin-top: -400px;
 }
 #lottie-2.paused {
   width: 1920px;
@@ -1642,7 +1653,7 @@ div::-webkit-scrollbar-thumb {
   margin-bottom: 45px;
 }
 .sertificate-item .picture {
-  background-color: rgb(255, 255, 255);
+  background-color: #fcf8f5;
   width: 250px;
   height: 200px;
   -webkit-box-shadow: 0px 10px 70px rgba(226, 216, 208, 0.7);
@@ -1753,7 +1764,7 @@ div::-webkit-scrollbar-thumb {
   width: 100%;
   height: 435px;
   align-items: center;
-  background-color: rgb(255, 255, 255);
+  border: solid 1px rgba(170, 159, 142, 0.5);
 }
 .news-item--big .news-item__picture {
   width: 435px;
@@ -1923,6 +1934,9 @@ div::-webkit-scrollbar-thumb {
   -ms-border-radius: 20px;
   border-radius: 20px;
 }
+.your-lines__slider .swiper-slide.swiper-slide-active .your-lines__content > * {
+  opacity: 1;
+}
 .your-lines__slider .swiper-slide:nth-child(1) {
   background-color: rgb(172, 154, 190);
 }
@@ -2016,6 +2030,13 @@ div::-webkit-scrollbar-thumb {
   background-color: rgb(0, 0, 0);
   opacity: 0.35;
 }
+.your-lines__content > *:not(.caption__invis) {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
 
 .your-line__controls {
   display: flex;
@@ -2069,7 +2090,7 @@ div::-webkit-scrollbar-thumb {
 }
 
 .food-type {
-  margin-top: 80px;
+  margin-top: 6610px;
 }
 
 .food-type__head {
@@ -2445,6 +2466,7 @@ div::-webkit-scrollbar-thumb {
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: contain;
+  pointer-events: none;
 }
 .animation-text.show {
   opacity: 0;
@@ -2452,9 +2474,27 @@ div::-webkit-scrollbar-thumb {
 }
 
 .product-main {
+  position: relative;
+  top: 0;
+  left: 0;
   margin-top: 10400px;
   padding: 140px 0;
   position: relative;
+  width: 100%;
+  opacity: 1;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+.product-main.fixed {
+  margin-top: 0;
+  position: fixed;
+  top: -60px;
+}
+.product-main.show {
+  opacity: 0;
+  pointer-events: none;
 }
 .product-main .caption {
   margin-bottom: 30px;
@@ -2469,7 +2509,7 @@ div::-webkit-scrollbar-thumb {
 .product-main .list {
   display: flex;
   justify-content: space-around;
-  margin-top: 428px;
+  margin-top: 350px;
   position: relative;
   padding-left: 55px;
   padding-right: 55px;
@@ -2554,6 +2594,24 @@ div::-webkit-scrollbar-thumb {
   position: relative;
 }
 
+.production {
+  left: 0;
+  top: 0;
+  width: 100%;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.production.fixed {
+  position: fixed;
+  top: 90px;
+}
+.production.show {
+  opacity: 0;
+}
+
 .production__inner {
   font-weight: 400;
   font-size: 16px;
@@ -2625,13 +2683,35 @@ div::-webkit-scrollbar-thumb {
   display: flex;
   align-items: center;
   padding: 50px 0;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+  width: 100%;
+  opacity: 1;
+  overflow: hidden;
+  position: relative;
+}
+.delivery.fixed {
+  position: fixed;
+  margin: 0;
 }
 .delivery--v1 {
   background-image: url("../img/bg-map1.png");
+  margin-top: 1120px;
+  opacity: 0;
+}
+.delivery--v1.fixed {
+  opacity: 1;
+}
+.delivery--v1.show {
+  opacity: 0;
 }
 .delivery--v2 {
   background-image: url("../img/bg-map2.png");
-  margin-top: 1540px;
+  margin-top: 3670px;
 }
 .delivery .caption {
   font-weight: 700;
@@ -2664,7 +2744,7 @@ div::-webkit-scrollbar-thumb {
 }
 .delivery .line {
   position: absolute;
-  left: 0;
+  left: 230px;
   top: 0;
   width: 100%;
   height: 100%;
@@ -3927,6 +4007,7 @@ div::-webkit-scrollbar-thumb {
   -o-transition: all 0.3s;
   transition: all 0.3s;
   background-color: #fefcfb;
+  border: 0;
 }
 .news-section .news-item:hover {
   background-color: rgb(255, 255, 255);
