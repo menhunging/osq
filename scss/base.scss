@@ -596,7 +596,7 @@ div {
 }
 
 #lottie-2 {
-  z-index: 0;
+  z-index: 2;
   $trans: width 0.3s, height 0.3s, margin 0.3s, opacity 0.3s, top 1s;
   @include transition($trans);
 
@@ -605,6 +605,7 @@ div {
     height: 700px;
     margin-left: -830px;
     margin-top: -400px;
+    z-index: 1;
   }
 
   &.paused {
