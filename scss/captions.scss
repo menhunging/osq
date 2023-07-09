@@ -24,4 +24,18 @@
     line-height: 38px;
     letter-spacing: -0.09em;
   }
+
+  &--big-v2 {
+    font-size: 64px;
+    line-height: 64px;
+    letter-spacing: -5.76px;
+  }
+}
+
+.caption__desc {
+  font-size: 48px;
+  line-height: 64px;
+  letter-spacing: -4.8px;
+  display: block;
+  font-weight: 400;
 }
