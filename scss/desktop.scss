@@ -4126,8 +4126,18 @@
   }
 
   &__icon {
+    position: relative;
+    @include invisLink;
+
+    &:hover{
+      path{
+        stroke: $colorSite;
+      }
+    }
+
     path {
       stroke: #2e2e2e;
+      @include transition(all .3s);
     }
   }
 }
@@ -4190,6 +4200,16 @@
         #fbf5f1 0%,
         rgba(251, 245, 241, 0) 100%
       );
+    }
+
+    a:hover{
+      & + .other-file{
+        svg{
+          path{
+            stroke: $colorSite
+          }
+        }
+      }
     }
   }
 
@@ -4529,6 +4549,23 @@
 
   ul {
     margin-top: 17px;
+    height: 295px;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      background-color: transparent;
+      left: 5px;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      width: 5px;
+      background-color: $colorSite;
+      @include border-radius(10px);
+    }
+  
+    scrollbar-color: $colorSite transparent;
+    scrollbar-width: thin;
   }
 
   li {
@@ -4594,6 +4631,8 @@
     width: 35px;
     height: 23px;
   }
+
+  a:hover{}
 }
 
 .contacts-controls {

@@ -705,3 +705,51 @@ div {
     margin-top: 16px;
   }
 }
+
+.vk {
+  svg {
+    path {
+      @include transition(all 0.3s);
+    }
+  }
+
+  &:hover {
+    svg {
+      path {
+        fill: #4c75a3;
+      }
+    }
+  }
+}
+
+.telegram {
+  svg {
+    path {
+      @include transition(all 0.3s);
+    }
+  }
+
+  &:hover {
+    svg {
+      path {
+        fill: #0088cc;
+      }
+    }
+  }
+}
+
+.youtube {
+  svg {
+    path {
+      @include transition(all 0.3s);
+    }
+  }
+
+  &:hover {
+    svg {
+      path {
+        fill: #c4302b;
+      }
+    }
+  }
+}
