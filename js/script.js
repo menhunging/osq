@@ -562,7 +562,7 @@ $(document).ready(function () {
 
         $(".possibilities .num").spincrement({
           thousandSeparator: "",
-          duration: 3000,
+          duration: 5000,
         });
 
         show = false;
