@@ -753,3 +753,19 @@ div {
     }
   }
 }
+
+.whatsup {
+  svg {
+    path {
+      @include transition(all 0.3s);
+    }
+  }
+
+  &:hover {
+    svg {
+      path {
+        fill: #25d366;
+      }
+    }
+  }
+}

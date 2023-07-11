@@ -292,6 +292,55 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".production-page__slider").length > 0) {
+    const swiper = new Swiper(".production-page__slider", {
+      slidesPerView: 1,
+      autoHeight: true,
+      effect: "fade",
+      fadeEffect: { crossFade: true },
+      navigation: {
+        nextEl: ".production-page__sliderWrapper .swiper-button-next",
+        prevEl: ".production-page__sliderWrapper .swiper-button-prev",
+      },
+      pagination: {
+        el: ".production-page__slider .swiper-pagination",
+        type: "progressbar",
+      },
+    });
+  }
+
+  if ($(".delivery-slider").length > 0) {
+    const swiper = new Swiper(".delivery-slider", {
+      slidesPerView: 1,
+      autoHeight: true,
+      navigation: {
+        nextEl: ".delivery-slider .swiper-button-next",
+        prevEl: ".delivery-slider .swiper-button-prev",
+      },
+      pagination: {
+        el: ".delivery-slider .swiper-pagination",
+        type: "progressbar",
+      },
+    });
+  }
+
+  if ($(".slider-simple").length > 0) {
+    const swiper = new Swiper(".slider-simple", {
+      slidesPerView: 1,
+      autoHeight: true,
+      effect: "fade",
+      fadeEffect: { crossFade: true },
+      navigation: {
+        nextEl: ".slider-simple__wrap .swiper-button-next",
+        prevEl: ".slider-simple__wrap .swiper-button-prev",
+      },
+      pagination: {
+        el: ".slider-simple .swiper-pagination",
+        type: "progressbar",
+      },
+    });
+  }
+
   if ($(".universal-containers").length > 0) {
     const swiper = new Swiper(".universal-containers__slider", {
       slidesPerView: 1,
@@ -411,6 +460,12 @@ $(document).ready(function () {
       animation: true,
     });
 
+    $(".tabs").on("_before", function () {
+      if ($(".list-cites").length > 0) {
+        isVisibleMapBlock();
+      }
+    });
+
     // исправление бага в chrome
     $(".tabs-links li").eq(0).find("a").trigger("click");
 
@@ -505,6 +560,11 @@ $(document).ready(function () {
           duration: 3000,
         });
 
+        $(".possibilities .num").spincrement({
+          thousandSeparator: "",
+          duration: 3000,
+        });
+
         show = false;
       }
     });
@@ -517,6 +577,8 @@ $(document).ready(function () {
       $(".list-cites .btn").removeClass("show");
       $(this).next(".btn").addClass("show");
     });
+
+    isVisibleMapBlock();
   }
 
   if ($("#lottie-1").length > 0) {
@@ -1019,3 +1081,13 @@ $(document).ready(function () {
     }
   }
 });
+
+function isVisibleMapBlock() {
+  $(".list-cites li").map(function () {
+    if ($(this).attr("data-visible") === "false") {
+      $(this).addClass("show");
+    } else {
+      $(this).removeClass("show");
+    }
+  });
+}
