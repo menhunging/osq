@@ -4838,6 +4838,10 @@
 
 .storage-section__tabs {
   margin-top: 57px;
+
+  .list-cites .btn.show{
+    display: none!important;
+  }
 }
 
 .storage-list {
