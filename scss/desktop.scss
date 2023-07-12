@@ -5960,10 +5960,10 @@
   .swiper-pagination {
   }
   .swiper-button-prev {
-    left: -155px;
+    left: -100px;
   }
   .swiper-button-next {
-    right: -155px;
+    right: -100px;
   }
 }
 
@@ -6067,6 +6067,9 @@
   @include border-radius(27px);
   padding: 57px 60px;
   width: 440px;
+  position: sticky;
+  top: 10px;
+  left: 0;
 }
 
 .events-age {
