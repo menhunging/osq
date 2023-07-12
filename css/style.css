@@ -7422,4 +7422,472 @@ div::-webkit-scrollbar-thumb {
   height: 405px;
 }
 
+.events-slider__wrap {
+  margin-top: 53px;
+  position: relative;
+}
+.events-slider__wrap .swiper-button-prev {
+  left: -155px;
+}
+.events-slider__wrap .swiper-button-next {
+  right: -155px;
+}
+
+.events-slider .swiper-slide {
+  padding: 90px;
+  position: relative;
+  overflow: hidden;
+  -webkit-border-radius: 27px;
+  -moz-border-radius: 27px;
+  -ms-border-radius: 27px;
+  border-radius: 27px;
+  padding: 60px;
+  min-height: 351px;
+}
+.events-slider .picture {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.events-slider .caption {
+  color: rgb(255, 255, 255);
+  margin-top: 21px;
+}
+.events-slider .btn {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 161, 154);
+  padding: 19px 38px;
+  font-size: 18px;
+  margin-top: 53px;
+}
+.events-slider .btn svg path {
+  stroke: rgb(0, 161, 154);
+}
+.events-slider .btn::before {
+  border-color: rgb(255, 255, 255);
+}
+.events-slider .btn:hover {
+  background-color: rgb(0, 161, 154);
+  color: rgb(255, 255, 255);
+}
+.events-slider .btn:hover svg path {
+  stroke: rgb(255, 255, 255);
+}
+.events-slider .btn:hover::before {
+  background-color: transparent;
+  border-color: rgb(0, 161, 154);
+}
+
+.events-slider__date {
+  color: rgb(255, 255, 255);
+  font-size: 32px;
+  font-weight: 350;
+  line-height: 90.8%;
+  letter-spacing: -2.56px;
+  display: block;
+}
+
+.events {
+  padding: 91px 0;
+}
+.events .text-section {
+  padding: 0;
+}
+
+.events-calendar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 90px;
+}
+.events-calendar .caption__desc {
+  text-transform: uppercase;
+  line-height: 48px;
+}
+
+.events-calendar__leftSide {
+  background-color: rgb(255, 255, 255);
+  -webkit-border-radius: 27px;
+  -moz-border-radius: 27px;
+  -ms-border-radius: 27px;
+  border-radius: 27px;
+  padding: 57px 60px;
+  width: 440px;
+}
+
+.events-age {
+  color: #2e2e2e;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 54px;
+  letter-spacing: -6.4px;
+  text-transform: uppercase;
+}
+
+.events-mon {
+  color: #2e2e2e;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 26px;
+}
+.events-mon li {
+  cursor: pointer;
+}
+.events-mon li.active {
+  color: rgb(0, 161, 154);
+  font-weight: 700;
+}
+.events-mon li:hover {
+  color: rgb(0, 161, 154);
+}
+.events-mon li + li {
+  margin-top: 16px;
+}
+.events-mon a {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.events-calendar__rightSide {
+  width: 100%;
+  max-width: 930px;
+}
+
+.events-list {
+  margin-top: 30px;
+}
+
+.events-item {
+  padding: 50px;
+  background-color: #fbf5f1;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 40px 0px rgba(226, 216, 208, 0.7);
+  -moz-box-shadow: 0px 0px 40px 0px rgba(226, 216, 208, 0.7);
+  box-shadow: 0px 0px 40px 0px rgba(226, 216, 208, 0.7);
+}
+.events-item + .events-item {
+  margin-top: 20px;
+}
+.events-item:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+.events-item__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: solid 1px rgba(182, 170, 155, 0.5);
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+.events-item__date {
+  color: #00a19a;
+  text-align: right;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 90.8%;
+  letter-spacing: -1.92px;
+}
+.events-item__date .events-item__time {
+  color: rgb(46, 46, 46);
+}
+
+.events-item__controls {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 3;
+}
+
+.events-item__info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: #2e2e2e;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -1.8px;
+  text-transform: uppercase;
+  gap: 60px;
+}
+.events-item__info li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.calendarWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #ebe4dd;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
+  padding: 60px;
+}
+.calendarWrapper .calendarNext, .calendarWrapper .calendarPrev {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(255, 255, 255);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calendarWrapper .calendarNext path, .calendarWrapper .calendarPrev path {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.calendarWrapper .calendarNext:hover, .calendarWrapper .calendarPrev:hover {
+  background-color: rgb(0, 161, 154);
+}
+.calendarWrapper .calendarNext:hover svg path, .calendarWrapper .calendarPrev:hover svg path {
+  stroke: rgb(255, 255, 255);
+}
+.calendarWrapper .calendarTitle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: #2e2e2e;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  height: 50px;
+  -webkit-border-radius: 10px 10px 0px 0px;
+  -moz-border-radius: 10px 10px 0px 0px;
+  -ms-border-radius: 10px 10px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
+}
+.calendarWrapper .calendarTitle .month {
+  text-transform: uppercase;
+}
+
+.calendar {
+  width: 100%;
+  border-collapse: collapse;
+  border: 0;
+}
+.calendar .thead {
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px #b6aa9b;
+  gap: 10px;
+}
+.calendar .thead .td {
+  height: 62px;
+  font-size: 14px;
+}
+.calendar .tbody {
+  font-weight: 750;
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: 0.05em;
+  color: rgb(0, 0, 0);
+  padding-top: 10px;
+}
+.calendar .td {
+  cursor: pointer;
+  text-align: center;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  width: calc(14.2857142857% - 10px);
+  height: 72px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  border: solid 1px transparent;
+  color: #2e2e2e;
+  text-align: right;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 10px;
+  position: relative;
+}
+.calendar .td::before {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  left: 10px;
+  top: 10px;
+  width: 15px;
+  height: 14px;
+}
+.calendar .td.event {
+  background-color: rgb(0, 161, 154);
+  color: rgb(255, 255, 255);
+}
+.calendar .td.past {
+  border-color: #aa9f8e;
+}
+.calendar .td.past::before {
+  background-image: url("../img/star-gray.svg");
+}
+.calendar .td.past:hover {
+  border-color: #aa9f8e !important;
+  background-color: #aa9f8e;
+  color: rgb(255, 255, 255);
+}
+.calendar .td.past:hover::before {
+  opacity: 0;
+}
+.calendar .td.coming {
+  border-color: rgb(0, 161, 154);
+}
+.calendar .td.coming::before {
+  background-image: url("../img/star-green.svg");
+}
+.calendar .td.coming:hover {
+  border-color: rgb(0, 161, 154);
+  background-color: rgb(0, 161, 154);
+  color: rgb(255, 255, 255);
+}
+.calendar .td.coming:hover::before {
+  background-image: url("../img/star-white.svg");
+}
+.calendar .tr {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.calendar .tbody .td > .td, .calendar .tbody .td.td-empty, .calendar .tbody .td:empty {
+  border-color: transparent !important;
+  pointer-events: none !important;
+}
+.calendar .tbody .td:hover {
+  border-color: rgb(0, 161, 154);
+}
+.calendar .calendarHead {
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: 0.05em;
+  color: #747d88;
+}
+.calendar .today {
+  border-color: #2e2e2e;
+}
+
+.calendarTitle__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  gap: 5px;
+}
+
+.events--all__age {
+  color: rgb(0, 161, 154);
+}
+
+.events-all .caption {
+  font-size: 64px;
+}
+.events-all__inner {
+  border-top: solid 1px #b6aa9b;
+  padding-top: 87px;
+}
+
+.events-mons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+.events-mons__item {
+  width: 100%;
+  height: 240px;
+}
+.events-mons__item .calendarWrapper {
+  padding: 8px 15px;
+  background-color: transparent;
+  border: 1px dashed rgba(170, 159, 142, 0.8);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  height: 100%;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.events-mons__item .calendarWrapper .calendarTitle {
+  height: 30px;
+}
+.events-mons__item .calendar {
+  padding: 0;
+}
+.events-mons__item .calendar .thead .td {
+  font-size: 8px;
+}
+.events-mons__item .calendar .tbody {
+  gap: 6px 0;
+  display: flex;
+  flex-direction: column;
+}
+.events-mons__item .calendar .tr {
+  gap: 0;
+}
+.events-mons__item .calendar .td {
+  width: 14.2857142857%;
+  font-size: 14px;
+  line-height: 11px;
+  height: 21px;
+  padding: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+}
+.events-mons__item .calendar .td::before {
+  display: none;
+}
+.events-mons__item .calendarTitle__text {
+  margin: 0;
+  letter-spacing: -2.4px;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -324,6 +324,23 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".events-slider").length > 0) {
+    const swiper = new Swiper(".events-slider", {
+      slidesPerView: 1,
+      autoHeight: true,
+      effect: "fade",
+      fadeEffect: { crossFade: true },
+      navigation: {
+        nextEl: ".events-slider__wrap .swiper-button-next",
+        prevEl: ".events-slider__wrap .swiper-button-prev",
+      },
+      pagination: {
+        el: ".events-slider .swiper-pagination",
+        type: "progressbar",
+      },
+    });
+  }
+
   if ($(".slider-simple").length > 0) {
     const swiper = new Swiper(".slider-simple", {
       slidesPerView: 1,
@@ -579,6 +596,204 @@ $(document).ready(function () {
     });
 
     isVisibleMapBlock();
+  }
+
+  if ($("#calendar").length > 0) {
+    let current = 28;
+    let old = 27;
+
+    let months = [
+      "Январь",
+      "Февраль",
+      "Март",
+      "Апрель",
+      "Май",
+      "Июнь",
+      "Июль",
+      "Август",
+      "Сентябрь",
+      "Октябрь",
+      "Ноябрь",
+      "Декабрь",
+    ];
+
+    function Calendar(id, year, month) {
+      let Dlast = new Date(year, month + 1, 0).getDate(),
+        D = new Date(year, month, Dlast),
+        DNlast = new Date(D.getFullYear(), D.getMonth(), Dlast).getDay(),
+        DNfirst = new Date(D.getFullYear(), D.getMonth(), 1).getDay(),
+        calendar = "<div class='tr'>";
+
+      if (DNfirst != 0) {
+        for (let i = 1; i < DNfirst; i++) calendar += "<div class='td'></div>";
+      } else {
+        for (let i = 0; i < 6; i++) calendar += "<div class='td'></div>";
+      }
+
+      for (let i = 1; i <= Dlast; i++) {
+        if (
+          i == new Date().getDate() &&
+          D.getFullYear() == new Date().getFullYear() &&
+          D.getMonth() == new Date().getMonth()
+        ) {
+          calendar += "<div class='td today'>" + i + "</div>";
+        } else {
+          let custom = "";
+          switch (i) {
+            case current:
+              custom = "coming";
+              break;
+
+            case old:
+              custom = "past";
+              break;
+
+            default:
+              custom = "";
+              break;
+          }
+
+          calendar += `<div class='td ${custom}'>${i}</div>`;
+        }
+        if (new Date(D.getFullYear(), D.getMonth(), i).getDay() == 0) {
+          calendar += "</div><div class='tr'>";
+        }
+      }
+
+      for (var i = DNlast; i < 7; i++)
+        calendar += "<div class='td td-empty'>&nbsp;";
+
+      document.querySelector("#" + id + " .tbody").innerHTML =
+        calendar + "</div>";
+
+      document.querySelector(".events .calendarTitle .month").innerHTML =
+        months[D.getMonth()];
+
+      document.querySelector(".events .calendarTitle .year").innerHTML =
+        D.getFullYear();
+
+      document.querySelector(".events .calendarTitle .month").dataset.month =
+        D.getMonth();
+
+      document.querySelector(".events .calendarTitle .year").dataset.year =
+        D.getFullYear();
+
+      // переключение месяцев
+      if ($(".listMount").length > 0) {
+        $(".listMount li").eq(D.getMonth()).addClass("active");
+        $(".listMount li").click(function () {
+          $(".listMount li").removeClass("active");
+          $(this).addClass("active");
+          let current = $(this).index();
+          Calendar(
+            "calendar",
+            document.querySelector(".events .calendarTitle .year").dataset.year,
+            current
+          );
+        });
+      }
+    }
+
+    Calendar("calendar", new Date().getFullYear(), new Date().getMonth());
+
+    // переключатель минус месяц
+    document.querySelector(".events .calendarPrev").onclick = function () {
+      $(".listMount li").removeClass("active");
+      Calendar(
+        "calendar",
+        document.querySelector(".events .calendarTitle .year").dataset.year,
+        parseFloat(
+          document.querySelector(".events .calendarTitle .month").dataset.month
+        ) - 1
+      );
+    };
+
+    // переключатель плюс месяц
+    document.querySelector(".events .calendarNext").onclick = function () {
+      $(".listMount li").removeClass("active");
+      Calendar(
+        "calendar",
+        document.querySelector(".events .calendarTitle .year").dataset.year,
+        parseFloat(
+          document.querySelector(".events .calendarTitle .month").dataset.month
+        ) + 1
+      );
+    };
+  }
+
+  if ($(".events-all").length > 0) {
+    let eventDateArray = [12, 24];
+
+    let months = [
+      "Январь",
+      "Февраль",
+      "Март",
+      "Апрель",
+      "Май",
+      "Июнь",
+      "Июль",
+      "Август",
+      "Сентябрь",
+      "Октябрь",
+      "Ноябрь",
+      "Декабрь",
+    ];
+
+    $(".events-mons__item").map(function (index, event) {
+      let calendarID = `calendar${index}`;
+
+      $(this).find(".calendar").attr("id", calendarID);
+      $(this).find(".calendarTitle .month").text(months[index]);
+
+      Calendar(calendarID, new Date().getFullYear(), index);
+    });
+
+    function Calendar(id, year, month) {
+      let Dlast = new Date(year, month + 1, 0).getDate(),
+        D = new Date(year, month, Dlast),
+        DNlast = new Date(D.getFullYear(), D.getMonth(), Dlast).getDay(),
+        DNfirst = new Date(D.getFullYear(), D.getMonth(), 1).getDay(),
+        calendar = "<div class='tr'>";
+
+      if (DNfirst != 0) {
+        for (let i = 1; i < DNfirst; i++) calendar += "<div class='td'></div>";
+      } else {
+        for (let i = 0; i < 6; i++) calendar += "<div class='td'></div>";
+      }
+
+      for (let i = 1; i <= Dlast; i++) {
+        let custom = "";
+
+        if (eventDateArray.includes(i)) {
+          custom = "event";
+        }
+
+        // switch (i) {
+        //   case current:
+        //     custom = "coming";
+        //     break;
+
+        //   case old:
+        //     custom = "past";
+        //     break;
+
+        //   default:
+        //     custom = "";
+        //     break;
+        // }
+
+        calendar += `<div class='td ${custom}'>${i}</div>`;
+        if (new Date(D.getFullYear(), D.getMonth(), i).getDay() == 0) {
+          calendar += "</div><div class='tr'>";
+        }
+      }
+
+      for (var i = DNlast; i < 7; i++)
+        calendar += "<div class='td td-empty'>&nbsp;";
+
+      document.querySelector("#" + id + " .tbody").innerHTML =
+        calendar + "</div>";
+    }
   }
 
   if ($("#lottie-1").length > 0) {
