@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, user-scalable=no, viewport-fit=cover" />
-  <title>Избранное</title>
+  <title>UI-kit</title>
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -17,6 +17,29 @@
   <link rel="stylesheet" type="text/css" href="css/fancybox.css" />
   <link rel="stylesheet" type="text/css" href="css/aos.css" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+  <style>
+    .test {
+      padding: 30px 0 100px;
+    }
+
+    .test a:hover {
+      text-decoration-color: transparent;
+    }
+
+    .test a {
+      display: table;
+      text-decoration: underline;
+    }
+
+    small {
+      color: #00A19A;
+    }
+
+    .test a+a {
+      margin-top: 10px;
+    }
+  </style>
 
 </head>
 
@@ -590,219 +613,35 @@
         <div class="container">
           <ul class="breadcrumbs__list">
             <li><a href="#">Главная</a></li>
-            <li><a href="#">Каталог</a></li>
-            <li><span>Избранное</span></li>
+            <li><a href="#">О нас</a></li>
+            <li><span>UI-kit</span></li>
           </ul>
         </div>
       </div>
-
-      <div class="search-section">
+      <div class="test">
         <div class="container">
-          <h2 class="caption caption--big">Избранное</h2>
+          <a href="#" data-modal="modal-call">Заказать звонок</a>
 
-          <a href="#" class="btn-back">
+          <a href="#" data-modal="modal-thank">Спасибо! (Ваша заявка отправлена)</a>
 
-            <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path opacity="0.6" d="M7 11L2 6L7 1" stroke="#AA9F8E" stroke-width="2" />
-            </svg>
+          <a href="#" data-modal="modal-thank2">Спасибо! (Ваша заявка отправлена) <small>В ближайшее время с вами
+              свяжется менеджер для уточнения адреса доставки образца</small></a>
 
-            Назад в каталог
-          </a>
+          <a href="#" data-modal="modal-thank3">Спасибо! (Ваша заявка отправлена) <small>Ожидайте, пожалуйста. В
+              ближайшее время с вами свяжется наш специалист для уточнения информации</small></a>
 
-          <div class="search-result">
-            <div class="search-result__title">
-              <span class="search-result__text captrion caption--small">8 товаров в избранном</span>
+          <a href="#" data-modal="modal-thank4">Спасибо! (Ваша заявка отправлена) <small>Ожидайте, пожалуйста. В
+              ближайшее время с вами свяжется наш специалист</small></a>
 
-              <button class="btn-clear">
-                Удалить все товары
+          <a href="#" data-modal="modal-thank-reviews">Спасибо! (Ваш отзыв отправлен)</a>
 
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 9L5 5M5 5L1 9M5 5L1 1M5 5L9 1" stroke-width="2"></path>
-                </svg>
-              </button>
-            </div>
-
-
-
-            <div class="product-list">
-              <div class="product-item">
-                <button class="btn-favorite favorite">
-                  <svg width="26" height="23" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M11.976 21.7172L11.9757 21.7169C10.9539 20.8234 9.96903 19.984 9.10221 19.2453C9.10158 19.2448 9.10094 19.2443 9.1003 19.2437L9.09971 19.2432L9.09973 19.2431L9.09589 19.2399C6.54126 17.0629 4.38325 15.2216 2.88882 13.4185C1.23557 11.4235 0.5 9.57826 0.5 7.58688C0.5 5.62601 1.17188 3.83688 2.3703 2.53693C3.58126 1.22352 5.24054 0.5 7.05239 0.5C8.39665 0.5 9.62407 0.922557 10.713 1.76474C11.2651 2.19186 11.7697 2.71775 12.2173 3.33672L12.6224 3.89688L13.0276 3.3368C13.4755 2.7177 13.9799 2.19182 14.5322 1.76476L14.5322 1.76474C15.6211 0.922557 16.8486 0.5 18.1928 0.5C20.0045 0.5 21.6639 1.22352 22.8749 2.53693C24.0733 3.83685 24.745 5.62599 24.745 7.58688C24.745 9.57829 24.0096 11.4235 22.3564 13.4183L22.3564 13.4183C20.8619 15.2216 18.7041 17.0627 16.1499 19.2395C15.281 19.9797 14.294 20.821 13.2691 21.7173L13.269 21.7174C13.0904 21.8736 12.8608 21.96 12.6225 21.96C12.3841 21.96 12.1548 21.8737 11.976 21.7172Z"
-                      stroke="#AA9F8E" />
-                  </svg>
-                </button>
-                <div class="product-item__picture">
-                  <a href="#"></a>
-                  <img src="img/catalog-item1.png" alt="">
-                </div>
-                <a href="#" class="product-item__name">Контейнер на вынос OSQ TABOX PRO 1555</a>
-                <a href="#" class="btn btn--border-green">Подробнее <svg width="17" height="16" viewBox="0 0 17 16"
-                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3.83333 1H15.5M15.5 1V12.6667M15.5 1L1.5 15" stroke-width="1.2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
-                </a>
-
-              </div>
-              <div class="product-item">
-                <button class="btn-favorite favorite">
-                  <svg width="26" height="23" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M11.976 21.7172L11.9757 21.7169C10.9539 20.8234 9.96903 19.984 9.10221 19.2453C9.10158 19.2448 9.10094 19.2443 9.1003 19.2437L9.09971 19.2432L9.09973 19.2431L9.09589 19.2399C6.54126 17.0629 4.38325 15.2216 2.88882 13.4185C1.23557 11.4235 0.5 9.57826 0.5 7.58688C0.5 5.62601 1.17188 3.83688 2.3703 2.53693C3.58126 1.22352 5.24054 0.5 7.05239 0.5C8.39665 0.5 9.62407 0.922557 10.713 1.76474C11.2651 2.19186 11.7697 2.71775 12.2173 3.33672L12.6224 3.89688L13.0276 3.3368C13.4755 2.7177 13.9799 2.19182 14.5322 1.76476L14.5322 1.76474C15.6211 0.922557 16.8486 0.5 18.1928 0.5C20.0045 0.5 21.6639 1.22352 22.8749 2.53693C24.0733 3.83685 24.745 5.62599 24.745 7.58688C24.745 9.57829 24.0096 11.4235 22.3564 13.4183L22.3564 13.4183C20.8619 15.2216 18.7041 17.0627 16.1499 19.2395C15.281 19.9797 14.294 20.821 13.2691 21.7173L13.269 21.7174C13.0904 21.8736 12.8608 21.96 12.6225 21.96C12.3841 21.96 12.1548 21.8737 11.976 21.7172Z"
-                      stroke="#AA9F8E" />
-                  </svg>
-                </button>
-                <div class="product-item__picture">
-                  <a href="#"></a>
-                  <img src="img/catalog-item2.png" alt="">
-                </div>
-                <a href="#" class="product-item__name">Контейнер на вынос OSQ TABOX PRO 1555</a>
-                <a href="#" class="btn btn--border-green">Подробнее <svg width="17" height="16" viewBox="0 0 17 16"
-                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3.83333 1H15.5M15.5 1V12.6667M15.5 1L1.5 15" stroke-width="1.2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
-                </a>
-
-              </div>
-              <div class="product-item">
-                <button class="btn-favorite favorite">
-                  <svg width="26" height="23" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M11.976 21.7172L11.9757 21.7169C10.9539 20.8234 9.96903 19.984 9.10221 19.2453C9.10158 19.2448 9.10094 19.2443 9.1003 19.2437L9.09971 19.2432L9.09973 19.2431L9.09589 19.2399C6.54126 17.0629 4.38325 15.2216 2.88882 13.4185C1.23557 11.4235 0.5 9.57826 0.5 7.58688C0.5 5.62601 1.17188 3.83688 2.3703 2.53693C3.58126 1.22352 5.24054 0.5 7.05239 0.5C8.39665 0.5 9.62407 0.922557 10.713 1.76474C11.2651 2.19186 11.7697 2.71775 12.2173 3.33672L12.6224 3.89688L13.0276 3.3368C13.4755 2.7177 13.9799 2.19182 14.5322 1.76476L14.5322 1.76474C15.6211 0.922557 16.8486 0.5 18.1928 0.5C20.0045 0.5 21.6639 1.22352 22.8749 2.53693C24.0733 3.83685 24.745 5.62599 24.745 7.58688C24.745 9.57829 24.0096 11.4235 22.3564 13.4183L22.3564 13.4183C20.8619 15.2216 18.7041 17.0627 16.1499 19.2395C15.281 19.9797 14.294 20.821 13.2691 21.7173L13.269 21.7174C13.0904 21.8736 12.8608 21.96 12.6225 21.96C12.3841 21.96 12.1548 21.8737 11.976 21.7172Z"
-                      stroke="#AA9F8E" />
-                  </svg>
-                </button>
-                <div class="product-item__picture">
-                  <a href="#"></a>
-                  <img src="img/catalog-item3.png" alt="">
-                </div>
-                <a href="#" class="product-item__name">Контейнер на вынос OSQ TABOX PRO 1555</a>
-                <a href="#" class="btn btn--border-green">Подробнее <svg width="17" height="16" viewBox="0 0 17 16"
-                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3.83333 1H15.5M15.5 1V12.6667M15.5 1L1.5 15" stroke-width="1.2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
-                </a>
-
-              </div>
-              <div class="product-item">
-                <button class="btn-favorite favorite">
-                  <svg width="26" height="23" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M11.976 21.7172L11.9757 21.7169C10.9539 20.8234 9.96903 19.984 9.10221 19.2453C9.10158 19.2448 9.10094 19.2443 9.1003 19.2437L9.09971 19.2432L9.09973 19.2431L9.09589 19.2399C6.54126 17.0629 4.38325 15.2216 2.88882 13.4185C1.23557 11.4235 0.5 9.57826 0.5 7.58688C0.5 5.62601 1.17188 3.83688 2.3703 2.53693C3.58126 1.22352 5.24054 0.5 7.05239 0.5C8.39665 0.5 9.62407 0.922557 10.713 1.76474C11.2651 2.19186 11.7697 2.71775 12.2173 3.33672L12.6224 3.89688L13.0276 3.3368C13.4755 2.7177 13.9799 2.19182 14.5322 1.76476L14.5322 1.76474C15.6211 0.922557 16.8486 0.5 18.1928 0.5C20.0045 0.5 21.6639 1.22352 22.8749 2.53693C24.0733 3.83685 24.745 5.62599 24.745 7.58688C24.745 9.57829 24.0096 11.4235 22.3564 13.4183L22.3564 13.4183C20.8619 15.2216 18.7041 17.0627 16.1499 19.2395C15.281 19.9797 14.294 20.821 13.2691 21.7173L13.269 21.7174C13.0904 21.8736 12.8608 21.96 12.6225 21.96C12.3841 21.96 12.1548 21.8737 11.976 21.7172Z"
-                      stroke="#AA9F8E" />
-                  </svg>
-                </button>
-                <div class="product-item__picture">
-                  <a href="#"></a>
-                  <img src="img/catalog-item2.png" alt="">
-                </div>
-                <a href="#" class="product-item__name">Контейнер на вынос OSQ TABOX PRO 1555</a>
-                <a href="#" class="btn btn--border-green">Подробнее <svg width="17" height="16" viewBox="0 0 17 16"
-                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3.83333 1H15.5M15.5 1V12.6667M15.5 1L1.5 15" stroke-width="1.2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
-                </a>
-
-              </div>
-              <div class="product-item">
-                <button class="btn-favorite favorite">
-                  <svg width="26" height="23" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M11.976 21.7172L11.9757 21.7169C10.9539 20.8234 9.96903 19.984 9.10221 19.2453C9.10158 19.2448 9.10094 19.2443 9.1003 19.2437L9.09971 19.2432L9.09973 19.2431L9.09589 19.2399C6.54126 17.0629 4.38325 15.2216 2.88882 13.4185C1.23557 11.4235 0.5 9.57826 0.5 7.58688C0.5 5.62601 1.17188 3.83688 2.3703 2.53693C3.58126 1.22352 5.24054 0.5 7.05239 0.5C8.39665 0.5 9.62407 0.922557 10.713 1.76474C11.2651 2.19186 11.7697 2.71775 12.2173 3.33672L12.6224 3.89688L13.0276 3.3368C13.4755 2.7177 13.9799 2.19182 14.5322 1.76476L14.5322 1.76474C15.6211 0.922557 16.8486 0.5 18.1928 0.5C20.0045 0.5 21.6639 1.22352 22.8749 2.53693C24.0733 3.83685 24.745 5.62599 24.745 7.58688C24.745 9.57829 24.0096 11.4235 22.3564 13.4183L22.3564 13.4183C20.8619 15.2216 18.7041 17.0627 16.1499 19.2395C15.281 19.9797 14.294 20.821 13.2691 21.7173L13.269 21.7174C13.0904 21.8736 12.8608 21.96 12.6225 21.96C12.3841 21.96 12.1548 21.8737 11.976 21.7172Z"
-                      stroke="#AA9F8E" />
-                  </svg>
-                </button>
-                <div class="product-item__picture">
-                  <a href="#"></a>
-                  <img src="img/catalog-item3.png" alt="">
-                </div>
-                <a href="#" class="product-item__name">Контейнер на вынос OSQ TABOX PRO 1555</a>
-                <a href="#" class="btn btn--border-green">Подробнее <svg width="17" height="16" viewBox="0 0 17 16"
-                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3.83333 1H15.5M15.5 1V12.6667M15.5 1L1.5 15" stroke-width="1.2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
-                </a>
-
-              </div>
-              <div class="product-item">
-                <button class="btn-favorite favorite">
-                  <svg width="26" height="23" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M11.976 21.7172L11.9757 21.7169C10.9539 20.8234 9.96903 19.984 9.10221 19.2453C9.10158 19.2448 9.10094 19.2443 9.1003 19.2437L9.09971 19.2432L9.09973 19.2431L9.09589 19.2399C6.54126 17.0629 4.38325 15.2216 2.88882 13.4185C1.23557 11.4235 0.5 9.57826 0.5 7.58688C0.5 5.62601 1.17188 3.83688 2.3703 2.53693C3.58126 1.22352 5.24054 0.5 7.05239 0.5C8.39665 0.5 9.62407 0.922557 10.713 1.76474C11.2651 2.19186 11.7697 2.71775 12.2173 3.33672L12.6224 3.89688L13.0276 3.3368C13.4755 2.7177 13.9799 2.19182 14.5322 1.76476L14.5322 1.76474C15.6211 0.922557 16.8486 0.5 18.1928 0.5C20.0045 0.5 21.6639 1.22352 22.8749 2.53693C24.0733 3.83685 24.745 5.62599 24.745 7.58688C24.745 9.57829 24.0096 11.4235 22.3564 13.4183L22.3564 13.4183C20.8619 15.2216 18.7041 17.0627 16.1499 19.2395C15.281 19.9797 14.294 20.821 13.2691 21.7173L13.269 21.7174C13.0904 21.8736 12.8608 21.96 12.6225 21.96C12.3841 21.96 12.1548 21.8737 11.976 21.7172Z"
-                      stroke="#AA9F8E" />
-                  </svg>
-                </button>
-                <div class="product-item__picture">
-                  <a href="#"></a>
-                  <img src="img/catalog-item2.png" alt="">
-                </div>
-                <a href="#" class="product-item__name">Контейнер на вынос OSQ TABOX PRO 1555</a>
-                <a href="#" class="btn btn--border-green">Подробнее <svg width="17" height="16" viewBox="0 0 17 16"
-                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3.83333 1H15.5M15.5 1V12.6667M15.5 1L1.5 15" stroke-width="1.2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
-                </a>
-
-              </div>
-              <div class="product-item">
-                <button class="btn-favorite favorite">
-                  <svg width="26" height="23" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M11.976 21.7172L11.9757 21.7169C10.9539 20.8234 9.96903 19.984 9.10221 19.2453C9.10158 19.2448 9.10094 19.2443 9.1003 19.2437L9.09971 19.2432L9.09973 19.2431L9.09589 19.2399C6.54126 17.0629 4.38325 15.2216 2.88882 13.4185C1.23557 11.4235 0.5 9.57826 0.5 7.58688C0.5 5.62601 1.17188 3.83688 2.3703 2.53693C3.58126 1.22352 5.24054 0.5 7.05239 0.5C8.39665 0.5 9.62407 0.922557 10.713 1.76474C11.2651 2.19186 11.7697 2.71775 12.2173 3.33672L12.6224 3.89688L13.0276 3.3368C13.4755 2.7177 13.9799 2.19182 14.5322 1.76476L14.5322 1.76474C15.6211 0.922557 16.8486 0.5 18.1928 0.5C20.0045 0.5 21.6639 1.22352 22.8749 2.53693C24.0733 3.83685 24.745 5.62599 24.745 7.58688C24.745 9.57829 24.0096 11.4235 22.3564 13.4183L22.3564 13.4183C20.8619 15.2216 18.7041 17.0627 16.1499 19.2395C15.281 19.9797 14.294 20.821 13.2691 21.7173L13.269 21.7174C13.0904 21.8736 12.8608 21.96 12.6225 21.96C12.3841 21.96 12.1548 21.8737 11.976 21.7172Z"
-                      stroke="#AA9F8E" />
-                  </svg>
-                </button>
-                <div class="product-item__picture">
-                  <a href="#"></a>
-                  <img src="img/catalog-item3.png" alt="">
-                </div>
-                <a href="#" class="product-item__name">Контейнер на вынос OSQ TABOX PRO 1555</a>
-                <a href="#" class="btn btn--border-green">Подробнее <svg width="17" height="16" viewBox="0 0 17 16"
-                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3.83333 1H15.5M15.5 1V12.6667M15.5 1L1.5 15" stroke-width="1.2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
-                </a>
-
-              </div>
-              <div class="product-item">
-                <button class="btn-favorite favorite">
-                  <svg width="26" height="23" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M11.976 21.7172L11.9757 21.7169C10.9539 20.8234 9.96903 19.984 9.10221 19.2453C9.10158 19.2448 9.10094 19.2443 9.1003 19.2437L9.09971 19.2432L9.09973 19.2431L9.09589 19.2399C6.54126 17.0629 4.38325 15.2216 2.88882 13.4185C1.23557 11.4235 0.5 9.57826 0.5 7.58688C0.5 5.62601 1.17188 3.83688 2.3703 2.53693C3.58126 1.22352 5.24054 0.5 7.05239 0.5C8.39665 0.5 9.62407 0.922557 10.713 1.76474C11.2651 2.19186 11.7697 2.71775 12.2173 3.33672L12.6224 3.89688L13.0276 3.3368C13.4755 2.7177 13.9799 2.19182 14.5322 1.76476L14.5322 1.76474C15.6211 0.922557 16.8486 0.5 18.1928 0.5C20.0045 0.5 21.6639 1.22352 22.8749 2.53693C24.0733 3.83685 24.745 5.62599 24.745 7.58688C24.745 9.57829 24.0096 11.4235 22.3564 13.4183L22.3564 13.4183C20.8619 15.2216 18.7041 17.0627 16.1499 19.2395C15.281 19.9797 14.294 20.821 13.2691 21.7173L13.269 21.7174C13.0904 21.8736 12.8608 21.96 12.6225 21.96C12.3841 21.96 12.1548 21.8737 11.976 21.7172Z"
-                      stroke="#AA9F8E" />
-                  </svg>
-                </button>
-                <div class="product-item__picture">
-                  <a href="#"></a>
-                  <img src="img/catalog-item3.png" alt="">
-                </div>
-                <a href="#" class="product-item__name">Контейнер на вынос OSQ TABOX PRO 1555</a>
-                <a href="#" class="btn btn--border-green">Подробнее <svg width="17" height="16" viewBox="0 0 17 16"
-                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3.83333 1H15.5M15.5 1V12.6667M15.5 1L1.5 15" stroke-width="1.2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
-                </a>
-
-              </div>
-            </div>
-
-            <div class="search-result__controls">
-              <a href="#" class="btn">Заказать образцы</a>
-              <a href="#" class="btn">Получить КП</a>
-            </div>
-          </div>
+          <a href="#" data-modal="modal-review">Оставить отзыв</a>
+          <a href="#" data-modal="modal-order">Заказать образцы</a>
+          <a href="#" data-modal="modal-order-v2">Заказать образцы 2</a>
+          <a href="#" data-modal="modal-offer">Получить коммерческое предложение</a>
+          <a href="#" data-modal="modal-consultation">Заказать Консультацию</a>
         </div>
       </div>
-
 
     </main>
     <footer class="footer">
@@ -891,16 +730,435 @@
         </div>
       </div>
     </footer>
-    <a href="#" class="btn btn--border-green btn-favorite-invis">
-
-      <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M10.4766 0C11.8026 0 13.0744 0.526784 14.0121 1.46447C14.9498 2.40215 15.4766 3.67392 15.4766 5C15.4766 6.32608 14.9498 7.59785 14.0121 8.53553C13.0744 9.47322 11.8026 10 10.4766 10C9.15048 10 7.87871 9.47322 6.94103 8.53553C6.00335 7.59785 5.47656 6.32608 5.47656 5C5.47656 3.67392 6.00335 2.40215 6.94103 1.46447C7.87871 0.526784 9.15048 0 10.4766 0ZM10.4766 20C10.4766 20 20.4766 20 20.4766 17.5C20.4766 14.5 15.6016 11.25 10.4766 11.25C5.35156 11.25 0.476562 14.5 0.476562 17.5C0.476562 20 10.4766 20 10.4766 20Z"
-          fill="#00A19A" />
-      </svg>
-
-      Избранные товары</a>
   </div>
+
+  <div class="micromodal-slide modal" id="modal-call" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true">
+        <div class="modal__inner">
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close>
+
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M31 31L16 16M16 16L1 31M16 16L1 1M16 16L31 1" stroke="#AA9F8E" stroke-width="2" />
+            </svg>
+
+
+          </button>
+          <div class="modal__content" autocomplete="off">
+            <form class="modal__form">
+              <h2 class="caption">Заказать звонок</h2>
+              <div class="input-list">
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Ваше имя*">
+                </div>
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Ваш телефон*" class="phone-input">
+                </div>
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Город*" class="error" required>
+                </div>
+                <div class="input-wrapper">
+                  <textarea placeholder="Комментарий"></textarea>
+                </div>
+              </div>
+              <div class="modal__controls">
+                <button type="submit" class="btn">Жду звонка</button>
+              </div>
+              <div class="check-block">
+                <input type="checkbox" id="moda1">
+                <label for="moda1">Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных
+                  данных, в
+                  соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и
+                  для целей, определенных в Согласии на обработку персональных данных.</label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="micromodal-slide modal" id="modal-thank" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true">
+        <div class="modal__inner">
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close>
+
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M31 31L16 16M16 16L1 31M16 16L1 1M16 16L31 1" stroke="#AA9F8E" stroke-width="2" />
+            </svg>
+
+
+          </button>
+          <div class="modal__content" autocomplete="off">
+            <div class="modal-thank">
+              <h2 class="caption">Спасибо!</h2>
+              <span class="caption-desc">Ваша заявка отправлена</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="micromodal-slide modal" id="modal-thank2" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true">
+        <div class="modal__inner">
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close>
+
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M31 31L16 16M16 16L1 31M16 16L1 1M16 16L31 1" stroke="#AA9F8E" stroke-width="2" />
+            </svg>
+
+
+          </button>
+          <div class="modal__content" autocomplete="off">
+            <div class="modal-thank">
+              <h2 class="caption">Спасибо!</h2>
+              <span class="caption-desc">Ваша заявка отправлена</span>
+              <p>В ближайшее время с вами свяжется менеджер для уточнения адреса доставки образца</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="micromodal-slide modal" id="modal-thank3" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true">
+        <div class="modal__inner">
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close>
+
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M31 31L16 16M16 16L1 31M16 16L1 1M16 16L31 1" stroke="#AA9F8E" stroke-width="2" />
+            </svg>
+
+
+          </button>
+          <div class="modal__content" autocomplete="off">
+            <div class="modal-thank">
+              <h2 class="caption">Спасибо!</h2>
+              <span class="caption-desc">Ваша заявка отправлена</span>
+              <p>Ожидайте, пожалуйста. В ближайшее время с вами свяжется наш специалист для уточнения информации</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="micromodal-slide modal" id="modal-thank4" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true">
+        <div class="modal__inner">
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close>
+
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M31 31L16 16M16 16L1 31M16 16L1 1M16 16L31 1" stroke="#AA9F8E" stroke-width="2" />
+            </svg>
+
+
+          </button>
+          <div class="modal__content" autocomplete="off">
+            <div class="modal-thank">
+              <h2 class="caption">Спасибо!</h2>
+              <span class="caption-desc">Ваша заявка отправлена</span>
+              <p>Ожидайте, пожалуйста. В ближайшее время с вами свяжется наш специалист</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="micromodal-slide modal" id="modal-thank-reviews" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true">
+        <div class="modal__inner">
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close>
+
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M31 31L16 16M16 16L1 31M16 16L1 1M16 16L31 1" stroke="#AA9F8E" stroke-width="2" />
+            </svg>
+
+
+          </button>
+          <div class="modal__content" autocomplete="off">
+            <div class="modal-thank">
+              <h2 class="caption">Спасибо!</h2>
+              <span class="caption-desc">Ваш отзыв отправлен</span>
+              <p>После модерации, мы опубликуем его на сайте</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="micromodal-slide modal" id="modal-review" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true">
+        <div class="modal__inner">
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close>
+
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M31 31L16 16M16 16L1 31M16 16L1 1M16 16L31 1" stroke="#AA9F8E" stroke-width="2" />
+            </svg>
+
+
+          </button>
+          <div class="modal__content" autocomplete="off">
+            <form class="modal__form">
+              <h2 class="caption">Оставить отзыв</h2>
+              <div class="input-list">
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Ваше имя*">
+                </div>
+
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Ваш e-mail*">
+                </div>
+                <div class="input-wrapper">
+                  <textarea placeholder="Напишите ваш отзыв"></textarea>
+                </div>
+              </div>
+              <div class="modal__controls">
+                <button type="submit" class="btn">Отправить</button>
+              </div>
+              <div class="check-block">
+                <input type="checkbox" id="personal1">
+                <label for="personal1">Даю согласие на обработку персональных данных</label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="micromodal-slide modal" id="modal-order" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true">
+        <div class="modal__inner">
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close>
+
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M31 31L16 16M16 16L1 31M16 16L1 1M16 16L31 1" stroke="#AA9F8E" stroke-width="2" />
+            </svg>
+
+
+          </button>
+          <div class="modal__content" autocomplete="off">
+            <form class="modal__form">
+              <h2 class="caption">Заказать образцы</h2>
+              <div class="text-simple">
+                <p>Мы убеждены, что оценить наши продукты по достоинству можете только вы! Мы настоятельно рекомендуем
+                  заказать образцы и подобрать наиболее подходящую упаковку для вашего продукта.</p>
+                <p>Напишите нам, какую упаковку вы хотите протестировать на своей продукции, и мы ее вам отправим!</p>
+              </div>
+              <div class="input-list">
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Фамилия">
+                </div>
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Имя*">
+                </div>
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Отчество">
+                </div>
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Название компании">
+                </div>
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Телефон*" class="phone-input" id="phone-1">
+                </div>
+                <button class="btn-phone-add">+ добавить еще</button>
+                <div class="input-wrapper">
+                  <input type="text" placeholder="E-mail*">
+                </div>
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Федеральный округ*">
+                </div>
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Адрес">
+                </div>
+                <div class="input-wrapper">
+                  <textarea placeholder="Комментарий"></textarea>
+                </div>
+              </div>
+              <div class="modal__controls">
+                <button type="submit" class="btn">Отправить</button>
+              </div>
+              <div class="check-block">
+                <input type="checkbox" id="moda2">
+                <label for="moda2">Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных
+                  данных, в
+                  соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и
+                  для целей, определенных в Согласии на обработку персональных данных.</label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="micromodal-slide modal" id="modal-order-v2" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true">
+        <div class="modal__inner">
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close>
+
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M31 31L16 16M16 16L1 31M16 16L1 1M16 16L31 1" stroke="#AA9F8E" stroke-width="2" />
+            </svg>
+
+
+          </button>
+          <div class="modal__content" autocomplete="off">
+            <form class="modal__form">
+              <h2 class="caption">Заказать образцы</h2>
+              <div class="text-simple">
+                <p>Мы убеждены, что оценить наши продукты по достоинству можете только вы! Мы настоятельно рекомендуем
+                  заказать образцы и подобрать наиболее подходящую упаковку для вашего продукта.</p>
+                <p>Напишите нам, какую упаковку вы хотите протестировать на своей продукции, и мы ее вам отправим!</p>
+              </div>
+              <div class="input-list">
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Фамилия">
+                </div>
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Имя*">
+                </div>
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Отчество">
+                </div>
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Название компании">
+                </div>
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Телефон*" class="phone-input" id="phone-1">
+                  <button class="btn-phone-add">+ добавить еще</button>
+                </div>
+                <div class="input-wrapper">
+                  <input type="text" placeholder="E-mail*">
+                </div>
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Федеральный округ*">
+                </div>
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Адрес">
+                </div>
+                <div class="input-wrapper">
+                  <textarea placeholder="Комментарий"></textarea>
+                </div>
+              </div>
+              <div class="modal__controls">
+                <button type="submit" class="btn">Отправить</button>
+              </div>
+              <div class="check-block">
+                <input type="checkbox" id="moda3">
+                <label for="moda3">Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных
+                  данных, в
+                  соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и
+                  для целей, определенных в Согласии на обработку персональных данных.</label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="micromodal-slide modal" id="modal-offer" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true">
+        <div class="modal__inner">
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close>
+
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M31 31L16 16M16 16L1 31M16 16L1 1M16 16L31 1" stroke="#AA9F8E" stroke-width="2" />
+            </svg>
+
+
+          </button>
+          <div class="modal__content" autocomplete="off">
+            <form class="modal__form">
+              <h2 class="caption">Получить коммерческое предложение</h2>
+              <div class="input-list">
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Ваше имя*">
+                </div>
+
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Ваш телефон" class="phone-input">
+                </div>
+
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Ваш e-mail*">
+                </div>
+
+                <div class="input-wrapper">
+                  <textarea placeholder="Напишите ваш отзыв"></textarea>
+                </div>
+              </div>
+              <div class="modal__controls">
+                <button type="submit" class="btn">Отправить</button>
+              </div>
+              <div class="check-block">
+                <input type="checkbox" id="personal2">
+                <label for="personal2">Даю согласие на обработку персональных данных</label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="micromodal-slide modal" id="modal-consultation" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true">
+        <div class="modal__inner">
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close>
+
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M31 31L16 16M16 16L1 31M16 16L1 1M16 16L31 1" stroke="#AA9F8E" stroke-width="2" />
+            </svg>
+
+
+          </button>
+          <div class="modal__content" autocomplete="off">
+            <form class="modal__form">
+              <h2 class="caption">Заказать Консультацию</h2>
+              <div class="input-list">
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Ваше имя*">
+                </div>
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Ваш телефон*" class="phone-input">
+                </div>
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Ваш e-mail*">
+                </div>
+              </div>
+              <div class="modal__controls">
+                <button type="submit" class="btn">Отправить</button>
+              </div>
+              <div class="check-block">
+                <input type="checkbox" id="moda0">
+                <label for="moda0">Даю согласие на обработку персональных данных</label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
   <script src="js/jquery-3.6.4.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>

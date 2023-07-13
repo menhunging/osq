@@ -239,11 +239,15 @@ input {
         top: 50%;
         margin-top: -7px;
         left: 12px;
+        $trans: all 0s;
+        @include transition($trans);
       }
 
       @include after {
         background-color: $colorSite;
         @include border-radius(50%);
+        $trans: all 0s;
+        @include transition($trans);
         width: 8px;
         height: 8px;
         top: 50%;
@@ -322,19 +326,22 @@ input {
 .modal__close {
   @include transition(all 0.3s);
   position: absolute;
-  right: 29px;
-  top: 32px;
-  display: flex;
+  right: 61px;
+  top: 62px;
   z-index: 10;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
   color: #292929;
   align-items: center;
   gap: 11px;
 
   &:hover {
     opacity: 0.75;
+  }
+
+  svg {
+    pointer-events: none;
+    path {
+      stroke: #aa9f8e;
+    }
   }
 }
 
@@ -359,13 +366,16 @@ input {
 }
 
 .modal__inner {
-  background-color: #fbf9f8;
+  background-color: $colorWhite;
   margin: 0 auto;
   position: relative;
-  background-image: url("../img/logo-big.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  @include border-radius(27px);
+  @include box-shadow(0px 0px 40px 0px rgba(226, 216, 208, 0.7));
+  padding: 60px;
+  max-width: 570px;
 
   .caption {
     font-size: 60px;
@@ -377,6 +387,21 @@ input {
   .caption__desc {
     margin-top: 20px;
   }
+
+  .text-simple {
+    margin-top: 25px;
+    color: #2e2e2e;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+
+    p {
+      & + p {
+        margin-top: 10px;
+      }
+    }
+  }
 }
 
 #modal-result {
@@ -384,9 +409,120 @@ input {
     max-width: 650px;
     padding: 90px 70px;
   }
+}
 
-  .text-simple {
-    margin-top: 25px;
+#modal-review {
+  .modal__inner {
+    max-width: 690px;
+  }
+
+  .input-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .input-wrapper {
+      width: calc(50% - 5px);
+      margin-bottom: 10px;
+
+      & + .input-wrapper {
+        margin-top: 0;
+      }
+
+      &:nth-child(3) {
+        width: 100%;
+      }
+    }
+  }
+
+  .modal__controls {
+    margin-top: 20px;
+  }
+
+  .check-block,
+  .modal__controls {
+    max-width: 296px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+#modal-offer {
+  .modal__inner {
+    max-width: 810px;
+  }
+
+  .input-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .input-wrapper {
+      width: calc(calc(100% / 3) - 5px);
+      margin-bottom: 10px;
+
+      & + .input-wrapper {
+        margin-top: 0;
+      }
+
+      &:nth-child(4) {
+        width: 100%;
+      }
+
+      textarea {
+        height: 113px;
+      }
+    }
+  }
+
+  .modal__controls {
+    margin-top: 20px;
+  }
+
+  .check-block,
+  .modal__controls {
+    max-width: 296px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+#modal-order-v2 {
+  .modal__inner {
+    max-width: 930px;
+  }
+
+  .input-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .input-wrapper {
+      width: calc(50% - 5px);
+      margin-bottom: 10px;
+
+      &:last-child {
+        width: 100%;
+      }
+
+      & + .input-wrapper {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .modal__controls {
+    max-width: 395px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+#modal-consultation {
+  .check-block {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
   }
 }
 
@@ -550,6 +686,18 @@ div {
     line-height: 27px;
     color: #aa9f8e;
     @include border-radius(100px);
+    padding: 22px 30px 22px 30px;
+  }
+
+  textarea {
+    width: 100%;
+    height: 90px;
+    background-color: $colorWhite;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #aa9f8e;
+    @include border-radius(30px);
     padding: 22px 30px 22px 30px;
   }
 }
@@ -767,5 +915,21 @@ div {
         fill: #25d366;
       }
     }
+  }
+}
+
+.btn-phone-add {
+  position: relative;
+  left: 35px;
+  color: #aa9f8e;
+  font-size: 14px;
+  font-weight: 700;
+  @include text-decoration-hover(#aa9f8e);
+  margin-bottom: 10px;
+}
+
+.input-wrapper {
+  .btn-phone-add {
+    margin-bottom: 0;
   }
 }

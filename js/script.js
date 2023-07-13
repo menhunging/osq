@@ -548,7 +548,17 @@ $(document).ready(function () {
       } else {
         $(this).selectric({
           onOpen: function () {},
-          onChange: function (element) {},
+          onChange: function (element) {
+            if ($(element).attr("id") === "select-country") {
+              if ($(element).val() === "СНГ") {
+                $(".google-map").stop().slideDown();
+                $(".distr-section .contacts-map").stop().slideUp();
+              } else {
+                $(".google-map").stop().slideUp();
+                $(".distr-section .contacts-map").stop().slideDown();
+              }
+            }
+          },
           onClose: function () {},
         });
       }
@@ -566,7 +576,7 @@ $(document).ready(function () {
 
   if ($(".modal").length > 0) {
     MicroModal.init({
-      openTrigger: "data-custom-open",
+      openTrigger: "data-modal",
       disableScroll: true,
       awaitOpenAnimation: true,
       awaitCloseAnimation: true,
@@ -580,8 +590,37 @@ $(document).ready(function () {
       },
     });
 
-    $("a[data-custom-open]").map(function () {
+    $("a[data-modal]").map(function () {
       $(this).click((e) => e.preventDefault());
+    });
+  }
+
+  if ($(".btn-phone-add").length > 0) {
+    $(".btn-phone-add").on("click", function (event) {
+      event.preventDefault();
+
+      let parents = $(this).parents(".input-list");
+      let phones = parents.find(".phone-input");
+      let id = phones.length + 1;
+
+      let html = `<div class="input-wrapper">
+      <input type="text" placeholder="Телефон*" class="phone-input" id='phone-${id}'>
+      </div>`;
+
+      parents
+        .find(phones[phones.length - 1])
+        .parents(".input-wrapper")
+        .after(html);
+
+      parents.find(`.phone-input`).map(function () {
+        $(this).inputmask({
+          mask: "+7(999) 999-99-99",
+          placeholder: "*",
+          showMaskOnHover: false,
+          showMaskOnFocus: true,
+          clearIncomplete: true,
+        });
+      });
     });
   }
 
@@ -872,6 +911,40 @@ $(document).ready(function () {
         }
       });
     });
+  }
+
+  if ($(".storage-section__tabs").length > 0) {
+    $(".storage-section__tabs .contacts-info__bottom .btn").on(
+      "click",
+      function (event) {
+        event.preventDefault();
+        openGoogleMap($(this));
+      }
+    );
+
+    $(".storage-section__tabs .list-cites .btn").on("click", function (event) {
+      event.preventDefault();
+      openGoogleMap($(this));
+    });
+
+    function openGoogleMap(than) {
+      let parents = than.parents(".tabs-body");
+      let mapBlock = $(".google-map");
+
+      than.toggleClass("active");
+      parents.find(".google-map").stop().slideDown();
+      parents.find(".contacts-map").stop().slideUp();
+
+      setTimeout(function () {
+        scrollGoogleMap();
+      }, 400);
+    }
+
+    function scrollGoogleMap() {
+      let mapBlock = $(".google-map");
+      $("html, body").animate({ scrollTop: mapBlock.offset().top }, 1000);
+      return false;
+    }
   }
 
   if ($("#lottie-1").length > 0) {
