@@ -6,6 +6,7 @@
   flex-wrap: wrap;
   align-items: center;
   padding: 28px 0;
+  position: relative;
 
   .btn {
     min-width: 202px;
@@ -17,10 +18,16 @@
 .menu {
   margin-left: 60px;
   margin-right: auto;
+  position: relative;
+  z-index: 5;
 
-  ul {
+  & > ul {
     display: flex;
     gap: 34px;
+  }
+
+  li {
+    position: relative;
   }
 }
 .menu-link {
@@ -28,9 +35,19 @@
   font-size: 16px;
   line-height: 14px;
   @include default-hover;
+  position: relative;
+
+  &:hover {
+    &::before {
+      @include transform(rotate(180deg));
+    }
+  }
 }
 
 .btn-search {
+  svg {
+    pointer-events: none;
+  }
 }
 
 .btn-location {
@@ -41,6 +58,8 @@
   padding-left: 30px;
   max-width: 150px;
   margin-left: 30px;
+  position: relative;
+  z-index: 5;
 }
 
 .city-block__title {
@@ -58,6 +77,10 @@
   display: flex;
   align-items: center;
   gap: 8px;
+
+  &::before {
+    display: none !important;
+  }
 
   .city {
     white-space: nowrap;
@@ -103,6 +126,8 @@
 }
 
 .search-block {
+  position: relative;
+
   path {
     stroke: #00a19a;
   }
@@ -111,5 +136,9 @@
 .location-block {
   path {
     fill: #00a19a;
+  }
+
+  &::before {
+    display: none;
   }
 }

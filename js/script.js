@@ -323,7 +323,6 @@ $(document).ready(function () {
       },
     });
   }
-
   if ($(".events-slider").length > 0) {
     const swiper = new Swiper(".events-slider", {
       slidesPerView: 1,
@@ -414,6 +413,44 @@ $(document).ready(function () {
         type: "progressbar",
       },
     });
+  }
+
+  if ($(".catalog-invis__slider").length > 0) {
+    const swiper = new Swiper(".catalog-invis__slider", {
+      slidesPerView: 1,
+      autoHeight: true,
+      pagination: {
+        el: ".catalog-invis__slider .swiper-pagination",
+        type: "progressbar",
+      },
+    });
+  }
+
+  if ($(".eventList-small").length > 0) {
+    const sliders = document.querySelectorAll(".eventList-small");
+
+    let mySwipers = [];
+
+    function sliderinit() {
+      sliders.forEach((slider, index) => {
+        if (!slider.swiper) {
+          mySwipers[index] = new Swiper(slider, {
+            slidesPerView: 4,
+            slidesPerGroup: 1,
+            spaceBetween: 37,
+            autoHeight: true,
+            on: {
+              init: function (swiper) {},
+            },
+            breakpoints: {},
+          });
+        } else {
+          return;
+        }
+      });
+    }
+
+    sliders.length && sliderinit();
   }
 
   if ($(".product__picture").length > 0) {
@@ -794,6 +831,47 @@ $(document).ready(function () {
       document.querySelector("#" + id + " .tbody").innerHTML =
         calendar + "</div>";
     }
+  }
+
+  if ($(".js-action-link").length > 0) {
+    let isLeave = false;
+
+    $(".js-action-link").mouseover(function (event) {
+      let than = $(this);
+      let block = than.attr("data-open");
+
+      if (than.hasClass("active")) return false;
+
+      if ($(".js-action-link").hasClass("active")) {
+        $(".js-action-link").removeClass("active");
+        $(".invis-block").removeClass("open").stop().slideUp();
+        $(".invis-block").off("mouseover");
+        isLeave = false;
+        setTimeout(function () {
+          openInvisBlock(than, block, isLeave);
+        }, 500);
+      } else {
+        openInvisBlock(than, block, isLeave);
+      }
+    });
+  }
+
+  if ($(".btn-search").length > 0) {
+    $(".btn-search").on("click", function () {
+      $(".search-invis").toggleClass("opened");
+
+      $(document).mouseup(function (e) {
+        let div = $(".search-invis");
+        if (
+          !div.is(e.target) &&
+          div.has(e.target).length === 0 &&
+          !$(".btn-search").is(e.target)
+        ) {
+          div.removeClass("opened");
+          $(document).off("mouseup");
+        }
+      });
+    });
   }
 
   if ($("#lottie-1").length > 0) {
@@ -1305,4 +1383,54 @@ function isVisibleMapBlock() {
       $(this).removeClass("show");
     }
   });
+}
+
+function openInvisBlock(than, block, isLeave) {
+  than.addClass("active");
+
+  let timerNotHover = setTimeout(function () {
+    closeInvis(block);
+  }, 1500);
+
+  $(`.${block}`).addClass("open").slideDown();
+
+  $(`.${block}`).mouseleave(function () {
+    if (!isLeave) {
+      isLeave = true;
+
+      let timer = setTimeout(function () {
+        closeInvis(block, timer);
+      }, 500);
+
+      $(`.${block}`).mouseover(function () {
+        timer && clearTimeout(timer);
+        timerNotHover && clearTimeout(timerNotHover);
+        isLeave = false;
+      });
+    }
+  });
+
+  $(`.${block}`).mouseover(function () {
+    timerNotHover && clearTimeout(timerNotHover);
+    isLeave = false;
+  });
+
+  $(document).mouseup(function (e) {
+    let div = $(`.${block}`);
+    if (!div.is(e.target) && div.has(e.target).length === 0) {
+      $(".js-action-link").removeClass("active");
+      div.removeClass("open").stop().slideUp();
+      $(document).off("mouseup");
+    }
+  });
+
+  function closeInvis(block, timer = undefined) {
+    $(".js-action-link").removeClass("active");
+    $(`.${block}`).removeClass("open").stop().slideUp();
+    $(`.${block}`).off("mouseover");
+    $(document).off("mouseup");
+    isLeave = false;
+    timer && clearTimeout(timer);
+    timerNotHover && clearTimeout(timerNotHover);
+  }
 }
