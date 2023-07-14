@@ -178,6 +178,16 @@ $(document).ready(function () {
         el: ".sertificate__slider .swiper-pagination",
         type: "progressbar",
       },
+      on: {
+        init: function (swiper) {
+          setTimeout(function () {
+            swiper.slideTo(2);
+            $(".sertificate__slider").addClass("init");
+          }, 600);
+
+      
+        },
+      },
     });
   }
 

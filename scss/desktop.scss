@@ -123,12 +123,25 @@
   overflow: visible;
   max-width: 930px;
 
+  &.init{
+    opacity: 1;
+  }
+
   .swiper-wrapper {
   }
 
   .swiper-slide {
     width: 250px;
     left: 200px;
+
+    .picture{
+      width: 190px;
+      height: 160px;
+
+      img{
+        width: 120px;
+      }
+    }
 
     .caption,
     p {
@@ -141,7 +154,7 @@
   .swiper-slide-active {
     width: 650px;
     margin-left: 150px;
-    margin-right: 150px !important;
+    margin-right: 300px !important;
 
     &:first-child {
       left: -50px;
@@ -149,6 +162,14 @@
     }
 
     .sertificate-item {
+
+      .picture{
+        width: 250px;
+        height: 200px;
+
+  
+      }
+
       .caption,
       p {
         opacity: 1;
