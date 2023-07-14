@@ -630,9 +630,9 @@ input {
   -moz-border-radius: 27px;
   -ms-border-radius: 27px;
   border-radius: 27px;
-  -webkit-box-shadow: 0px 0px 40px 0px rgba(226, 216, 208, 0.7);
-  -moz-box-shadow: 0px 0px 40px 0px rgba(226, 216, 208, 0.7);
-  box-shadow: 0px 0px 40px 0px rgba(226, 216, 208, 0.7);
+  -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.33);
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.33);
   padding: 60px;
   max-width: 570px;
 }
@@ -7797,9 +7797,9 @@ div::-webkit-scrollbar-thumb {
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   border-radius: 20px;
-  -webkit-box-shadow: 0px 0px 40px 0px rgba(226, 216, 208, 0.7);
-  -moz-box-shadow: 0px 0px 40px 0px rgba(226, 216, 208, 0.7);
-  box-shadow: 0px 0px 40px 0px rgba(226, 216, 208, 0.7);
+  -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.33);
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.33);
 }
 .events-item + .events-item {
   margin-top: 20px;
@@ -8121,9 +8121,9 @@ div::-webkit-scrollbar-thumb {
   -moz-border-radius: 27px;
   -ms-border-radius: 27px;
   border-radius: 27px;
-  -webkit-box-shadow: 0px 30px 40px 0px #e2d8d0;
-  -moz-box-shadow: 0px 30px 40px 0px #e2d8d0;
-  box-shadow: 0px 30px 40px 0px #e2d8d0;
+  -webkit-box-shadow: 0px 30px 40px 0px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: 0px 30px 40px 0px rgba(0, 0, 0, 0.33);
+  box-shadow: 0px 30px 40px 0px rgba(0, 0, 0, 0.33);
   z-index: 9;
   display: none;
 }
@@ -8349,9 +8349,9 @@ div::-webkit-scrollbar-thumb {
   -moz-border-radius: 27px;
   -ms-border-radius: 27px;
   border-radius: 27px;
-  -webkit-box-shadow: 0px 30px 40px 0px #e2d8d0;
-  -moz-box-shadow: 0px 30px 40px 0px #e2d8d0;
-  box-shadow: 0px 30px 40px 0px #e2d8d0;
+  -webkit-box-shadow: 0px 30px 40px 0px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: 0px 30px 40px 0px rgba(0, 0, 0, 0.33);
+  box-shadow: 0px 30px 40px 0px rgba(0, 0, 0, 0.33);
   z-index: 9;
   padding: 60px;
   display: none;
@@ -8504,9 +8504,10 @@ div::-webkit-scrollbar-thumb {
   -o-transition: all 0.3s;
   transition: all 0.3s;
   overflow: hidden;
-  -webkit-box-shadow: 0px 10px 20px 0px #e2d8d0;
-  -moz-box-shadow: 0px 10px 20px 0px #e2d8d0;
-  box-shadow: 0px 10px 20px 0px #e2d8d0;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  border-radius: 40px;
 }
 .search-invis.opened {
   width: 603px;
