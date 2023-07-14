@@ -1946,6 +1946,7 @@ div::-webkit-scrollbar-thumb {
 .sertificate__slider .swiper-slide {
   width: 250px;
   left: 200px;
+  top: 20px;
 }
 .sertificate__slider .swiper-slide .picture {
   width: 190px;
@@ -1964,6 +1965,7 @@ div::-webkit-scrollbar-thumb {
   width: 650px;
   margin-left: 150px;
   margin-right: 300px !important;
+  top: 0;
 }
 .sertificate__slider .swiper-slide-active:first-child {
   left: -50px;
