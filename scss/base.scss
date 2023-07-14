@@ -70,6 +70,7 @@ input {
 
         &::after {
           background-color: $colorBlack;
+          opacity: 1;
         }
       }
     }
@@ -106,6 +107,7 @@ input {
       margin-top: -4px;
       background-color: #80726a;
       @include border-radius(50%);
+      opacity: 0;
     }
   }
 
@@ -931,5 +933,18 @@ div {
 .input-wrapper {
   .btn-phone-add {
     margin-bottom: 0;
+  }
+}
+
+#modal-personal {
+  .modal__inner {
+    max-width: 930px;
+  }
+}
+
+#modal-product {
+  .modal__inner {
+    max-width: 930px;
+    background-color: #fbf5f1;
   }
 }

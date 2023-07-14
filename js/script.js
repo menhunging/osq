@@ -3,22 +3,22 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 addEventListener("scroll", (event) => {
   currentScroll = $(window).scrollTop();
 
-  // console.log(currentScroll);
+  console.log(currentScroll);
 
   if ($(".animation-text").length > 0) {
-    if (currentScroll >= "7800") {
+    if (currentScroll >= "9600") {
       $("#lottie-1").addClass("show");
     } else {
       $("#lottie-1").removeClass("show");
     }
 
-    if (currentScroll >= "10400") {
+    if (currentScroll >= "11900") {
       $(".animation-text").addClass("show");
     } else {
       $(".animation-text").removeClass("show");
     }
 
-    if (currentScroll >= "11700" && currentScroll < "23500") {
+    if (currentScroll >= "13000" && currentScroll < "23000") {
       $("#lottie-2").addClass("small");
       $(".product-main").addClass("fixed");
     } else {
@@ -26,19 +26,19 @@ addEventListener("scroll", (event) => {
       $(".product-main").removeClass("fixed");
     }
 
-    if (currentScroll >= "13000") {
+    if (currentScroll >= "14000") {
       $(".product-main").addClass("show");
     } else {
       $(".product-main").removeClass("show");
     }
 
-    if (currentScroll >= "21800") {
+    if (currentScroll >= "23000") {
       $(".production").addClass("fixed");
     } else {
       $(".production").removeClass("fixed");
     }
 
-    if (currentScroll >= "24700") {
+    if (currentScroll >= "27200") {
       $("#lottie-2").addClass("show");
       $("#lottie-3").addClass("visible");
       $(".production").addClass("show");
@@ -50,7 +50,7 @@ addEventListener("scroll", (event) => {
       $(".delivery--v1").removeClass("fixed");
     }
 
-    if (currentScroll >= "29500") {
+    if (currentScroll >= "32300") {
       $(".delivery--v1").addClass("show");
       $("#lottie-3").removeClass("visible");
       $("#lottie-3").addClass("show");
@@ -61,7 +61,7 @@ addEventListener("scroll", (event) => {
   }
 
   if ($(".incision").length > 0) {
-    if (currentScroll >= "20200") {
+    if (currentScroll >= "23000") {
       $(".incision").addClass("show");
     } else {
       $(".incision").removeClass("show");
@@ -166,7 +166,7 @@ $(document).ready(function () {
 
   if ($(".sertificate__slider").length > 0) {
     const swiper = new Swiper(".sertificate__slider", {
-      slidesPerView: 1,
+      slidesPerView: "auto",
       centeredSlides: true,
       spaceBetween: 60,
       autoHeight: true,
@@ -323,6 +323,7 @@ $(document).ready(function () {
       },
     });
   }
+
   if ($(".events-slider").length > 0) {
     const swiper = new Swiper(".events-slider", {
       slidesPerView: 1,
@@ -947,8 +948,17 @@ $(document).ready(function () {
     }
   }
 
+  if ($(".terms-text").length > 0) {
+    $(".terms-text").scroll(function () {
+      if ($(".terms-text").scrollTop() >= $($(".terms-text")).height()) {
+        $(".modal-personal .read-to").addClass("hide");
+        $(".modal-personal .modal__controls").addClass("visible");
+      }
+    });
+  }
+
   if ($("#lottie-1").length > 0) {
-    let number = 1000;
+    let number = 3000;
 
     let theWindow = $(window);
     let winHeight = theWindow.height();
@@ -988,7 +998,7 @@ $(document).ready(function () {
   }
 
   if ($("#lottie-2").length > 0) {
-    let number = 8000;
+    let number = 9300;
 
     let theWindow = $(window);
     let winHeight = theWindow.height();
@@ -1011,35 +1021,35 @@ $(document).ready(function () {
     }
 
     $(window).scroll(function () {
-      if ($(this).scrollTop() > number && currentScroll < "14900") {
+      if ($(this).scrollTop() > number && currentScroll < "16200") {
         animatebodymovin(animDuration, anim);
       }
 
-      if (currentScroll >= "14900" && currentScroll <= "20500") {
+      if (currentScroll >= "16200" && currentScroll <= "23000") {
         $("#lottie-2").addClass("paused");
         anim.pause();
       }
 
-      if (currentScroll >= "20500" && currentScroll < "23500") {
+      if (currentScroll >= "23200" && currentScroll < "26500") {
         $("#lottie-2").removeClass("paused");
         $("#lottie-2").removeClass("small");
         anim.pause();
-        animatebodymovin(animDuration, anim, 5600);
+        animatebodymovin(animDuration, anim, 7200);
       }
 
-      if (currentScroll < "14900") {
+      if (currentScroll < "16200") {
         $("#lottie-2").removeClass("paused");
       }
 
-      if (currentScroll > "23500") {
-        $("#lottie-2").removeClass("small");
-        anim.pause();
-      }
+      // if (currentScroll > "26500") {
+      //   $("#lottie-2").removeClass("small");
+      //   anim.pause();
+      // }
     });
   }
 
   if ($("#lottie-3").length > 0) {
-    let number = 24700;
+    let number = 27200;
 
     let theWindow = $(window);
     let winHeight = theWindow.height();
@@ -1068,11 +1078,11 @@ $(document).ready(function () {
     });
 
     $(window).scroll(function () {
-      if ($(this).scrollTop() > number && currentScroll < "29300") {
+      if ($(this).scrollTop() > number && currentScroll < "32000") {
         animatebodymovin(animDuration, anim);
       }
 
-      if (currentScroll >= "29300") {
+      if (currentScroll >= "32000") {
         anim.pause();
       }
     });
@@ -1080,21 +1090,21 @@ $(document).ready(function () {
 
   if ($(".animation-main").length > 0) {
     if (ScrollTrigger.isTouch !== 1) {
-      gsap.fromTo(
-        ".catalog-main",
-        { x: 0, y: 0, opacity: 1 },
-        {
-          x: -1000,
-          y: 600,
-          opacity: 0,
-          scrollTrigger: {
-            trigger: ".catalog-main",
-            start: "500",
-            end: "1500",
-            scrub: true,
-          },
-        }
-      );
+      // gsap.fromTo(
+      //   ".catalog-main",
+      //   { x: 0, y: 0, opacity: 1 },
+      //   {
+      //     x: -1000,
+      //     y: 600,
+      //     opacity: 0,
+      //     scrollTrigger: {
+      //       trigger: ".catalog-main",
+      //       start: "500",
+      //       end: "1500",
+      //       scrub: true,
+      //     },
+      //   }
+      // );
 
       gsap.fromTo(
         "#lottie-1",
@@ -1102,7 +1112,7 @@ $(document).ready(function () {
         {
           x: 100,
           scrollTrigger: {
-            trigger: ".catalog-main",
+            trigger: ".animation-main",
             start: "700",
             end: "2000",
             scrub: true,
@@ -1118,8 +1128,8 @@ $(document).ready(function () {
           position: "fixed",
           scrollTrigger: {
             trigger: ".animation-text",
-            start: "4000",
-            end: "5000",
+            start: "4500",
+            end: "5500",
             scrub: true,
           },
         }
@@ -1132,8 +1142,8 @@ $(document).ready(function () {
           x: 0,
           scrollTrigger: {
             trigger: ".animation-text",
-            start: "5000",
-            end: "6000",
+            start: "5500",
+            end: "6500",
             scrub: true,
           },
         }
@@ -1146,8 +1156,8 @@ $(document).ready(function () {
           x: 0,
           scrollTrigger: {
             trigger: ".animation-text",
-            start: "6000",
-            end: "7000",
+            start: "6500",
+            end: "7500",
             scrub: true,
           },
         }
@@ -1160,7 +1170,7 @@ $(document).ready(function () {
           x: 0,
           scrollTrigger: {
             trigger: ".animation-text",
-            start: "6500",
+            start: "7000",
             end: "8000",
             scrub: true,
           },
@@ -1174,7 +1184,7 @@ $(document).ready(function () {
           opacity: 1,
           scrollTrigger: {
             trigger: ".animation-text",
-            start: "6500",
+            start: "7000",
             end: "8000",
             scrub: true,
           },
@@ -1189,7 +1199,7 @@ $(document).ready(function () {
           y: 0,
           scrollTrigger: {
             trigger: ".animation-text",
-            start: "5000",
+            start: "5500",
             end: "8000",
             scrub: true,
           },
@@ -1461,10 +1471,6 @@ function isVisibleMapBlock() {
 function openInvisBlock(than, block, isLeave) {
   than.addClass("active");
 
-  let timerNotHover = setTimeout(function () {
-    closeInvis(block);
-  }, 1500);
-
   $(`.${block}`).addClass("open").slideDown();
 
   $(`.${block}`).mouseleave(function () {
@@ -1477,14 +1483,12 @@ function openInvisBlock(than, block, isLeave) {
 
       $(`.${block}`).mouseover(function () {
         timer && clearTimeout(timer);
-        timerNotHover && clearTimeout(timerNotHover);
         isLeave = false;
       });
     }
   });
 
   $(`.${block}`).mouseover(function () {
-    timerNotHover && clearTimeout(timerNotHover);
     isLeave = false;
   });
 
@@ -1504,6 +1508,5 @@ function openInvisBlock(than, block, isLeave) {
     $(document).off("mouseup");
     isLeave = false;
     timer && clearTimeout(timer);
-    timerNotHover && clearTimeout(timerNotHover);
   }
 }
