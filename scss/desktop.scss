@@ -122,9 +122,10 @@
   margin-top: 90px;
   overflow: visible;
   max-width: 930px;
+  @include transition(opacity 0.3s 0.5s);
+  opacity: 0;
 
-
-  &.init{
+  &.init {
     opacity: 1;
   }
 
@@ -134,13 +135,13 @@
   .swiper-slide {
     width: 250px;
     left: 200px;
-    top:20px;
+    top: 20px;
 
-    .picture{
+    .picture {
       width: 190px;
       height: 160px;
 
-      img{
+      img {
         width: 120px;
       }
     }
@@ -157,7 +158,7 @@
     width: 650px;
     margin-left: 150px;
     margin-right: 300px !important;
-    top:0;
+    top: 0;
 
     &:first-child {
       left: -50px;
@@ -165,12 +166,9 @@
     }
 
     .sertificate-item {
-
-      .picture{
+      .picture {
         width: 250px;
         height: 200px;
-
-  
       }
 
       .caption,
@@ -7455,7 +7453,7 @@
 .contacts-map {
   &.aos-animate {
     .moscov-krasnadar {
-        opacity: 0;
+      opacity: 0;
       .car {
         animation: invisCar-moscow;
         animation-duration: 5s;
@@ -7465,7 +7463,7 @@
     }
 
     .piter-kaliningrad {
-        opacity: 0;
+      opacity: 0;
       .car {
         animation: invisCar-piter;
         animation-duration: 5s;
@@ -7475,7 +7473,7 @@
     }
 
     .ekaterin-moscow {
-        opacity: 0;
+      opacity: 0;
       .car {
         animation: invisCar-ekatina;
         animation-duration: 5s;
@@ -7485,7 +7483,7 @@
     }
 
     .novosib-piter {
-        opacity: 0;
+      opacity: 0;
       .car {
         animation: invisCar-novosib;
         animation-duration: 5s;
@@ -7598,12 +7596,11 @@
   }
 }
 
-
 .moscov-krasnadar,
 .piter-kaliningrad,
 .ekaterin-moscow,
-.novosib-piter{
-  @include transition(opacity .3s 6s);
+.novosib-piter {
+  @include transition(opacity 0.3s 6s);
 }
 
 @keyframes invisCar-moscow {
