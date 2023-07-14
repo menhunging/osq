@@ -7433,32 +7433,40 @@
 .contacts-map {
   &.aos-animate {
     .moscov-krasnadar {
+        opacity: 0;
       .car {
-        animation: invisCar-moscow 3s;
+        animation: invisCar-moscow;
+        animation-duration: 5s;
         animation-timing-function: linear;
         animation-fill-mode: forwards;
       }
     }
 
     .piter-kaliningrad {
+        opacity: 0;
       .car {
-        animation: invisCar-piter 3s;
+        animation: invisCar-piter;
+        animation-duration: 5s;
         animation-timing-function: linear;
         animation-fill-mode: forwards;
       }
     }
 
     .ekaterin-moscow {
+        opacity: 0;
       .car {
-        animation: invisCar-ekatina 3s;
+        animation: invisCar-ekatina;
+        animation-duration: 5s;
         animation-timing-function: linear;
         animation-fill-mode: forwards;
       }
     }
 
     .novosib-piter {
+        opacity: 0;
       .car {
-        animation: invisCar-novosib 3s;
+        animation: invisCar-novosib;
+        animation-duration: 5s;
         animation-timing-function: linear;
         animation-fill-mode: forwards;
       }
@@ -7473,12 +7481,12 @@
   height: 120px;
   background-position: center;
   background-repeat: no-repeat;
-  display: block;
   z-index: -1;
   top: 27px;
   left: -52px;
   display: flex;
   justify-content: center;
+  pointer-events: none;
 
   .car {
     background-image: url("../img/car1.png");
@@ -7500,12 +7508,12 @@
   height: 72px;
   background-position: center;
   background-repeat: no-repeat;
-  display: block;
   z-index: -1;
   top: -44px;
   left: -43px;
   display: flex;
   justify-content: center;
+  pointer-events: none;
 
   .car {
     background-image: url("../img/car2.png");
@@ -7525,12 +7533,12 @@
   height: 170px;
   background-position: center;
   background-repeat: no-repeat;
-  display: block;
   z-index: -1;
   top: -128px;
   left: -120px;
   display: flex;
   justify-content: center;
+  pointer-events: none;
 
   .car {
     background-image: url("../img/car3.png");
@@ -7550,12 +7558,12 @@
   height: 410px;
   background-position: center;
   background-repeat: no-repeat;
-  display: block;
   z-index: -1;
   top: -371px;
   left: -267px;
   display: flex;
   justify-content: center;
+  pointer-events: none;
 
   .car {
     background-image: url("../img/car4.png");
@@ -7566,6 +7574,14 @@
     @include transform(translate(-182px, -50px));
     opacity: 1;
   }
+}
+
+
+.moscov-krasnadar,
+.piter-kaliningrad,
+.ekaterin-moscow,
+.novosib-piter{
+  @include transition(opacity .3s 6s);
 }
 
 @keyframes invisCar-moscow {
@@ -7627,7 +7643,7 @@
   }
 
   100% {
-    @include transform(translate(-108px, -48px));
+    @include transform(translate(-97px, -31px));
     opacity: 0;
   }
 }

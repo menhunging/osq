@@ -3,7 +3,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 addEventListener("scroll", (event) => {
   currentScroll = $(window).scrollTop();
 
-  console.log(currentScroll);
+  // console.log(currentScroll);
 
   if ($(".animation-text").length > 0) {
     if (currentScroll >= "9600") {

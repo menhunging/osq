@@ -9060,23 +9060,39 @@ div::-webkit-scrollbar-thumb {
   z-index: -1;
 }
 
+.contacts-map.aos-animate .moscov-krasnadar {
+  opacity: 0;
+}
 .contacts-map.aos-animate .moscov-krasnadar .car {
-  animation: invisCar-moscow 3s;
+  animation: invisCar-moscow;
+  animation-duration: 5s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
+}
+.contacts-map.aos-animate .piter-kaliningrad {
+  opacity: 0;
 }
 .contacts-map.aos-animate .piter-kaliningrad .car {
-  animation: invisCar-piter 3s;
+  animation: invisCar-piter;
+  animation-duration: 5s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
+}
+.contacts-map.aos-animate .ekaterin-moscow {
+  opacity: 0;
 }
 .contacts-map.aos-animate .ekaterin-moscow .car {
-  animation: invisCar-ekatina 3s;
+  animation: invisCar-ekatina;
+  animation-duration: 5s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
+.contacts-map.aos-animate .novosib-piter {
+  opacity: 0;
+}
 .contacts-map.aos-animate .novosib-piter .car {
-  animation: invisCar-novosib 3s;
+  animation: invisCar-novosib;
+  animation-duration: 5s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
@@ -9088,12 +9104,12 @@ div::-webkit-scrollbar-thumb {
   height: 120px;
   background-position: center;
   background-repeat: no-repeat;
-  display: block;
   z-index: -1;
   top: 27px;
   left: -52px;
   display: flex;
   justify-content: center;
+  pointer-events: none;
 }
 .moscov-krasnadar .car {
   background-image: url("../img/car1.png");
@@ -9120,12 +9136,12 @@ div::-webkit-scrollbar-thumb {
   height: 72px;
   background-position: center;
   background-repeat: no-repeat;
-  display: block;
   z-index: -1;
   top: -44px;
   left: -43px;
   display: flex;
   justify-content: center;
+  pointer-events: none;
 }
 .piter-kaliningrad .car {
   background-image: url("../img/car2.png");
@@ -9148,12 +9164,12 @@ div::-webkit-scrollbar-thumb {
   height: 170px;
   background-position: center;
   background-repeat: no-repeat;
-  display: block;
   z-index: -1;
   top: -128px;
   left: -120px;
   display: flex;
   justify-content: center;
+  pointer-events: none;
 }
 .ekaterin-moscow .car {
   background-image: url("../img/car3.png");
@@ -9176,12 +9192,12 @@ div::-webkit-scrollbar-thumb {
   height: 410px;
   background-position: center;
   background-repeat: no-repeat;
-  display: block;
   z-index: -1;
   top: -371px;
   left: -267px;
   display: flex;
   justify-content: center;
+  pointer-events: none;
 }
 .novosib-piter .car {
   background-image: url("../img/car4.png");
@@ -9195,6 +9211,16 @@ div::-webkit-scrollbar-thumb {
   -o-transform: translate(-182px, -50px);
   transform: translate(-182px, -50px);
   opacity: 1;
+}
+
+.moscov-krasnadar,
+.piter-kaliningrad,
+.ekaterin-moscow,
+.novosib-piter {
+  -webkit-transition: opacity 0.3s 6s;
+  -moz-transition: opacity 0.3s 6s;
+  -o-transition: opacity 0.3s 6s;
+  transition: opacity 0.3s 6s;
 }
 
 @keyframes invisCar-moscow {
@@ -9280,11 +9306,11 @@ div::-webkit-scrollbar-thumb {
     opacity: 1;
   }
   100% {
-    -moz-transform: translate(-108px, -48px);
-    -ms-transform: translate(-108px, -48px);
-    -webkit-transform: translate(-108px, -48px);
-    -o-transform: translate(-108px, -48px);
-    transform: translate(-108px, -48px);
+    -moz-transform: translate(-97px, -31px);
+    -ms-transform: translate(-97px, -31px);
+    -webkit-transform: translate(-97px, -31px);
+    -o-transform: translate(-97px, -31px);
+    transform: translate(-97px, -31px);
     opacity: 0;
   }
 }
