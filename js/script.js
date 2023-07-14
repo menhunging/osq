@@ -550,8 +550,8 @@ $(document).ready(function () {
         $(this).selectric({
           onOpen: function () {},
           onChange: function (element) {
-            if ($(element).attr("id") === "select-country") {
-              if ($(element).val() === "СНГ") {
+            if ($(element).attr("id") === "select-city") {
+              if ($(element).val() === "Москва") {
                 $(".google-map").stop().slideDown();
                 $(".distr-section .contacts-map").stop().slideUp();
               } else {
@@ -564,6 +564,23 @@ $(document).ready(function () {
         });
       }
     });
+  }
+
+  if ($(".distr-section .list-cites .btn").length > 0) {
+    $(".distr-section .list-cites .btn").on("click", function () {
+      $(".google-map").stop().slideDown();
+      $(".distr-section .contacts-map").stop().slideUp();
+
+      setTimeout(function () {
+        scrollGoogleMap();
+      }, 400);
+    });
+
+    function scrollGoogleMap() {
+      let mapBlock = $(".google-map");
+      $("html, body").animate({ scrollTop: mapBlock.offset().top }, 300);
+      return false;
+    }
   }
 
   if ($(".play-video").length > 0) {
@@ -668,7 +685,9 @@ $(document).ready(function () {
     $(".city-bl").on("click", function (event) {
       event.preventDefault();
 
+      $(".city-bl").removeClass("active");
       $(".list-cites .btn").removeClass("show");
+      $(this).addClass("active");
       $(this).next(".btn").addClass("show");
     });
 

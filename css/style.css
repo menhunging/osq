@@ -6520,6 +6520,7 @@ div::-webkit-scrollbar-thumb {
   width: 120px;
   text-align: center;
   position: absolute;
+  z-index: 3;
 }
 .list-cites li.show {
   opacity: 0;
@@ -6577,6 +6578,12 @@ div::-webkit-scrollbar-thumb {
   width: 100%;
   position: relative;
   z-index: 3;
+}
+.city-bl.active .logo-map {
+  background-image: url("../img/marker.svg");
+  width: 47px;
+  height: 63px;
+  margin-top: -20px;
 }
 
 .storage-section .tabs {
@@ -9051,6 +9058,277 @@ div::-webkit-scrollbar-thumb {
   -ms-border-radius: 50%;
   border-radius: 50%;
   z-index: -1;
+}
+
+.contacts-map.aos-animate .moscov-krasnadar .car {
+  animation: invisCar-moscow 3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.contacts-map.aos-animate .piter-kaliningrad .car {
+  animation: invisCar-piter 3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.contacts-map.aos-animate .ekaterin-moscow .car {
+  animation: invisCar-ekatina 3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.contacts-map.aos-animate .novosib-piter .car {
+  animation: invisCar-novosib 3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.moscov-krasnadar {
+  position: absolute;
+  background-image: url("../img/line-moscow.svg");
+  width: 109px;
+  height: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  z-index: -1;
+  top: 27px;
+  left: -52px;
+  display: flex;
+  justify-content: center;
+}
+.moscov-krasnadar .car {
+  background-image: url("../img/car1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 82px;
+  height: 73px;
+  -webkit-transition: transform 2s 1s;
+  -moz-transition: transform 2s 1s;
+  -o-transition: transform 2s 1s;
+  transition: transform 2s 1s;
+  -moz-transform: translate(58px, -29px);
+  -ms-transform: translate(58px, -29px);
+  -webkit-transform: translate(58px, -29px);
+  -o-transform: translate(58px, -29px);
+  transform: translate(58px, -29px);
+  opacity: 1;
+}
+
+.piter-kaliningrad {
+  position: absolute;
+  background-image: url("../img/line-piter.svg");
+  width: 112px;
+  height: 72px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  z-index: -1;
+  top: -44px;
+  left: -43px;
+  display: flex;
+  justify-content: center;
+}
+.piter-kaliningrad .car {
+  background-image: url("../img/car2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 82px;
+  height: 73px;
+  -moz-transform: translate(48px, 31px);
+  -ms-transform: translate(48px, 31px);
+  -webkit-transform: translate(48px, 31px);
+  -o-transform: translate(48px, 31px);
+  transform: translate(48px, 31px);
+  opacity: 1;
+}
+
+.ekaterin-moscow {
+  position: absolute;
+  background-image: url("../img/line-ekaterin.svg");
+  width: 187px;
+  height: 170px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  z-index: -1;
+  top: -128px;
+  left: -120px;
+  display: flex;
+  justify-content: center;
+}
+.ekaterin-moscow .car {
+  background-image: url("../img/car3.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 69px;
+  height: 62px;
+  -moz-transform: translate(88px, 111px);
+  -ms-transform: translate(88px, 111px);
+  -webkit-transform: translate(88px, 111px);
+  -o-transform: translate(88px, 111px);
+  transform: translate(88px, 111px);
+  opacity: 1;
+}
+
+.novosib-piter {
+  position: absolute;
+  background-image: url("../img/line-novosib.svg");
+  width: 343px;
+  height: 410px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  z-index: -1;
+  top: -371px;
+  left: -267px;
+  display: flex;
+  justify-content: center;
+}
+.novosib-piter .car {
+  background-image: url("../img/car4.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 90px;
+  height: 81px;
+  -moz-transform: translate(-182px, -50px);
+  -ms-transform: translate(-182px, -50px);
+  -webkit-transform: translate(-182px, -50px);
+  -o-transform: translate(-182px, -50px);
+  transform: translate(-182px, -50px);
+  opacity: 1;
+}
+
+@keyframes invisCar-moscow {
+  0% {
+    -moz-transform: translate(58px, -29px);
+    -ms-transform: translate(58px, -29px);
+    -webkit-transform: translate(58px, -29px);
+    -o-transform: translate(58px, -29px);
+    transform: translate(58px, -29px);
+    opacity: 1;
+  }
+  50% {
+    -moz-transform: translate(19px, 41px);
+    -ms-transform: translate(19px, 41px);
+    -webkit-transform: translate(19px, 41px);
+    -o-transform: translate(19px, 41px);
+    transform: translate(19px, 41px);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: translate(-69px, 91px);
+    -ms-transform: translate(-69px, 91px);
+    -webkit-transform: translate(-69px, 91px);
+    -o-transform: translate(-69px, 91px);
+    transform: translate(-69px, 91px);
+    opacity: 0;
+  }
+}
+@keyframes invisCar-piter {
+  0% {
+    -moz-transform: translate(48px, 31px);
+    -ms-transform: translate(48px, 31px);
+    -webkit-transform: translate(48px, 31px);
+    -o-transform: translate(48px, 31px);
+    transform: translate(48px, 31px);
+    opacity: 1;
+  }
+  50% {
+    -moz-transform: translate(-2px, -12px);
+    -ms-transform: translate(-2px, -12px);
+    -webkit-transform: translate(-2px, -12px);
+    -o-transform: translate(-2px, -12px);
+    transform: translate(-2px, -12px);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: translate(-72px, -39px);
+    -ms-transform: translate(-72px, -39px);
+    -webkit-transform: translate(-72px, -39px);
+    -o-transform: translate(-72px, -39px);
+    transform: translate(-72px, -39px);
+    opacity: 0;
+  }
+}
+@keyframes invisCar-ekatina {
+  0% {
+    -moz-transform: translate(88px, 111px);
+    -ms-transform: translate(88px, 111px);
+    -webkit-transform: translate(88px, 111px);
+    -o-transform: translate(88px, 111px);
+    transform: translate(88px, 111px);
+    opacity: 1;
+  }
+  25% {
+    -moz-transform: translate(42px, 41px);
+    -ms-transform: translate(42px, 41px);
+    -webkit-transform: translate(42px, 41px);
+    -o-transform: translate(42px, 41px);
+    transform: translate(42px, 41px);
+  }
+  50% {
+    -moz-transform: translate(-14px, -9px);
+    -ms-transform: translate(-14px, -9px);
+    -webkit-transform: translate(-14px, -9px);
+    -o-transform: translate(-14px, -9px);
+    transform: translate(-14px, -9px);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: translate(-108px, -48px);
+    -ms-transform: translate(-108px, -48px);
+    -webkit-transform: translate(-108px, -48px);
+    -o-transform: translate(-108px, -48px);
+    transform: translate(-108px, -48px);
+    opacity: 0;
+  }
+}
+@keyframes invisCar-novosib {
+  0% {
+    -moz-transform: translate(-182px, -50px);
+    -ms-transform: translate(-182px, -50px);
+    -webkit-transform: translate(-182px, -50px);
+    -o-transform: translate(-182px, -50px);
+    transform: translate(-182px, -50px);
+    opacity: 1;
+  }
+  25% {
+    -moz-transform: translate(-62px, 20px);
+    -ms-transform: translate(-62px, 20px);
+    -webkit-transform: translate(-62px, 20px);
+    -o-transform: translate(-62px, 20px);
+    transform: translate(-62px, 20px);
+  }
+  50% {
+    -moz-transform: translate(39px, 120px);
+    -ms-transform: translate(39px, 120px);
+    -webkit-transform: translate(39px, 120px);
+    -o-transform: translate(39px, 120px);
+    transform: translate(39px, 120px);
+  }
+  75% {
+    -moz-transform: translate(119px, 233px);
+    -ms-transform: translate(119px, 233px);
+    -webkit-transform: translate(119px, 233px);
+    -o-transform: translate(119px, 233px);
+    transform: translate(119px, 233px);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: translate(159px, 350px);
+    -ms-transform: translate(159px, 350px);
+    -webkit-transform: translate(159px, 350px);
+    -o-transform: translate(159px, 350px);
+    transform: translate(159px, 350px);
+    opacity: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
