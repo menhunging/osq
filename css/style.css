@@ -205,7 +205,7 @@ a {
 }
 
 body {
-  font-family: "Circe";
+  font-family: "Qanelas";
   color: rgb(0, 0, 0);
   background-color: #fbf5f1;
 }
@@ -228,7 +228,7 @@ input {
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   border-radius: 0;
-  font-family: "Circe";
+  font-family: "Qanelas";
   border: 0;
   outline: none;
 }
@@ -530,7 +530,7 @@ input {
 }
 
 .modal {
-  font-family: "Circe";
+  font-family: "Qanelas";
   display: none;
   width: 100%;
   height: 100%;
@@ -1454,6 +1454,7 @@ div::-webkit-scrollbar-thumb {
   letter-spacing: -0.1em;
   text-transform: uppercase;
   color: #2e2e2e;
+  font-family: "Circe";
 }
 .caption--big {
   font-weight: 400;
