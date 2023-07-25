@@ -7532,7 +7532,6 @@
       opacity: 0;
       .car {
         animation: invisCar-piter;
-        animation-delay: 5s;
         animation-duration: 5s;
         animation-timing-function: linear;
         animation-fill-mode: forwards;
@@ -7606,8 +7605,8 @@
     background-image: url("../img/car2.png");
     background-position: center;
     background-repeat: no-repeat;
-    width: 77px;
-    height: 76px;
+    width: 82px;
+    height: 73px;
     @include transform(translate(48px, 31px));
     opacity: 1;
   }
@@ -7667,7 +7666,7 @@
 .piter-kaliningrad,
 .ekaterin-moscow,
 .novosib-piter {
-  @include transition(opacity 0.3s 10s);
+  @include transition(opacity 0.3s 6s);
 }
 
 @keyframes invisCar-moscow {
