@@ -100,6 +100,11 @@ $(document).ready(function () {
         clickable: true,
       },
     });
+
+    $(".grettings__slider .swiper-slide").on("click", function () {
+      let index = $(this).index();
+      swiper.slideTo(index);
+    });
   }
 
   if ($(".typeFood__slider").length > 0) {
@@ -184,8 +189,6 @@ $(document).ready(function () {
             swiper.slideTo(2);
             $(".sertificate__slider").addClass("init");
           }, 600);
-
-      
         },
       },
     });
@@ -264,6 +267,10 @@ $(document).ready(function () {
       spaceBetween: 0,
       centeredSlides: true,
       initialSlide: 1,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
       autoHeight: true,
       effect: "creative",
       creativeEffect: {
@@ -926,7 +933,15 @@ $(document).ready(function () {
   }
 
   if ($(".btn-search").length > 0) {
-    $(".btn-search").on("click", function () {
+    // $(".btn-search").on("click", function () {
+    //   initSearchBlock()
+    // });
+
+    $(".btn-search").mouseover(function () {
+      initSearchBlock();
+    });
+
+    function initSearchBlock() {
       $(".search-invis").toggleClass("opened");
 
       $(document).mouseup(function (e) {
@@ -940,7 +955,7 @@ $(document).ready(function () {
           $(document).off("mouseup");
         }
       });
-    });
+    }
   }
 
   if ($(".storage-section__tabs").length > 0) {
@@ -1494,6 +1509,16 @@ function isVisibleMapBlock() {
     } else {
       $(this).removeClass("show");
     }
+  });
+
+  $(".google-map__controls .btn").on("click", function (event) {
+    event.preventDefault();
+
+    let parents = $(this).parents(".distr-section");
+
+    $(this).toggleClass("active");
+    parents.find(".google-map").stop().slideUp();
+    parents.find(".contacts-map").stop().slideDown();
   });
 }
 

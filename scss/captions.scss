@@ -2,7 +2,6 @@
   font-weight: 700;
   font-size: 60px;
   line-height: 54px;
-  letter-spacing: -0.1em;
   text-transform: uppercase;
   color: #2e2e2e;
   font-family: $fontMain2;
@@ -28,14 +27,12 @@
   &--big-v2 {
     font-size: 64px;
     line-height: 64px;
-    letter-spacing: -5.76px;
   }
 }
 
 .caption__desc {
   font-size: 48px;
   line-height: 64px;
-  letter-spacing: -4.8px;
   display: block;
   font-weight: 400;
 }

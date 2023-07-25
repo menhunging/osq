@@ -1451,7 +1451,6 @@ div::-webkit-scrollbar-thumb {
   font-weight: 700;
   font-size: 60px;
   line-height: 54px;
-  letter-spacing: -0.1em;
   text-transform: uppercase;
   color: #2e2e2e;
   font-family: "Circe";
@@ -1474,13 +1473,11 @@ div::-webkit-scrollbar-thumb {
 .caption--big-v2 {
   font-size: 64px;
   line-height: 64px;
-  letter-spacing: -5.76px;
 }
 
 .caption__desc {
   font-size: 48px;
   line-height: 64px;
-  letter-spacing: -4.8px;
   display: block;
   font-weight: 400;
 }
@@ -1660,7 +1657,6 @@ div::-webkit-scrollbar-thumb {
   font-weight: 700;
   font-size: 64px;
   line-height: 44px;
-  letter-spacing: -0.1em;
   text-transform: uppercase;
   color: #2e2e2e;
 }
@@ -1861,25 +1857,6 @@ div::-webkit-scrollbar-thumb {
   -ms-border-radius: 27px;
   border-radius: 27px;
 }
-.grettings__slide::before {
-  content: "";
-  position: absolute;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  position: absolute;
-  width: 684px;
-  height: 684px;
-  left: -88px;
-  top: 176px;
-  background-color: rgb(0, 161, 154);
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%;
-  z-index: 0;
-}
 .grettings__slide .btn {
   margin-top: 60px;
   position: relative;
@@ -1923,7 +1900,6 @@ div::-webkit-scrollbar-thumb {
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
-  letter-spacing: -0.025em;
   color: rgb(255, 255, 255);
 }
 
@@ -2188,7 +2164,6 @@ div::-webkit-scrollbar-thumb {
   font-weight: 400;
   font-size: 20px;
   line-height: 19px;
-  letter-spacing: -0.09em;
   text-transform: uppercase;
   color: #2e2e2e;
   margin-bottom: 20px;
@@ -2359,7 +2334,6 @@ div::-webkit-scrollbar-thumb {
   margin-top: -50px;
   font-weight: 400;
   font-size: 24px;
-  letter-spacing: -0.09em;
   margin: 0;
   color: #2e2e2e;
   text-transform: uppercase;
@@ -2480,7 +2454,7 @@ div::-webkit-scrollbar-thumb {
   align-items: center;
 }
 .food-type__head .caption {
-  max-width: 325px;
+  max-width: 400px;
 }
 .food-type__head .caption--small {
   text-transform: none;
@@ -3141,7 +3115,7 @@ div::-webkit-scrollbar-thumb {
   font-weight: 400;
   font-size: 64px;
   line-height: 80px;
-  letter-spacing: -0.1em;
+  letter-spacing: 0em;
   text-transform: uppercase;
   color: #2e2e2e;
   display: block;
@@ -3220,7 +3194,6 @@ div::-webkit-scrollbar-thumb {
 .incision__head .desc {
   font-size: 48px;
   line-height: 44px;
-  letter-spacing: -0.09em;
   display: block;
 }
 
@@ -3361,7 +3334,7 @@ div::-webkit-scrollbar-thumb {
 
 .title-page .caption {
   font-weight: 400;
-  letter-spacing: -0.1em;
+  letter-spacing: 0em;
   font-size: 64px;
   line-height: 74px;
 }
@@ -3573,7 +3546,7 @@ div::-webkit-scrollbar-thumb {
   font-weight: 400;
   font-size: 32px;
   line-height: 23px;
-  letter-spacing: -0.1em;
+  letter-spacing: 0em;
   text-transform: uppercase;
   color: #2e2e2e;
   display: block;
@@ -3862,7 +3835,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 24px;
   line-height: 24px;
   text-align: center;
-  letter-spacing: -0.01em;
   color: #1d1d1d;
   margin-top: 59px;
   height: 50px;
@@ -3970,7 +3942,6 @@ div::-webkit-scrollbar-thumb {
 .prodcut-text__caption {
   font-weight: 700;
   font-size: 48px;
-  letter-spacing: -0.1em;
   max-width: 320px;
   width: 100%;
 }
@@ -3985,7 +3956,6 @@ div::-webkit-scrollbar-thumb {
 
 .filter-product .caption {
   text-transform: none;
-  letter-spacing: -0.01em;
   line-height: 28px;
 }
 .filter-product .btn-delete {
@@ -4327,7 +4297,6 @@ div::-webkit-scrollbar-thumb {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  letter-spacing: -0.02em;
   color: #1d1d1d;
   display: flex;
   align-items: center;
@@ -4448,7 +4417,6 @@ div::-webkit-scrollbar-thumb {
 .news-section .news-item .news-item__name {
   font-size: 48px;
   line-height: 48px;
-  letter-spacing: -3.84px;
   margin-bottom: 13px;
 }
 .news-section .news-item .news-item__content {
@@ -4546,7 +4514,6 @@ div::-webkit-scrollbar-thumb {
   font-weight: 400;
   color: #2e2e2e;
   display: block;
-  letter-spacing: -3.84px;
   text-transform: uppercase;
 }
 
@@ -4728,14 +4695,12 @@ div::-webkit-scrollbar-thumb {
   font-size: 24px;
   font-weight: 700;
   line-height: 48px;
-  letter-spacing: -1.92px;
   text-transform: uppercase;
   margin-bottom: 15px;
 }
 .other-block a {
   font-size: 18px;
   line-height: 18px;
-  letter-spacing: -1.62px;
   text-transform: uppercase;
   -webkit-transition: color 0.3s;
   -moz-transition: color 0.3s;
@@ -4836,7 +4801,6 @@ div::-webkit-scrollbar-thumb {
 .blog-item__link {
   font-size: 24px;
   line-height: 32px;
-  letter-spacing: -1.92px;
   text-transform: uppercase;
   margin-bottom: 18px;
   display: inline-block;
@@ -4876,7 +4840,6 @@ div::-webkit-scrollbar-thumb {
 .other-section .caption {
   font-size: 48px;
   line-height: 48px;
-  letter-spacing: -4.32px;
   text-transform: uppercase;
 }
 .other-section .blog-item {
@@ -5084,7 +5047,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 64px;
   font-weight: 700;
   line-height: 64px;
-  letter-spacing: -5.76px;
   margin-bottom: 20px;
   display: block;
   text-transform: uppercase;
@@ -5246,7 +5208,6 @@ div::-webkit-scrollbar-thumb {
 .search-result__text {
   margin-top: 62px;
   padding-bottom: 30px;
-  letter-spacing: -0.32px;
   display: block;
 }
 
@@ -5255,7 +5216,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
-  letter-spacing: -0.18px;
   margin-top: 14px;
 }
 .search-result__not li {
@@ -5474,7 +5434,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 48px;
   font-weight: 700;
   line-height: 64px;
-  letter-spacing: -4.32px;
   text-transform: uppercase;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -5592,7 +5551,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
-  letter-spacing: -0.36px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -5632,7 +5590,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 32px;
   font-weight: 400;
   line-height: 32px;
-  letter-spacing: -0.64px;
   display: block;
   margin-top: 28px;
   margin-bottom: 28px;
@@ -5675,7 +5632,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 116px;
   line-height: 116px;
   font-weight: 700;
-  letter-spacing: -10.44px;
   text-transform: uppercase;
   grid-row: 1/3;
   white-space: nowrap;
@@ -5686,7 +5642,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 57px;
   font-weight: 700;
   line-height: 57px;
-  letter-spacing: -4.486px;
   text-transform: uppercase;
   grid-column: 2/3;
   -moz-transform: translateY(19px);
@@ -5700,7 +5655,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 29px;
   font-weight: 700;
   line-height: 29px;
-  letter-spacing: -2.326px;
   text-transform: uppercase;
   grid-column: 2/3;
   -moz-transform: translateY(-13px);
@@ -5714,7 +5668,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 20px;
   font-weight: 400;
   line-height: 26px;
-  letter-spacing: -1.8px;
   text-transform: uppercase;
   display: block;
   margin-top: -18px;
@@ -5764,7 +5717,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 32px;
   font-weight: 400;
   line-height: 32px;
-  letter-spacing: -0.64px;
   max-width: 692px;
 }
 
@@ -5873,7 +5825,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 32px;
   font-weight: 400;
   line-height: 34px;
-  letter-spacing: -2.88px;
   text-transform: uppercase;
   max-width: 250px;
 }
@@ -6094,7 +6045,6 @@ div::-webkit-scrollbar-thumb {
   font-weight: 700;
   font-size: 32px;
   line-height: 34px;
-  letter-spacing: -2.56px;
   margin-bottom: 30px;
 }
 .esg-report__right strong + h2 {
@@ -6209,7 +6159,6 @@ div::-webkit-scrollbar-thumb {
 .delivery-sng__right .caption {
   font-size: 48px;
   line-height: 48px;
-  letter-spacing: -4.32px;
   display: block;
   margin-bottom: 43px;
 }
@@ -6247,7 +6196,6 @@ div::-webkit-scrollbar-thumb {
 .delivery-free .caption {
   font-size: 48px;
   line-height: 48px;
-  letter-spacing: -4.32px;
 }
 .delivery-free ul {
   margin-top: 45px;
@@ -6308,7 +6256,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 48px;
   font-weight: 700;
   line-height: 48px;
-  letter-spacing: -4.32px;
 }
 .delivery-shipping::before {
   content: "";
@@ -6365,7 +6312,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 48px;
   font-weight: 700;
   line-height: 48px;
-  letter-spacing: -4.32px;
 }
 .delivery-pickup .btn {
   margin-top: 60px;
@@ -6462,7 +6408,6 @@ div::-webkit-scrollbar-thumb {
   color: rgb(0, 161, 154);
   font-size: 24px;
   font-weight: 400;
-  letter-spacing: -2.16px;
 }
 .contacts-info__right ul {
   margin-top: 17px;
@@ -6737,7 +6682,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 32px;
   font-weight: 400;
   line-height: 24px;
-  letter-spacing: -2.56px;
   text-transform: uppercase;
   display: block;
 }
@@ -7015,7 +6959,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 48px;
   font-weight: 400;
   line-height: 64px;
-  letter-spacing: -4.32px;
   text-transform: uppercase;
   display: block;
 }
@@ -7039,7 +6982,6 @@ div::-webkit-scrollbar-thumb {
 .technologies-section .caption {
   margin-bottom: 55px;
   max-width: 461px;
-  letter-spacing: -5.76px;
 }
 .technologies-section .caption--small {
   font-weight: 400;
@@ -7113,7 +7055,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 48px;
   font-weight: 700;
   line-height: 48px;
-  letter-spacing: -4.32px;
   text-transform: uppercase;
   max-width: 453px;
   width: 100%;
@@ -7132,7 +7073,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 96px;
   font-weight: 700;
   line-height: 90.8%;
-  letter-spacing: -8.64px;
   text-transform: uppercase;
   display: block;
 }
@@ -7445,7 +7385,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 64px;
   font-weight: 700;
   line-height: 64px;
-  letter-spacing: 1.92px;
   text-transform: uppercase;
   display: block;
   color: #f3ece7;
@@ -7461,7 +7400,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 32px;
   font-weight: 400;
   line-height: 34px;
-  letter-spacing: -2.88px;
   text-transform: uppercase;
   color: #2e2e2e;
   display: block;
@@ -7526,9 +7464,6 @@ div::-webkit-scrollbar-thumb {
   margin-top: 74px;
   position: relative;
 }
-.types-print .caption {
-  letter-spacing: -2.76px;
-}
 .types-print .btn {
   margin: 0 auto;
   font-size: 18px;
@@ -7539,7 +7474,6 @@ div::-webkit-scrollbar-thumb {
   letter-spacing: 0;
   font-size: 18px;
   font-weight: 700;
-  letter-spacing: -1.62px;
 }
 .types-print__list {
   position: relative;
@@ -7627,7 +7561,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 24px;
   font-weight: 700;
   line-height: 34px;
-  letter-spacing: -2.16px;
   text-transform: uppercase;
   margin-bottom: 16px;
 }
@@ -7686,7 +7619,6 @@ div::-webkit-scrollbar-thumb {
   display: block;
   font-size: 48px;
   line-height: 48px;
-  letter-spacing: -4.32px;
 }
 .delivery-section .swiper-slide p {
   margin-top: 36px;
@@ -7810,7 +7742,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 32px;
   font-weight: 350;
   line-height: 90.8%;
-  letter-spacing: -2.56px;
   display: block;
 }
 
@@ -7851,7 +7782,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 64px;
   font-weight: 700;
   line-height: 54px;
-  letter-spacing: -6.4px;
   text-transform: uppercase;
 }
 
@@ -7928,7 +7858,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 24px;
   font-weight: 400;
   line-height: 90.8%;
-  letter-spacing: -1.92px;
 }
 .events-item__date .events-item__time {
   color: rgb(46, 46, 46);
@@ -7950,7 +7879,6 @@ div::-webkit-scrollbar-thumb {
   color: #2e2e2e;
   font-size: 20px;
   font-weight: 400;
-  letter-spacing: -1.8px;
   text-transform: uppercase;
   gap: 60px;
 }
@@ -8040,7 +7968,6 @@ div::-webkit-scrollbar-thumb {
   font-weight: 750;
   font-size: 14px;
   line-height: 25px;
-  letter-spacing: 0.05em;
   color: rgb(0, 0, 0);
   padding-top: 10px;
 }
@@ -8128,7 +8055,6 @@ div::-webkit-scrollbar-thumb {
 .calendar .calendarHead {
   font-size: 14px;
   line-height: 25px;
-  letter-spacing: 0.05em;
   color: #747d88;
 }
 .calendar .today {
@@ -8213,7 +8139,6 @@ div::-webkit-scrollbar-thumb {
 }
 .events-mons__item .calendarTitle__text {
   margin: 0;
-  letter-spacing: -2.4px;
 }
 
 .catalog-invis {
@@ -8269,7 +8194,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 18px;
   font-weight: 400;
   line-height: 18px;
-  letter-spacing: -1.8px;
   text-transform: uppercase;
 }
 .catalog-invis__list li:nth-child(4) img {
@@ -8417,7 +8341,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 14px;
   font-weight: 400;
   line-height: 90.8%;
-  letter-spacing: -1.12px;
 }
 .event-small .caption {
   position: relative;
@@ -8425,7 +8348,6 @@ div::-webkit-scrollbar-thumb {
   color: rgb(255, 255, 255);
   margin-top: 15px;
   line-height: 32px;
-  letter-spacing: -2.88px;
 }
 
 .js-action-link {
@@ -8486,7 +8408,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 18px;
   font-weight: 400;
   line-height: 18px;
-  letter-spacing: -1.8px;
   text-transform: uppercase;
   -webkit-transition: color 0.3s;
   -moz-transition: color 0.3s;
@@ -8626,6 +8547,9 @@ div::-webkit-scrollbar-thumb {
   -ms-border-radius: 40px;
   border-radius: 40px;
 }
+.search-invis:hover {
+  width: 603px;
+}
 .search-invis.opened {
   width: 603px;
 }
@@ -8634,7 +8558,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 16px;
   font-weight: 400;
   line-height: 14px;
-  letter-spacing: -0.32px;
   padding: 0 30px;
   width: 100%;
   height: 100%;
@@ -8653,7 +8576,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 16px;
   font-weight: 400;
   line-height: 14px;
-  letter-spacing: -0.32px;
   position: absolute;
   right: 30px;
   top: 50%;
@@ -8916,7 +8838,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 64px;
   font-weight: 700;
   line-height: 48px;
-  letter-spacing: -5.12px;
   text-transform: uppercase;
   color: rgb(0, 161, 154);
 }
@@ -8924,7 +8845,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 32px;
   font-weight: 400;
   line-height: 48px;
-  letter-spacing: -2.56px;
   text-transform: uppercase;
   margin-top: 10px;
 }
@@ -9007,7 +8927,6 @@ div::-webkit-scrollbar-thumb {
   font-size: 16px;
   font-weight: 400;
   line-height: 14px;
-  letter-spacing: -0.32px;
   display: flex;
   flex-direction: column;
   align-items: center;
