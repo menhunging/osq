@@ -194,72 +194,72 @@ $(document).ready(function () {
     });
   }
 
-  if ($(".your-lines__slider").length > 0) {
-    const sliders = document.querySelectorAll(".your-lines__slider");
+  // if ($(".your-lines__slider").length > 0) {
+  //   const sliders = document.querySelectorAll(".your-lines__slider");
 
-    let mySwipers = [];
+  //   let mySwipers = [];
 
-    function sliderinit() {
-      sliders.forEach((slider, index) => {
-        if (!slider.swiper) {
-          mySwipers[index] = new Swiper(slider, {
-            effect: "cards",
-            allowTouchMove: false,
-            initialSlide:
-              $(slider).find(".swiper-slide").length <= 8
-                ? $(slider).find(".swiper-slide").length / 2 - 1
-                : 4,
-            cardsEffect: {
-              slideShadows: false,
-              perSlideRotate: 0,
-              perSlideOffset: 15,
-            },
-            on: {
-              init: function (swiper) {
-                // $(slider)
-                //   .find(".swiper-slide")
-                //   .map(function (index, element) {
-                //     $(this).hover(function (e) {
-                //       swiper.slideTo(index);
-                //     });
-                //   });
-              },
-            },
-            breakpoints: {
-              // 320: {
-              //   slidesPerView: 1,
-              // },
-              // 640: {
-              //   slidesPerView: 2,
-              // },
-              // 1024: {
-              //   slidesPerView: 3,
-              // },
-              // 1200: {
-              //   slidesPerView: 4,
-              // },
-            },
-          });
+  //   function sliderinit() {
+  //     sliders.forEach((slider, index) => {
+  //       if (!slider.swiper) {
+  //         mySwipers[index] = new Swiper(slider, {
+  //           effect: "cards",
+  //           allowTouchMove: false,
+  //           initialSlide:
+  //             $(slider).find(".swiper-slide").length <= 8
+  //               ? $(slider).find(".swiper-slide").length / 2 - 1
+  //               : 4,
+  //           cardsEffect: {
+  //             slideShadows: false,
+  //             perSlideRotate: 0,
+  //             perSlideOffset: 15,
+  //           },
+  //           on: {
+  //             init: function (swiper) {
+  //               // $(slider)
+  //               //   .find(".swiper-slide")
+  //               //   .map(function (index, element) {
+  //               //     $(this).hover(function (e) {
+  //               //       swiper.slideTo(index);
+  //               //     });
+  //               //   });
+  //             },
+  //           },
+  //           breakpoints: {
+  //             // 320: {
+  //             //   slidesPerView: 1,
+  //             // },
+  //             // 640: {
+  //             //   slidesPerView: 2,
+  //             // },
+  //             // 1024: {
+  //             //   slidesPerView: 3,
+  //             // },
+  //             // 1200: {
+  //             //   slidesPerView: 4,
+  //             // },
+  //           },
+  //         });
 
-          $(slider)
-            .find(".btn-prev")
-            .on("click", function () {
-              mySwipers[index].slidePrev();
-            });
+  //         $(slider)
+  //           .find(".btn-prev")
+  //           .on("click", function () {
+  //             mySwipers[index].slidePrev();
+  //           });
 
-          $(slider)
-            .find(".btn-next")
-            .on("click", function () {
-              mySwipers[index].slideNext();
-            });
-        } else {
-          return;
-        }
-      });
-    }
+  //         $(slider)
+  //           .find(".btn-next")
+  //           .on("click", function () {
+  //             mySwipers[index].slideNext();
+  //           });
+  //       } else {
+  //         return;
+  //       }
+  //     });
+  //   }
 
-    sliders.length && sliderinit();
-  }
+  //   sliders.length && sliderinit();
+  // }
 
   if ($(".catalog-main__slider").length > 0) {
     const swiper = new Swiper(".catalog-main__slider", {
@@ -1499,6 +1499,146 @@ $(document).ready(function () {
       //   );
       // });
     }
+  }
+
+  if ($(".your-lines").length > 0) {
+    $(".b-product-lines__cart").on("click", function (e) {
+      if (
+        !$(".b-product-lines__cart-arrow-wrap").is(e.target) &&
+        $(".b-product-lines__cart-arrow-wrap").has(e.target).length === 0
+      ) {
+        $(".b-product-lines__cart").removeClass("active");
+
+        let parentT = $(".b-product-lines__switch-item-wrap.active"),
+          parentTchildren = parentT.find(".b-product-lines__cart");
+
+        for (let n = 0; n < parentTchildren.length; n++) {
+          if (parentTchildren.index(n) < $(this).index() + 1) {
+            for (let i = 0; i < $(this).index(); i++) {
+              parentTchildren
+                .eq(i)
+                .css("border-radius", "10px 0 0 10px")
+                .addClass("b");
+            }
+          } else {
+            for (let b = $(this).index() - 1; b < parentTchildren.length; b++) {
+              parentTchildren
+                .eq(b)
+                .css("border-radius", "0px 10px 10px 0px")
+                .addClass("n");
+            }
+          }
+          $(this).addClass("active");
+          $(this).css("border-radius", "10px");
+        }
+      }
+    });
+
+    $(".b-product-lines__switch-btn").eq(0).addClass("active");
+    $(".b-product-lines__switch-item-wrap").eq(0).addClass("active").fadeIn();
+
+    let cartWidth = $(".b-product-lines__cart.active").width(),
+      bodyWidth = cartWidth - 16 * 9;
+
+    $(".b-product-lines__cart-body").css("width", bodyWidth + "px");
+    $(".b-product-lines__cart-body").css("min-width", bodyWidth + "px");
+
+    $(".b-product-lines__switch-btn").on("click", function (e) {
+      if (
+        !$(".b-product-lines__cart-arrow-wrap").is(e.target) &&
+        $(".b-product-lines__cart-arrow-wrap").has(e.target).length === 0
+      ) {
+        let cartWidth = $(".b-product-lines__cart.active").width(),
+          bodyWidth = cartWidth - 16 * 9;
+
+        $(".b-product-lines__switch-btn").removeClass("active");
+        $(this).addClass("active");
+
+        $(".b-product-lines__switch-item-wrap")
+          .fadeOut(0)
+          .removeClass("active");
+        $(".b-product-lines__switch-item-wrap")
+          .eq($(this).index())
+          .fadeIn()
+          .addClass("active");
+
+        let parentT = $(".b-product-lines__switch-item-wrap.active"),
+          parentTchildren = parentT.find(".b-product-lines__cart");
+
+        $(".b-product-lines__cart").removeClass("active");
+        parentTchildren.eq(0).addClass("active");
+        $(".b-product-lines__cart").css("transition", "0s");
+        setTimeout(
+          () => $(".b-product-lines__cart").css("transition", "0.4s"),
+          400
+        );
+
+        $(".b-product-lines__cart-body").css("width", bodyWidth + "px");
+        $(".b-product-lines__cart-body").css("min-width", bodyWidth + "px");
+      }
+    });
+
+    $(".b-product-lines__cart-arrow_next").on("click", function () {
+      let parentT = $(".b-product-lines__switch-item-wrap.active"),
+        parentTchildren = parentT.find(".b-product-lines__cart"),
+        cartActive = parentT.find(".b-product-lines__cart.active");
+
+      if (cartActive.index() != parentTchildren.length - 1) {
+        $(".b-product-lines__cart").removeClass("active");
+
+        for (let n = 0; n < parentTchildren.length; n++) {
+          if (parentTchildren.index(n) < cartActive + 1) {
+            for (let i = 0; i < cartActive; i++) {
+              parentTchildren
+                .eq(i)
+                .css("border-radius", "10px 0 0 10px")
+                .addClass("b");
+            }
+          } else {
+            for (let b = cartActive - 1; b < parentTchildren.length; b++) {
+              parentTchildren
+                .eq(b)
+                .css("border-radius", "0px 10px 10px 0px")
+                .addClass("n");
+            }
+          }
+        }
+
+        parentTchildren.eq(cartActive.index() + 1).addClass("active");
+        parentTchildren.eq(cartActive.index() + 1).css("border-radius", "10px");
+      }
+    });
+
+    $(".b-product-lines__cart-arrow_prev").on("click", function () {
+      let parentT = $(".b-product-lines__switch-item-wrap.active"),
+        parentTchildren = parentT.find(".b-product-lines__cart"),
+        cartActive = parentT.find(".b-product-lines__cart.active");
+
+      if (cartActive.index() != 0) {
+        $(".b-product-lines__cart").removeClass("active");
+
+        for (let n = 0; n < parentTchildren.length; n++) {
+          if (parentTchildren.index(n) < cartActive + 1) {
+            for (let i = 0; i < cartActive; i++) {
+              parentTchildren
+                .eq(i)
+                .css("border-radius", "10px 0 0 10px")
+                .addClass("b");
+            }
+          } else {
+            for (let b = cartActive - 1; b < parentTchildren.length; b++) {
+              parentTchildren
+                .eq(b)
+                .css("border-radius", "0px 10px 10px 0px")
+                .addClass("n");
+            }
+          }
+        }
+
+        parentTchildren.eq(cartActive.index() - 1).addClass("active");
+        parentTchildren.eq(cartActive.index() - 1).css("border-radius", "10px");
+      }
+    });
   }
 });
 
