@@ -3,7 +3,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 addEventListener("scroll", (event) => {
   currentScroll = $(window).scrollTop();
 
-  // console.log(currentScroll);
+  console.log(currentScroll);
 
   if ($(".animation-text").length > 0) {
     if (currentScroll >= "9600") {
@@ -18,7 +18,7 @@ addEventListener("scroll", (event) => {
       $(".animation-text").removeClass("show");
     }
 
-    if (currentScroll >= "13000" && currentScroll < "23000") {
+    if (currentScroll >= "13000" && currentScroll < "18900") {
       $("#lottie-2").addClass("small");
       $(".product-main").addClass("fixed");
     } else {
@@ -32,13 +32,13 @@ addEventListener("scroll", (event) => {
       $(".product-main").removeClass("show");
     }
 
-    if (currentScroll >= "23000") {
+    if (currentScroll >= "18900") {
       $(".production").addClass("fixed");
     } else {
       $(".production").removeClass("fixed");
     }
 
-    if (currentScroll >= "27200") {
+    if (currentScroll >= "23000") {
       $("#lottie-2").addClass("show");
       $("#lottie-3").addClass("visible");
       $(".production").addClass("show");
@@ -50,7 +50,7 @@ addEventListener("scroll", (event) => {
       $(".delivery--v1").removeClass("fixed");
     }
 
-    if (currentScroll >= "32300") {
+    if (currentScroll >= "27600") {
       $(".delivery--v1").addClass("show");
       $("#lottie-3").removeClass("visible");
       $("#lottie-3").addClass("show");
@@ -61,7 +61,8 @@ addEventListener("scroll", (event) => {
   }
 
   if ($(".incision").length > 0) {
-    if (currentScroll >= "23000") {
+    // if (currentScroll >= "23000") {
+    if (currentScroll >= "18900") {
       $(".incision").addClass("show");
     } else {
       $(".incision").removeClass("show");
@@ -1069,16 +1070,16 @@ $(document).ready(function () {
         animatebodymovin(animDuration, anim);
       }
 
-      if (currentScroll >= "16200" && currentScroll <= "23000") {
+      if (currentScroll >= "16200" && currentScroll <= "18900") {
         $("#lottie-2").addClass("paused");
         anim.pause();
       }
 
-      if (currentScroll >= "23200" && currentScroll < "26500") {
+      if (currentScroll >= "19000" && currentScroll < "26500") {
         $("#lottie-2").removeClass("paused");
         $("#lottie-2").removeClass("small");
         anim.pause();
-        animatebodymovin(animDuration, anim, 7200);
+        animatebodymovin(animDuration, anim, 3700);
       }
 
       if (currentScroll < "16200") {
@@ -1093,7 +1094,7 @@ $(document).ready(function () {
   }
 
   if ($("#lottie-3").length > 0) {
-    let number = 27200;
+    let number = 23000;
 
     let theWindow = $(window);
     let winHeight = theWindow.height();
@@ -1166,89 +1167,90 @@ $(document).ready(function () {
 
       gsap.fromTo(
         ".animation-text",
-        { x: 1000, position: "relative" },
+        { x: 0, opacity: 0, position: "relative" },
         {
           x: 0,
+          opacity: 1,
           position: "fixed",
           scrollTrigger: {
             trigger: ".animation-text",
-            start: "4500",
+            start: "5000",
             end: "5500",
             scrub: true,
           },
         }
       );
 
-      gsap.fromTo(
-        ".animation-text .caption",
-        { x: 500 },
-        {
-          x: 0,
-          scrollTrigger: {
-            trigger: ".animation-text",
-            start: "5500",
-            end: "6500",
-            scrub: true,
-          },
-        }
-      );
+      // gsap.fromTo(
+      //   ".animation-text .caption",
+      //   { x: 500 },
+      //   {
+      //     x: 0,
+      //     scrollTrigger: {
+      //       trigger: ".animation-text",
+      //       start: "5500",
+      //       end: "6500",
+      //       scrub: true,
+      //     },
+      //   }
+      // );
 
-      gsap.fromTo(
-        ".animation-text p",
-        { x: 500 },
-        {
-          x: 0,
-          scrollTrigger: {
-            trigger: ".animation-text",
-            start: "6500",
-            end: "7500",
-            scrub: true,
-          },
-        }
-      );
+      // gsap.fromTo(
+      //   ".animation-text p",
+      //   { x: 500 },
+      //   {
+      //     x: 0,
+      //     scrollTrigger: {
+      //       trigger: ".animation-text",
+      //       start: "6500",
+      //       end: "7500",
+      //       scrub: true,
+      //     },
+      //   }
+      // );
 
-      gsap.fromTo(
-        ".animation-text__controls",
-        { x: 1500 },
-        {
-          x: 0,
-          scrollTrigger: {
-            trigger: ".animation-text",
-            start: "7000",
-            end: "8000",
-            scrub: true,
-          },
-        }
-      );
+      // gsap.fromTo(
+      //   ".animation-text__controls",
+      //   { x: 1500 },
+      //   {
+      //     x: 0,
+      //     scrollTrigger: {
+      //       trigger: ".animation-text",
+      //       start: "7000",
+      //       end: "8000",
+      //       scrub: true,
+      //     },
+      //   }
+      // );
 
-      gsap.fromTo(
-        ".animation-text .line",
-        { opacity: 0 },
-        {
-          opacity: 1,
-          scrollTrigger: {
-            trigger: ".animation-text",
-            start: "7000",
-            end: "8000",
-            scrub: true,
-          },
-        }
-      );
+      // gsap.fromTo(
+      //   ".animation-text .line",
+      //   { opacity: 0 },
+      //   {
+      //     opacity: 1,
+      //     scrollTrigger: {
+      //       trigger: ".animation-text",
+      //       start: "7000",
+      //       end: "8000",
+      //       scrub: true,
+      //     },
+      //   }
+      // );
 
-      gsap.fromTo(
-        ".animation-text .logo-invis",
-        { x: 1000, y: 500 },
-        {
-          x: 0,
-          y: 0,
-          scrollTrigger: {
-            trigger: ".animation-text",
-            start: "5500",
-            end: "8000",
-            scrub: true,
-          },
-        }
-      );
+      // gsap.fromTo(
+      //   ".animation-text .logo-invis",
+      //   { x: 1000, y: 500 },
+      //   {
+      //     x: 0,
+      //     y: 0,
+      //     scrollTrigger: {
+      //       trigger: ".animation-text",
+      //       start: "5500",
+      //       end: "8000",
+      //       scrub: true,
+      //     },
+      //   }
+      // );
 
       // product-main
 
@@ -1327,7 +1329,7 @@ $(document).ready(function () {
       );
 
       gsap.fromTo(
-        ".incision-one",
+        ".incision-item",
         { x: 1500 },
         {
           x: 0,
@@ -1347,7 +1349,7 @@ $(document).ready(function () {
           x: 0,
           scrollTrigger: {
             trigger: ".incision",
-            start: "1500",
+            start: "1000",
             end: "2500",
             scrub: true,
           },
@@ -1361,8 +1363,8 @@ $(document).ready(function () {
           x: 0,
           scrollTrigger: {
             trigger: ".incision",
-            start: "2500",
-            end: "3500",
+            start: "1000",
+            end: "2500",
             scrub: true,
           },
         }
@@ -1375,8 +1377,8 @@ $(document).ready(function () {
           x: 0,
           scrollTrigger: {
             trigger: ".incision",
-            start: "3500",
-            end: "4500",
+            start: "1000",
+            end: "2500",
             scrub: true,
           },
         }
@@ -1389,8 +1391,8 @@ $(document).ready(function () {
           x: 0,
           scrollTrigger: {
             trigger: ".incision",
-            start: "4500",
-            end: "5500",
+            start: "1000",
+            end: "2500",
             scrub: true,
           },
         }
@@ -1426,9 +1428,9 @@ $(document).ready(function () {
 
       gsap.fromTo(
         ".delivery .btn",
-        { x: 2000 },
+        { opacity: 0,  x: 700, },
         {
-          x: 700,
+          opacity: 1,
           scrollTrigger: {
             trigger: ".delivery",
             start: "2500",
