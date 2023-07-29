@@ -2607,7 +2607,7 @@ div::-webkit-scrollbar-thumb {
   width: 100%;
 }
 .catalog-main__slider img {
-  width: 231px;
+  width: 320px;
   object-fit: contain;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
