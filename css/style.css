@@ -960,8 +960,17 @@ div::-webkit-scrollbar-thumb {
   margin-left: -960px;
   margin-top: -700px;
 }
-.lottie.show {
+
+#lottie-1 {
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
   opacity: 0;
+  margin-left: -1010px;
+}
+#lottie-1.show {
+  opacity: 1;
 }
 
 #lottie-2 {
@@ -970,6 +979,7 @@ div::-webkit-scrollbar-thumb {
   -moz-transition: width 0.3s, height 0.3s, margin 0.3s, opacity 0.3s, top 1s;
   -o-transition: width 0.3s, height 0.3s, margin 0.3s, opacity 0.3s, top 1s;
   transition: width 0.3s, height 0.3s, margin 0.3s, opacity 0.3s, top 1s;
+  opacity: 0;
 }
 #lottie-2.small {
   width: 1600px;
@@ -985,10 +995,14 @@ div::-webkit-scrollbar-thumb {
   margin-top: -580px;
 }
 #lottie-2.show {
-  top: -1000px;
+  opacity: 1;
+}
+#lottie-2.hide {
+  opacity: 0;
 }
 
 #lottie-3 {
+  margin-left: -1140px;
   opacity: 0;
   -webkit-transition: opacity 1s, top 1s;
   -moz-transition: opacity 1s, top 1s;
@@ -2607,7 +2621,7 @@ div::-webkit-scrollbar-thumb {
   width: 100%;
 }
 .catalog-main__slider img {
-  width: 232px;
+  width: 270px;
   object-fit: contain;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -2792,6 +2806,22 @@ div::-webkit-scrollbar-thumb {
   -o-transition: opacity 1s;
   transition: opacity 1s;
 }
+.animation-text::before {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 2141px;
+  height: 1080px;
+  left: 50%;
+  top: -160px;
+  background-image: url("../img/bg-anim-text.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: -1020px;
+}
 .animation-text .caption {
   margin-bottom: 30px;
   font-size: 96px;
@@ -2846,7 +2876,7 @@ div::-webkit-scrollbar-thumb {
   background-size: contain;
   pointer-events: none;
 }
-.animation-text.show {
+.animation-text.hide {
   opacity: 0 !important;
   pointer-events: none;
 }
@@ -2870,7 +2900,7 @@ div::-webkit-scrollbar-thumb {
   position: fixed;
   top: -60px;
 }
-.product-main.show {
+.product-main.hide {
   opacity: 0;
   pointer-events: none;
 }
@@ -3172,6 +3202,24 @@ div::-webkit-scrollbar-thumb {
 }
 .incision.show {
   opacity: 0 !important;
+}
+.incision::before {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 2113px;
+  height: 1319px;
+  left: 50%;
+  top: -320px;
+  background-image: url("../img/preimuschestva.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: -1050px;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .incision__inner {
@@ -9357,10 +9405,10 @@ div::-webkit-scrollbar-thumb {
   }
 }
 :root {
-  --color-primary: #00A19A;
-  --color-black: #2E2E2E;
+  --color-primary: #00a19a;
+  --color-black: #2e2e2e;
   --color-white: white;
-  --shadow: 0px 10px 20px rgba(170, 159, 142, 0.70);
+  --shadow: 0px 10px 20px rgba(170, 159, 142, 0.7);
   --opacity-1: 0.3;
   --transition-default: 0.4s;
   --cursor: pointer;
@@ -9440,7 +9488,7 @@ div::-webkit-scrollbar-thumb {
 }
 .dop-dev .b-product-lines__switch {
   display: flex;
-  gap: 1rem;
+  gap: 90px;
 }
 .dop-dev .b-product-lines__switch-btn {
   background-color: transparent;

@@ -731,23 +731,24 @@ div {
   height: 1060px;
   margin-left: -960px;
   margin-top: -700px;
-
-  &.show {
-    opacity: 0;
-  }
 }
 
 #lottie-1 {
-  // width: 1920px;
-  // height: 1200px;
-  // margin-left: -960px;
-  // margin-top: -760px;
+  $trans: opacity 0.3s;
+  @include transition($trans);
+  opacity: 0;
+  margin-left: -1010px;
+
+  &.show {
+    opacity: 1;
+  }
 }
 
 #lottie-2 {
   z-index: 2;
   $trans: width 0.3s, height 0.3s, margin 0.3s, opacity 0.3s, top 1s;
   @include transition($trans);
+  opacity: 0;
 
   &.small {
     width: 1600px;
@@ -765,15 +766,16 @@ div {
   }
 
   &.show {
-    top: -1000px;
+    opacity: 1;
+  }
+
+  &.hide {
+    opacity: 0;
   }
 }
 
 #lottie-3 {
-  // width: 1920px;
-  // height: 1200px;
-  // margin-left: -960px;
-  // margin-top: -760px;
+  margin-left: -1140px;
   opacity: 0;
   $trans: opacity 1s, top 1s;
   @include transition($trans);

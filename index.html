@@ -143,7 +143,7 @@
             <a href="#" class="link-mail">clients@osqgroup.ru</a>
           </div>
 
-          <a href="#" class="btn">
+          <a href="#" class="btn" data-modal="modal-call">
             Заказать звонок
 
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -793,7 +793,7 @@
             </div>
             <div class="food-item" data-aos="fade-left" data-aos-delay="0" data-aos-offset="0">
               <div class="picture">
-                <img src="img/pic-food1.jpg" alt="">
+                <img src="img/pic-food2.jpg" alt="">
                 <div class="food-item__content">
                   <a href="#" class="link">
                     Подробнее
@@ -808,7 +808,7 @@
             </div>
             <div class="food-item" data-aos="fade-left" data-aos-delay="0" data-aos-offset="0">
               <div class="picture">
-                <img src="img/pic-food1.jpg" alt="">
+                <img src="img/pic-food3.jpg" alt="">
                 <div class="food-item__content">
                   <a href="#" class="link">
                     Подробнее
@@ -823,7 +823,7 @@
             </div>
             <div class="food-item" data-aos="fade-left" data-aos-delay="0" data-aos-offset="0">
               <div class="picture">
-                <img src="img/pic-food1.jpg" alt="">
+                <img src="img/pic-food4.jpg" alt="">
                 <div class="food-item__content">
                   <a href="#" class="link">
                     Подробнее
@@ -839,7 +839,7 @@
 
             <div class="food-item" data-aos="fade-left" data-aos-delay="0" data-aos-offset="0">
               <div class="picture">
-                <img src="img/pic-food1.jpg" alt="">
+                <img src="img/pic-food5.jpg" alt="">
                 <div class="food-item__content">
                   <a href="#" class="link">
                     Подробнее
@@ -854,7 +854,7 @@
             </div>
             <div class="food-item" data-aos="fade-left" data-aos-delay="0" data-aos-offset="0">
               <div class="picture">
-                <img src="img/pic-food1.jpg" alt="">
+                <img src="img/pic-food6.jpg" alt="">
                 <div class="food-item__content">
                   <a href="#" class="link">
                     Подробнее
@@ -869,7 +869,7 @@
             </div>
             <div class="food-item" data-aos="fade-left" data-aos-delay="0" data-aos-offset="0">
               <div class="picture">
-                <img src="img/pic-food1.jpg" alt="">
+                <img src="img/pic-food7.jpg" alt="">
                 <div class="food-item__content">
                   <a href="#" class="link">
                     Подробнее
@@ -884,7 +884,7 @@
             </div>
             <div class="food-item" data-aos="fade-left" data-aos-delay="0" data-aos-offset="0">
               <div class="picture">
-                <img src="img/pic-food1.jpg" alt="">
+                <img src="img/pic-food8.jpg" alt="">
                 <div class="food-item__content">
                   <a href="#" class="link">
                     Подробнее
@@ -2059,6 +2059,52 @@
       </svg>
 
       Избранные товары</a>
+  </div>
+
+  <div class="micromodal-slide modal" id="modal-call" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true">
+        <div class="modal__inner">
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close>
+
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M31 31L16 16M16 16L1 31M16 16L1 1M16 16L31 1" stroke="#AA9F8E" stroke-width="2" />
+            </svg>
+
+
+          </button>
+          <div class="modal__content" autocomplete="off">
+            <form class="modal__form">
+              <h2 class="caption">Заказать звонок</h2>
+              <div class="input-list">
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Ваше имя*">
+                </div>
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Ваш телефон*" class="phone-input">
+                </div>
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Город*" required>
+                </div>
+                <div class="input-wrapper">
+                  <textarea placeholder="Комментарий"></textarea>
+                </div>
+              </div>
+              <div class="modal__controls">
+                <button type="submit" class="btn">Жду звонка</button>
+              </div>
+              <div class="check-block">
+                <input type="checkbox" id="moda1">
+                <label for="moda1">Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных
+                  данных, в
+                  соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и
+                  для целей, определенных в Согласии на обработку персональных данных.</label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="js/jquery-3.6.4.min.js"></script>

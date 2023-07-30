@@ -6,16 +6,23 @@ addEventListener("scroll", (event) => {
   console.log(currentScroll);
 
   if ($(".animation-text").length > 0) {
-    if (currentScroll >= "9600") {
+    if (currentScroll >= "3300") {
       $("#lottie-1").addClass("show");
     } else {
       $("#lottie-1").removeClass("show");
     }
 
-    if (currentScroll >= "11900") {
-      $(".animation-text").addClass("show");
+    if (currentScroll >= "8900") {
+      $("#lottie-1").removeClass("show");
+      $("#lottie-2").addClass("show");
     } else {
-      $(".animation-text").removeClass("show");
+      $("#lottie-2").removeClass("show");
+    }
+
+    if (currentScroll >= "11200") {
+      $(".animation-text").addClass("hide");
+    } else {
+      $(".animation-text").removeClass("hide");
     }
 
     if (currentScroll >= "13000" && currentScroll < "18900") {
@@ -26,10 +33,10 @@ addEventListener("scroll", (event) => {
       $(".product-main").removeClass("fixed");
     }
 
-    if (currentScroll >= "14000") {
-      $(".product-main").addClass("show");
+    if (currentScroll >= "14500") {
+      $(".product-main").addClass("hide");
     } else {
-      $(".product-main").removeClass("show");
+      $(".product-main").removeClass("hide");
     }
 
     if (currentScroll >= "18900") {
@@ -39,18 +46,18 @@ addEventListener("scroll", (event) => {
     }
 
     if (currentScroll >= "23000") {
-      $("#lottie-2").addClass("show");
+      $("#lottie-2").addClass("hide");
       $("#lottie-3").addClass("visible");
       $(".production").addClass("show");
       $(".delivery--v1").addClass("fixed");
     } else {
-      $("#lottie-2").removeClass("show");
+      $("#lottie-2").removeClass("hide");
       $("#lottie-3").removeClass("visible");
       $(".production").removeClass("show");
       $(".delivery--v1").removeClass("fixed");
     }
 
-    if (currentScroll >= "27600") {
+    if (currentScroll >= "27800") {
       $(".delivery--v1").addClass("show");
       $("#lottie-3").removeClass("visible");
       $("#lottie-3").addClass("show");
@@ -61,7 +68,6 @@ addEventListener("scroll", (event) => {
   }
 
   if ($(".incision").length > 0) {
-    // if (currentScroll >= "23000") {
     if (currentScroll >= "18900") {
       $(".incision").addClass("show");
     } else {
@@ -195,73 +201,6 @@ $(document).ready(function () {
     });
   }
 
-  // if ($(".your-lines__slider").length > 0) {
-  //   const sliders = document.querySelectorAll(".your-lines__slider");
-
-  //   let mySwipers = [];
-
-  //   function sliderinit() {
-  //     sliders.forEach((slider, index) => {
-  //       if (!slider.swiper) {
-  //         mySwipers[index] = new Swiper(slider, {
-  //           effect: "cards",
-  //           allowTouchMove: false,
-  //           initialSlide:
-  //             $(slider).find(".swiper-slide").length <= 8
-  //               ? $(slider).find(".swiper-slide").length / 2 - 1
-  //               : 4,
-  //           cardsEffect: {
-  //             slideShadows: false,
-  //             perSlideRotate: 0,
-  //             perSlideOffset: 15,
-  //           },
-  //           on: {
-  //             init: function (swiper) {
-  //               // $(slider)
-  //               //   .find(".swiper-slide")
-  //               //   .map(function (index, element) {
-  //               //     $(this).hover(function (e) {
-  //               //       swiper.slideTo(index);
-  //               //     });
-  //               //   });
-  //             },
-  //           },
-  //           breakpoints: {
-  //             // 320: {
-  //             //   slidesPerView: 1,
-  //             // },
-  //             // 640: {
-  //             //   slidesPerView: 2,
-  //             // },
-  //             // 1024: {
-  //             //   slidesPerView: 3,
-  //             // },
-  //             // 1200: {
-  //             //   slidesPerView: 4,
-  //             // },
-  //           },
-  //         });
-
-  //         $(slider)
-  //           .find(".btn-prev")
-  //           .on("click", function () {
-  //             mySwipers[index].slidePrev();
-  //           });
-
-  //         $(slider)
-  //           .find(".btn-next")
-  //           .on("click", function () {
-  //             mySwipers[index].slideNext();
-  //           });
-  //       } else {
-  //         return;
-  //       }
-  //     });
-  //   }
-
-  //   sliders.length && sliderinit();
-  // }
-
   if ($(".catalog-main__slider").length > 0) {
     const swiper = new Swiper(".catalog-main__slider", {
       slidesPerView: 3,
@@ -276,11 +215,11 @@ $(document).ready(function () {
       effect: "creative",
       creativeEffect: {
         prev: {
-          translate: ["-150%", 0, -200],
+          translate: ["-150%", 0, -210],
           rotate: [0, 0, 0],
         },
         next: {
-          translate: ["150%", 0, -200],
+          translate: ["150%", 0, -210],
           rotate: [0, 0, 0],
         },
       },
@@ -1017,9 +956,6 @@ $(document).ready(function () {
     };
 
     let anim = bodymovin.loadAnimation(animData);
-    // $(window).scroll(function () {
-    //   animatebodymovin(animDuration, anim);
-    // });
 
     function animatebodymovin(duration, animObject) {
       let scrollPosition = theWindow.scrollTop() - number;
@@ -1043,7 +979,7 @@ $(document).ready(function () {
   }
 
   if ($("#lottie-2").length > 0) {
-    let number = 9300;
+    let number = 9000;
 
     let theWindow = $(window);
     let winHeight = theWindow.height();
@@ -1066,30 +1002,25 @@ $(document).ready(function () {
     }
 
     $(window).scroll(function () {
-      if ($(this).scrollTop() > number && currentScroll < "16200") {
+      if ($(this).scrollTop() > number && currentScroll < "16000") {
         animatebodymovin(animDuration, anim);
       }
 
-      if (currentScroll >= "16200" && currentScroll <= "18900") {
+      if (currentScroll >= "16000" && currentScroll <= "18900") {
         $("#lottie-2").addClass("paused");
         anim.pause();
       }
 
-      if (currentScroll >= "19000" && currentScroll < "26500") {
+      if (currentScroll >= "19000" && currentScroll < "22600") {
         $("#lottie-2").removeClass("paused");
         $("#lottie-2").removeClass("small");
         anim.pause();
         animatebodymovin(animDuration, anim, 3700);
       }
 
-      if (currentScroll < "16200") {
+      if (currentScroll < "16000") {
         $("#lottie-2").removeClass("paused");
       }
-
-      // if (currentScroll > "26500") {
-      //   $("#lottie-2").removeClass("small");
-      //   anim.pause();
-      // }
     });
   }
 
@@ -1135,25 +1066,9 @@ $(document).ready(function () {
 
   if ($(".animation-main").length > 0) {
     if (ScrollTrigger.isTouch !== 1) {
-      // gsap.fromTo(
-      //   ".catalog-main",
-      //   { x: 0, y: 0, opacity: 1 },
-      //   {
-      //     x: -1000,
-      //     y: 600,
-      //     opacity: 0,
-      //     scrollTrigger: {
-      //       trigger: ".catalog-main",
-      //       start: "500",
-      //       end: "1500",
-      //       scrub: true,
-      //     },
-      //   }
-      // );
-
       gsap.fromTo(
         "#lottie-1",
-        { x: 1000 },
+        { x: 100 },
         {
           x: 100,
           scrollTrigger: {
@@ -1254,19 +1169,19 @@ $(document).ready(function () {
 
       // product-main
 
-      gsap.fromTo(
-        ".product-main .caption",
-        { x: -500 },
-        {
-          x: 0,
-          scrollTrigger: {
-            trigger: ".product-main",
-            start: "-1500",
-            end: "-1000",
-            scrub: true,
-          },
-        }
-      );
+      // gsap.fromTo(
+      //   ".product-main .caption",
+      //   { x: -500 },
+      //   {
+      //     x: 0,
+      //     scrollTrigger: {
+      //       trigger: ".product-main",
+      //       start: "-1500",
+      //       end: "-1000",
+      //       scrub: true,
+      //     },
+      //   }
+      // );
 
       // incision
 
@@ -1400,12 +1315,12 @@ $(document).ready(function () {
 
       gsap.fromTo(
         ".production__leftSide",
-        { x: -1000 },
+        { opacity: 0 },
         {
-          x: 0,
+          opacity: 1,
           scrollTrigger: {
             trigger: ".production",
-            start: "-2500",
+            start: "-1200",
             end: "0",
             scrub: true,
           },
@@ -1414,12 +1329,12 @@ $(document).ready(function () {
 
       gsap.fromTo(
         ".production__rightSide",
-        { x: 1000 },
+        { opacity: 0 },
         {
-          x: 0,
+          opacity: 1,
           scrollTrigger: {
             trigger: ".production",
-            start: "-2500",
+            start: "-1200",
             end: "0",
             scrub: true,
           },
@@ -1428,7 +1343,7 @@ $(document).ready(function () {
 
       gsap.fromTo(
         ".delivery .btn",
-        { opacity: 0,  x: 700, },
+        { opacity: 0, x: 700 },
         {
           opacity: 1,
           scrollTrigger: {
