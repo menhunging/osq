@@ -8086,10 +8086,10 @@ $fontSize: (
   }
 }
 
-.delivery--v1 {
-  .container {
-    position: relative;
-  }
+.delivery-wrap {
+  position: relative;
+  width: calc(100% + 30px);
+  left:-15px;
 }
 
 .delivery-circles {
