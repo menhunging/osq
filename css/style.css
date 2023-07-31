@@ -3131,7 +3131,8 @@ div::-webkit-scrollbar-thumb {
   margin: 0;
 }
 .delivery--v1 {
-  background-image: url("../img/bg-map1.png");
+  background-image: url("../img/bg-delivery.png");
+  background-position: center -121px;
   margin-top: 1120px;
   opacity: 0;
 }
@@ -9721,6 +9722,103 @@ div::-webkit-scrollbar-thumb {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.delivery--v1 .container {
+  position: relative;
+}
+
+.delivery-circles {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+.delivery-circles li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-box-shadow: 0 0 20px 10px rgb(0, 161, 154);
+  -moz-box-shadow: 0 0 20px 10px rgb(0, 161, 154);
+  box-shadow: 0 0 20px 10px rgb(0, 161, 154);
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  animation: circle-blur;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.delivery-circles li:nth-child(1) {
+  left: -70px;
+  top: 139px;
+}
+.delivery-circles li:nth-child(2) {
+  left: 38px;
+  top: -118px;
+}
+.delivery-circles li:nth-child(3) {
+  left: 234px;
+  top: -209px;
+  width: 5px;
+  height: 5px;
+}
+.delivery-circles li:nth-child(4) {
+  left: 147px;
+  top: -33px;
+  width: 5px;
+  height: 5px;
+}
+.delivery-circles li:nth-child(5) {
+  left: 385px;
+  top: -89px;
+}
+.delivery-circles li:nth-child(6) {
+  left: 674px;
+  top: 163px;
+}
+.delivery-circles li:nth-child(7) {
+  left: 543px;
+  top: 309px;
+  width: 5px;
+  height: 5px;
+}
+.delivery-circles li:nth-child(8) {
+  right: -59px;
+  top: 83px;
+  width: 5px;
+  height: 5px;
+  left: auto;
+}
+.delivery-circles li:nth-child(9) {
+  right: 73px;
+  top: -181px;
+  left: auto;
+}
+.delivery-circles li:nth-child(10) {
+  left: 783px;
+  top: -87px;
+  width: 3px;
+  height: 3px;
+}
+
+@keyframes circle-blur {
+  0% {
+    -webkit-box-shadow: 0 0 0px 0px rgba(0, 161, 154, 0.33);
+    -moz-box-shadow: 0 0 0px 0px rgba(0, 161, 154, 0.33);
+    box-shadow: 0 0 0px 0px rgba(0, 161, 154, 0.33);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 10px 7px rgba(0, 161, 154, 0.55);
+    -moz-box-shadow: 0 0 10px 7px rgba(0, 161, 154, 0.55);
+    box-shadow: 0 0 10px 7px rgba(0, 161, 154, 0.55);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
