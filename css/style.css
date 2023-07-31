@@ -2065,6 +2065,30 @@ div::-webkit-scrollbar-thumb {
 .news-main {
   padding-top: 180px;
   margin-top: 6700px;
+  position: relative;
+  top: 1000px;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 1s, top 1s;
+  -moz-transition: opacity 1s, top 1s;
+  -o-transition: opacity 1s, top 1s;
+  transition: opacity 1s, top 1s;
+}
+.news-main.fixed {
+  position: fixed;
+  margin-top: 0;
+  top: 0;
+}
+.news-main.show {
+  opacity: 1;
+}
+.news-main.hide {
+  top: -1000px;
+}
+
+.indexPage .subscribe-news {
+  margin-top: 8000px;
 }
 
 .news-main__inner {
@@ -2885,7 +2909,7 @@ div::-webkit-scrollbar-thumb {
   position: relative;
   top: 0;
   left: 0;
-  margin-top: 10400px;
+  margin-top: 8000px;
   padding: 140px 0;
   position: relative;
   width: 100%;

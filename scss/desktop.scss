@@ -276,6 +276,34 @@
 .news-main {
   padding-top: 180px;
   margin-top: 6700px;
+  position: relative;
+  top:1000px;
+  left:0;
+  width: 100%;
+  opacity: 0;
+  $trans: opacity 1s, top 1s;
+  @include transition($trans);
+
+  &.fixed{
+    position: fixed;
+    margin-top: 0;
+    top:0;
+  }
+
+  &.show{
+    opacity: 1;
+  }
+  &.hide{
+    top:-1000px;
+  }
+
+}
+
+.indexPage{
+  .subscribe-news{
+    // margin-top: 1500px;
+    margin-top: 8000px;
+  }
 }
 
 .news-main__inner {
@@ -1075,7 +1103,7 @@
   position: relative;
   top: 0;
   left: 0;
-  margin-top: 10400px;
+  margin-top: 8000px;
   padding: 140px 0;
   position: relative;
   width: 100%;

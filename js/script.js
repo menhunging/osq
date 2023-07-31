@@ -5,27 +5,27 @@ addEventListener("scroll", (event) => {
 
   console.log(currentScroll);
 
-  if ($(".animation-text").length > 0) {
-    if (currentScroll >= "3300") {
+  if ($(".animation-main").length > 0) {
+    if (currentScroll >= "3600") {
       $("#lottie-1").addClass("show");
     } else {
       $("#lottie-1").removeClass("show");
     }
 
-    if (currentScroll >= "8900") {
+    if (currentScroll >= "7000") {
       $("#lottie-1").removeClass("show");
       $("#lottie-2").addClass("show");
     } else {
       $("#lottie-2").removeClass("show");
     }
 
-    if (currentScroll >= "11200") {
+    if (currentScroll >= "10000") {
       $(".animation-text").addClass("hide");
     } else {
       $(".animation-text").removeClass("hide");
     }
 
-    if (currentScroll >= "13000" && currentScroll < "18900") {
+    if (currentScroll >= "10500" && currentScroll < "18900") {
       $("#lottie-2").addClass("small");
       $(".product-main").addClass("fixed");
     } else {
@@ -33,19 +33,19 @@ addEventListener("scroll", (event) => {
       $(".product-main").removeClass("fixed");
     }
 
-    if (currentScroll >= "14500") {
+    if (currentScroll >= "12000") {
       $(".product-main").addClass("hide");
     } else {
       $(".product-main").removeClass("hide");
     }
 
-    if (currentScroll >= "18900") {
+    if (currentScroll >= "17000") {
       $(".production").addClass("fixed");
     } else {
       $(".production").removeClass("fixed");
     }
 
-    if (currentScroll >= "23000") {
+    if (currentScroll >= "22000") {
       $("#lottie-2").addClass("hide");
       $("#lottie-3").addClass("visible");
       $(".production").addClass("show");
@@ -57,18 +57,33 @@ addEventListener("scroll", (event) => {
       $(".delivery--v1").removeClass("fixed");
     }
 
-    if (currentScroll >= "27800") {
+    if (currentScroll >= "27600") {
       $(".delivery--v1").addClass("show");
       $("#lottie-3").removeClass("visible");
       $("#lottie-3").addClass("show");
+  
     } else {
       $(".delivery--v1").removeClass("show");
       $("#lottie-3").removeClass("show");
     }
+
+    if (currentScroll >= "27600") {
+     $('.news-main').addClass('show')
+     $('.news-main').addClass("fixed");
+    } else {
+      $('.news-main').removeClass('show')
+      $('.news-main').removeClass("fixed");
+    }
+
+    if (currentScroll >= "28900") {
+      $('.news-main').addClass('hide')
+     }else{
+      $('.news-main').removeClass('hide')
+     }
   }
 
   if ($(".incision").length > 0) {
-    if (currentScroll >= "18900") {
+    if (currentScroll >= "17000") {
       $(".incision").addClass("show");
     } else {
       $(".incision").removeClass("show");
@@ -942,11 +957,11 @@ $(document).ready(function () {
   }
 
   if ($("#lottie-1").length > 0) {
-    let number = 3000;
+    let number = 3600;
 
     let theWindow = $(window);
     let winHeight = theWindow.height();
-    let animDuration = 7000;
+    let animDuration = 4000;
     let animData = {
       container: document.getElementById("lottie-1"),
       renderer: "svg",
@@ -979,7 +994,7 @@ $(document).ready(function () {
   }
 
   if ($("#lottie-2").length > 0) {
-    let number = 9000;
+    let number = 7000;
 
     let theWindow = $(window);
     let winHeight = theWindow.height();
@@ -1002,30 +1017,30 @@ $(document).ready(function () {
     }
 
     $(window).scroll(function () {
-      if ($(this).scrollTop() > number && currentScroll < "16000") {
+      if ($(this).scrollTop() > number && currentScroll < "14000") {
         animatebodymovin(animDuration, anim);
       }
 
-      if (currentScroll >= "16000" && currentScroll <= "18900") {
+      if (currentScroll >= "14000" && currentScroll <= "16900") {
         $("#lottie-2").addClass("paused");
         anim.pause();
       }
 
-      if (currentScroll >= "19000" && currentScroll < "22600") {
+      if (currentScroll >= "17000" && currentScroll < "20700") {
         $("#lottie-2").removeClass("paused");
         $("#lottie-2").removeClass("small");
         anim.pause();
         animatebodymovin(animDuration, anim, 3700);
       }
 
-      if (currentScroll < "16000") {
+      if (currentScroll < "14000") {
         $("#lottie-2").removeClass("paused");
       }
     });
   }
 
   if ($("#lottie-3").length > 0) {
-    let number = 23000;
+    let number = 22100;
 
     let theWindow = $(window);
     let winHeight = theWindow.height();
@@ -1054,11 +1069,11 @@ $(document).ready(function () {
     });
 
     $(window).scroll(function () {
-      if ($(this).scrollTop() > number && currentScroll < "32000") {
+      if ($(this).scrollTop() > number && currentScroll < "27000") {
         animatebodymovin(animDuration, anim);
       }
 
-      if (currentScroll >= "32000") {
+      if (currentScroll >= "27000") {
         anim.pause();
       }
     });
@@ -1089,8 +1104,8 @@ $(document).ready(function () {
           position: "fixed",
           scrollTrigger: {
             trigger: ".animation-text",
-            start: "5000",
-            end: "5500",
+            start: "3000",
+            end: "3500",
             scrub: true,
           },
         }
@@ -1320,7 +1335,7 @@ $(document).ready(function () {
           opacity: 1,
           scrollTrigger: {
             trigger: ".production",
-            start: "-1200",
+            start: "-3000",
             end: "0",
             scrub: true,
           },
@@ -1334,7 +1349,7 @@ $(document).ready(function () {
           opacity: 1,
           scrollTrigger: {
             trigger: ".production",
-            start: "-1200",
+            start: "-3000",
             end: "0",
             scrub: true,
           },
@@ -1348,8 +1363,8 @@ $(document).ready(function () {
           opacity: 1,
           scrollTrigger: {
             trigger: ".delivery",
-            start: "2500",
-            end: "3500",
+            start: "2800",
+            end: "4100",
             scrub: true,
           },
         }
