@@ -742,6 +742,21 @@ div {
   &.show {
     opacity: 1;
   }
+
+  @include before {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 2141px;
+    height: 1080px;
+    left: 50%;
+    top: 180px;
+    background-image: url(../img/bg-anim-text.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: -1130px;
+  }
 }
 
 #lottie-2 {
@@ -749,6 +764,7 @@ div {
   $trans: width 0.3s, height 0.3s, margin 0.3s, opacity 0.3s, top 1s;
   @include transition($trans);
   opacity: 0;
+  margin-top: -760px;
 
   &.small {
     width: 1600px;
@@ -771,6 +787,23 @@ div {
 
   &.hide {
     opacity: 0;
+  }
+
+  &.back {
+    @include before {
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      width: 2141px;
+      height: 1080px;
+      left: 50%;
+      top: 180px;
+      background-image: url(../img/bg-anim-text.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-left: -1130px;
+    }
   }
 }
 

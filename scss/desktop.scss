@@ -300,8 +300,7 @@
 
 .indexPage {
   .subscribe-news {
-    // margin-top: 1500px;
-    margin-top: 8000px;
+    margin-top: 5000px;
   }
 }
 
@@ -1028,7 +1027,7 @@
     background-image: url("../img/bg-anim-text.png");
     background-position: center;
     background-repeat: no-repeat;
-    margin-left: -1020px;
+    margin-left: -960px;
   }
 
   .caption {
@@ -1098,27 +1097,12 @@
 }
 
 .product-main {
-  // margin-top: 10600px;
   position: relative;
-  top: 0;
+  top: 60px;
   left: 0;
-  margin-top: 8000px;
-  padding: 140px 0;
-  position: relative;
   width: 100%;
   opacity: 1;
   @include transition(opacity 1s);
-
-  &.fixed {
-    margin-top: 0;
-    position: fixed;
-    top: -60px;
-  }
-
-  &.hide {
-    opacity: 0;
-    pointer-events: none;
-  }
 
   .caption {
     margin-bottom: 30px;
@@ -1135,7 +1119,6 @@
   .list {
     display: flex;
     justify-content: space-around;
-    margin-top: 350px;
     position: relative;
     padding-left: 55px;
     padding-right: 55px;
@@ -1177,7 +1160,7 @@
     text-transform: uppercase;
     color: #2e2e2e;
     display: block;
-    margin-top: 40px;
+    margin-top: 20px;
     text-align: center;
   }
 
@@ -1194,6 +1177,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     z-index: -1;
+    opacity: 0;
   }
 
   .logo-invis {
@@ -1216,12 +1200,13 @@
   top: 90px;
   width: 100%;
   opacity: 1;
+  z-index: 3;
   $trans: opacity 1s, top 1s;
   @include transition($trans);
 
   &.fixed {
     position: fixed;
-    top: 90px;
+    top: 50px;
   }
 
   &.show {
@@ -1428,8 +1413,9 @@
   width: 100%;
   padding: 100px 0;
   @include transition(opacity 0.5s);
+  // margin-top: 7000px;
 
-  &.show {
+  &.hide {
     opacity: 0 !important;
   }
 
@@ -7889,6 +7875,7 @@ $fontSize: (
     &-item {
       display: flex;
       flex-wrap: nowrap;
+      justify-content: center;
 
       &-wrap {
         display: none;
@@ -8089,7 +8076,7 @@ $fontSize: (
 .delivery-wrap {
   position: relative;
   width: calc(100% + 30px);
-  left:-15px;
+  left: -15px;
 }
 
 .delivery-circles {

@@ -25,27 +25,21 @@ addEventListener("scroll", (event) => {
       $(".animation-text").removeClass("hide");
     }
 
-    if (currentScroll >= "10500" && currentScroll < "18900") {
-      $("#lottie-2").addClass("small");
-      $(".product-main").addClass("fixed");
-    } else {
-      $("#lottie-2").removeClass("small");
-      $(".product-main").removeClass("fixed");
+    if ($(".incision").length > 0) {
+      if (currentScroll >= "14000") {
+        $(".incision").addClass("hide");
+      } else {
+        $(".incision").removeClass("hide");
+      }
     }
 
-    if (currentScroll >= "12000") {
-      $(".product-main").addClass("hide");
-    } else {
-      $(".product-main").removeClass("hide");
-    }
-
-    if (currentScroll >= "17000") {
+    if (currentScroll >= "14000") {
       $(".production").addClass("fixed");
     } else {
       $(".production").removeClass("fixed");
     }
 
-    if (currentScroll >= "22000") {
+    if (currentScroll >= "20000") {
       $("#lottie-2").addClass("hide");
       $("#lottie-3").addClass("visible");
       $(".production").addClass("show");
@@ -57,36 +51,26 @@ addEventListener("scroll", (event) => {
       $(".delivery--v1").removeClass("fixed");
     }
 
-    if (currentScroll >= "27600") {
+    if (currentScroll >= "25000") {
       $(".delivery--v1").addClass("show");
       $("#lottie-3").removeClass("visible");
       $("#lottie-3").addClass("show");
-  
     } else {
       $(".delivery--v1").removeClass("show");
       $("#lottie-3").removeClass("show");
     }
 
-    if (currentScroll >= "27600") {
-     $('.news-main').addClass('show')
-     $('.news-main').addClass("fixed");
+    if (currentScroll >= "25300") {
+      $(".news-main").addClass("show");
+      $(".news-main").addClass("fixed");
     } else {
-      $('.news-main').removeClass('show')
-      $('.news-main').removeClass("fixed");
+      $(".news-main").removeClass("show");
     }
 
-    if (currentScroll >= "28900") {
-      $('.news-main').addClass('hide')
-     }else{
-      $('.news-main').removeClass('hide')
-     }
-  }
-
-  if ($(".incision").length > 0) {
-    if (currentScroll >= "17000") {
-      $(".incision").addClass("show");
+    if (currentScroll >= "25900") {
+      $(".news-main").addClass("hide");
     } else {
-      $(".incision").removeClass("show");
+      $(".news-main").removeClass("hide");
     }
   }
 });
@@ -1017,30 +1001,34 @@ $(document).ready(function () {
     }
 
     $(window).scroll(function () {
-      if ($(this).scrollTop() > number && currentScroll < "14000") {
+      if ($(this).scrollTop() > number && currentScroll < "12800") {
         animatebodymovin(animDuration, anim);
       }
 
-      if (currentScroll >= "14000" && currentScroll <= "16900") {
+      if (currentScroll >= "12800" && currentScroll <= "13800") {
         $("#lottie-2").addClass("paused");
         anim.pause();
       }
 
-      if (currentScroll >= "17000" && currentScroll < "20700") {
+      if (currentScroll >= "14000" && currentScroll < "18200") {
         $("#lottie-2").removeClass("paused");
-        $("#lottie-2").removeClass("small");
+        $("#lottie-2").addClass("back");
         anim.pause();
-        animatebodymovin(animDuration, anim, 3700);
+        animatebodymovin(animDuration, anim, 1500);
+      }
+
+      if (currentScroll < "12800") {
+        $("#lottie-2").removeClass("paused");
       }
 
       if (currentScroll < "14000") {
-        $("#lottie-2").removeClass("paused");
+        $("#lottie-2").removeClass("back");
       }
     });
   }
 
   if ($("#lottie-3").length > 0) {
-    let number = 22100;
+    let number = 20000;
 
     let theWindow = $(window);
     let winHeight = theWindow.height();
@@ -1069,11 +1057,11 @@ $(document).ready(function () {
     });
 
     $(window).scroll(function () {
-      if ($(this).scrollTop() > number && currentScroll < "27000") {
+      if ($(this).scrollTop() > number && currentScroll < "25000") {
         animatebodymovin(animDuration, anim);
       }
 
-      if (currentScroll >= "27000") {
+      if (currentScroll >= "25000") {
         anim.pause();
       }
     });
@@ -1111,93 +1099,6 @@ $(document).ready(function () {
         }
       );
 
-      // gsap.fromTo(
-      //   ".animation-text .caption",
-      //   { x: 500 },
-      //   {
-      //     x: 0,
-      //     scrollTrigger: {
-      //       trigger: ".animation-text",
-      //       start: "5500",
-      //       end: "6500",
-      //       scrub: true,
-      //     },
-      //   }
-      // );
-
-      // gsap.fromTo(
-      //   ".animation-text p",
-      //   { x: 500 },
-      //   {
-      //     x: 0,
-      //     scrollTrigger: {
-      //       trigger: ".animation-text",
-      //       start: "6500",
-      //       end: "7500",
-      //       scrub: true,
-      //     },
-      //   }
-      // );
-
-      // gsap.fromTo(
-      //   ".animation-text__controls",
-      //   { x: 1500 },
-      //   {
-      //     x: 0,
-      //     scrollTrigger: {
-      //       trigger: ".animation-text",
-      //       start: "7000",
-      //       end: "8000",
-      //       scrub: true,
-      //     },
-      //   }
-      // );
-
-      // gsap.fromTo(
-      //   ".animation-text .line",
-      //   { opacity: 0 },
-      //   {
-      //     opacity: 1,
-      //     scrollTrigger: {
-      //       trigger: ".animation-text",
-      //       start: "7000",
-      //       end: "8000",
-      //       scrub: true,
-      //     },
-      //   }
-      // );
-
-      // gsap.fromTo(
-      //   ".animation-text .logo-invis",
-      //   { x: 1000, y: 500 },
-      //   {
-      //     x: 0,
-      //     y: 0,
-      //     scrollTrigger: {
-      //       trigger: ".animation-text",
-      //       start: "5500",
-      //       end: "8000",
-      //       scrub: true,
-      //     },
-      //   }
-      // );
-
-      // product-main
-
-      // gsap.fromTo(
-      //   ".product-main .caption",
-      //   { x: -500 },
-      //   {
-      //     x: 0,
-      //     scrollTrigger: {
-      //       trigger: ".product-main",
-      //       start: "-1500",
-      //       end: "-1000",
-      //       scrub: true,
-      //     },
-      //   }
-      // );
-
       // incision
 
       gsap.fromTo(
@@ -1207,126 +1108,29 @@ $(document).ready(function () {
           opacity: 1,
           position: "fixed",
           scrollTrigger: {
-            trigger: ".incision",
-            start: "-1300",
-            end: "2500",
+            trigger: ".animation-main",
+            start: "7000",
+            end: "9500",
             scrub: true,
           },
         }
       );
 
       gsap.fromTo(
-        ".incision .caption",
-        { x: -500 },
-        {
-          x: 0,
-          scrollTrigger: {
-            trigger: ".incision",
-            start: "-1300",
-            end: "2500",
-            scrub: true,
-          },
-        }
-      );
-
-      gsap.fromTo(
-        ".incision .desc",
-        { x: -500 },
-        {
-          x: 0,
-          scrollTrigger: {
-            trigger: ".incision",
-            start: "-1100",
-            end: "2500",
-            scrub: true,
-          },
-        }
-      );
-
-      gsap.fromTo(
-        ".incision-adv",
-        { opacity: 0, y: 500 },
+        ".incision-list",
+        { opacity: 0 },
         {
           opacity: 1,
-          y: 0,
           scrollTrigger: {
-            trigger: ".incision",
-            start: "0",
-            end: "2500",
+            trigger: ".animation-main",
+            start: "8500",
+            end: "9500",
             scrub: true,
           },
         }
       );
 
-      gsap.fromTo(
-        ".incision-item",
-        { x: 1500 },
-        {
-          x: 0,
-          scrollTrigger: {
-            trigger: ".incision",
-            start: "1000",
-            end: "2500",
-            scrub: true,
-          },
-        }
-      );
-
-      gsap.fromTo(
-        ".incision-two",
-        { x: -1000 },
-        {
-          x: 0,
-          scrollTrigger: {
-            trigger: ".incision",
-            start: "1000",
-            end: "2500",
-            scrub: true,
-          },
-        }
-      );
-
-      gsap.fromTo(
-        ".incision-three",
-        { x: 1000 },
-        {
-          x: 0,
-          scrollTrigger: {
-            trigger: ".incision",
-            start: "1000",
-            end: "2500",
-            scrub: true,
-          },
-        }
-      );
-
-      gsap.fromTo(
-        ".incision-four",
-        { x: -1000 },
-        {
-          x: 0,
-          scrollTrigger: {
-            trigger: ".incision",
-            start: "1000",
-            end: "2500",
-            scrub: true,
-          },
-        }
-      );
-
-      gsap.fromTo(
-        ".incision-five",
-        { x: 1000 },
-        {
-          x: 0,
-          scrollTrigger: {
-            trigger: ".incision",
-            start: "1000",
-            end: "2500",
-            scrub: true,
-          },
-        }
-      );
+      // production
 
       gsap.fromTo(
         ".production__leftSide",
@@ -1335,8 +1139,8 @@ $(document).ready(function () {
           opacity: 1,
           scrollTrigger: {
             trigger: ".production",
-            start: "-3000",
-            end: "0",
+            start: "-3500",
+            end: "-2500",
             scrub: true,
           },
         }
@@ -1349,12 +1153,14 @@ $(document).ready(function () {
           opacity: 1,
           scrollTrigger: {
             trigger: ".production",
-            start: "-3000",
-            end: "0",
+            start: "-3500",
+            end: "-2500",
             scrub: true,
           },
         }
       );
+
+      // delivery
 
       gsap.fromTo(
         ".delivery .btn",
@@ -1363,8 +1169,8 @@ $(document).ready(function () {
           opacity: 1,
           scrollTrigger: {
             trigger: ".delivery",
-            start: "2800",
-            end: "4100",
+            start: "800",
+            end: "1000",
             scrub: true,
           },
         }
@@ -1377,8 +1183,8 @@ $(document).ready(function () {
           opacity: 1,
           scrollTrigger: {
             trigger: ".delivery",
-            start: "2800",
-            end: "3200",
+            start: "800",
+            end: "1000",
             scrub: true,
           },
         }
@@ -1391,8 +1197,8 @@ $(document).ready(function () {
           x: 700,
           scrollTrigger: {
             trigger: ".delivery",
-            start: "2800",
-            end: "3200",
+            start: "-500",
+            end: "1000",
             scrub: true,
           },
         }
@@ -1405,8 +1211,8 @@ $(document).ready(function () {
           x: 700,
           scrollTrigger: {
             trigger: ".delivery",
-            start: "2800",
-            end: "3200",
+            start: "-500",
+            end: "1000",
             scrub: true,
           },
         }
