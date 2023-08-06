@@ -242,8 +242,7 @@
                       <div class="event-small">
                         <a href="#"></a>
                         <picture class='picture'>
-                          <source type="image/webp" srcset="img/pic-grettings1.webp" />
-                          <img src="img/pic-grettings1.jpg" alt="grettings" />
+                          <img src="img/pic-small-catalog.png" alt="" />
                         </picture>
                         <span class="date">КАТАЛОГ 2023</span>
                         <h2 class="caption caption--small">Скачать</h2>
@@ -253,8 +252,7 @@
                       <div class="event-small">
                         <a href="#"></a>
                         <picture class='picture'>
-                          <source type="image/webp" srcset="img/pic-grettings1.webp" />
-                          <img src="img/pic-grettings1.jpg" alt="grettings" />
+                          <img src="img/pic-small-catalog.png" alt="" />
                         </picture>
                         <span class="date">КАТАЛОГ 2023</span>
                         <h2 class="caption caption--small">Скачать</h2>
@@ -264,8 +262,7 @@
                       <div class="event-small">
                         <a href="#"></a>
                         <picture class='picture'>
-                          <source type="image/webp" srcset="img/pic-grettings1.webp" />
-                          <img src="img/pic-grettings1.jpg" alt="grettings" />
+                          <img src="img/pic-small-catalog.png" alt="" />
                         </picture>
                         <span class="date">КАТАЛОГ 2023</span>
                         <h2 class="caption caption--small">Скачать</h2>
@@ -602,6 +599,7 @@
         </div>
       </div>
     </header>
+
     <main class="main">
       <div class="grettings" data-aos="fade-up">
         <div class="container">
@@ -622,14 +620,6 @@
                 </div>
                 <picture class='picture'>
                   <img src="img/test1.jpg" alt="grettings" />
-                </picture>
-              </div>
-              <div class="swiper-slide grettings__slide">
-                <div class="grettings__text">
-                  <a href="#" class="btn btn--white">Подробнее</a>
-                </div>
-                <picture class='picture'>
-                  <img src="img/test2.jpg" alt="grettings" />
                 </picture>
               </div>
               <div class="swiper-slide grettings__slide">
@@ -659,6 +649,14 @@
       <div class="catalog-main__wrapper">
         <div class="container">
           <div class="catalog-main">
+            <div class="catalog-main__text">
+              <h2 class="caption">Каталог</h2>
+              <div class="catalog-main__right">
+                <h3 class="caption caption--small">Универсальные контейнеры</h3>
+                <p> Упаковка из линейки Showcase с прозрачными крышками. Многофункциональная упаковка из линейки Ready
+                  to go для доставки любых блюд.</p>
+              </div>
+            </div>
             <div class="catalog-main__slider">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -720,6 +718,16 @@
                   </svg>
                   Назад
                 </button>
+                <a href="#" class="btn">
+
+                  Перейти в каталог
+
+                  <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.6085 16.3042L18.6085 1.69576M18.6085 1.69576L4 1.69576M18.6085 1.69576L1 19.3042"
+                      stroke="white" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+
+                </a>
                 <button class="swiper-button-next">
                   Вперед
                   <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -732,25 +740,6 @@
               <div class="logo-invis">
                 <img src="img/logo-invis.svg" alt="">
               </div>
-            </div>
-            <div class="catalog-main__text">
-              <h2 class="caption">Каталог</h2>
-              <div class="catalog-main__right">
-                <h3 class="caption caption--small">Универсальные контейнеры</h3>
-                <p> Упаковка из линейки Showcase с прозрачными крышками. Многофункциональная упаковка из линейки Ready
-                  to go для доставки любых блюд.</p>
-              </div>
-              <a href="#" class="btn">
-
-                Перейти в каталог
-
-                <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M18.6085 16.3042L18.6085 1.69576M18.6085 1.69576L4 1.69576M18.6085 1.69576L1 19.3042"
-                    stroke="white" stroke-width="2" stroke-linecap="round" />
-                </svg>
-
-
-              </a>
             </div>
           </div>
         </div>
@@ -889,7 +878,7 @@
               <a href="#" class="food-item__link">Кухни мира</a>
             </div>
           </div>
-          <div class="food-controls" data-aos="fade-up" data-aos-delay="2000" data-aos-offset="0">
+          <div class="food-controls">
             <a href="#" class="btn">Заказать образцы</a>
             <a href="#" class="btn">Получить КП</a>
             <a href="#" class="btn">Скачать каталог</a>
@@ -918,24 +907,23 @@
                 <!-- Переключатели табов -->
                 <div class="b-product-lines__switch">
                   <!-- Кнопка переключения таба -->
-                  <button class="b-product-lines__switch-btn">OSQ Essential</button>
+                  <button class="b-product-lines__switch-btn" data-index="0">OSQ Essential</button>
                   <!-- /Кнопка переключения таба -->
 
-                  <button class="b-product-lines__switch-btn">Black Edition</button>
-                  <button class="b-product-lines__switch-btn">Enjoy</button>
+                  <button class="b-product-lines__switch-btn" data-index="5">Black Edition</button>
+                  <button class="b-product-lines__switch-btn" data-index="8">Forgenika</button>
                 </div>
                 <!-- /Переключатели табов -->
               </div>
               <!-- /Верхняя часть блока -->
 
-
               <!-- Элемент таба  -->
-              <div class="b-product-lines__switch-item-wrap">
+              <div class="b-product-lines__switch-item-wrap active">
                 <div class="b-product-lines__switch-item">
 
                   <!-- Карточка внутри таба -->
                   <!-- Задано через style чтобы проще сажать на CMS -->
-                  <div class="b-product-lines__cart active" style="background-color: #AC9ABE; border-color: #AC9ABE;">
+                  <div class="b-product-lines__cart active" style="background-color: #C9211E; border-color: #C9211E;">
                     <!-- Контеннт карточки -->
                     <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
                       <!-- Заголовок карточки-->
@@ -985,7 +973,7 @@
                   <div class="b-product-lines__cart" style="background-color: #CAA29C; border-color: #CAA29C;">
                     <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
                       <div class="b-product-lines__cart-title">
-                        BAKERY LINE
+                        COFFEE LINE
                       </div>
                       <div class="b-product-lines__cart-description">
                         Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
@@ -1004,10 +992,35 @@
                       </div>
                     </div>
                     <div class="b-product-lines__cart-name">
-                      <span>BAKERY LINE</span>
+                      <span> COFFEE LINE</span>
                     </div>
                   </div>
                   <div class="b-product-lines__cart" style="background-color: #F8AB9C; border-color: #F8AB9C;">
+                    <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
+                      <div class="b-product-lines__cart-title">
+                        PACKAGING LINE
+                      </div>
+                      <div class="b-product-lines__cart-description">
+                        Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
+                        экоупаковки.
+                      </div>
+                      <div class="b-product-lines__cart-footer">
+                        <a href="#" download="BAKERY_LINE.pdf" class="b-product-lines__cart-btn">
+                          Скачать каталог
+                        </a>
+                        <div class="b-product-lines__cart-arrow-wrap">
+                          <button class="b-product-lines__cart-arrow_prev b-product-lines__cart-arrow">
+                          </button>
+                          <button class="b-product-lines__cart-arrow_next b-product-lines__cart-arrow">
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="b-product-lines__cart-name">
+                      <span> PACKAGING LINE</span>
+                    </div>
+                  </div>
+                  <div class="b-product-lines__cart" style="background-color: #DDA0AA; border-color: #DDA0AA;">
                     <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
                       <div class="b-product-lines__cart-title">
                         FAST FOOD LINE
@@ -1029,38 +1042,13 @@
                       </div>
                     </div>
                     <div class="b-product-lines__cart-name">
-                      <span>FAST FOOD LINEE</span>
-                    </div>
-                  </div>
-                  <div class="b-product-lines__cart" style="background-color: #DDA0AA; border-color: #DDA0AA;">
-                    <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
-                      <div class="b-product-lines__cart-title">
-                        Packing line
-                      </div>
-                      <div class="b-product-lines__cart-description">
-                        Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
-                        экоупаковки.
-                      </div>
-                      <div class="b-product-lines__cart-footer">
-                        <a href="#" download="BAKERY_LINE.pdf" class="b-product-lines__cart-btn">
-                          Скачать каталог
-                        </a>
-                        <div class="b-product-lines__cart-arrow-wrap">
-                          <button class="b-product-lines__cart-arrow_prev b-product-lines__cart-arrow">
-                          </button>
-                          <button class="b-product-lines__cart-arrow_next b-product-lines__cart-arrow">
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="b-product-lines__cart-name">
-                      <span>Packing line</span>
+                      <span> FAST FOOD LINE</span>
                     </div>
                   </div>
                   <div class="b-product-lines__cart" style="background-color: #E3BB9B; border-color: #E3BB9B;">
                     <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
                       <div class="b-product-lines__cart-title">
-                        Ready to go line
+                        READY TO GO LINE
                       </div>
                       <div class="b-product-lines__cart-description">
                         Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
@@ -1085,7 +1073,7 @@
                   <div class="b-product-lines__cart" style="background-color: #D691AA; border-color: #D691AA;">
                     <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
                       <div class="b-product-lines__cart-title">
-                        Retail Line
+                        RETAIL LINE
                       </div>
                       <div class="b-product-lines__cart-description">
                         Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
@@ -1110,7 +1098,7 @@
                   <div class="b-product-lines__cart" style="background-color: #D3BBA2; border-color: #D3BBA2;">
                     <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
                       <div class="b-product-lines__cart-title">
-                        Roun Line
+                        ROUND LINE
                       </div>
                       <div class="b-product-lines__cart-description">
                         Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
@@ -1129,7 +1117,7 @@
                       </div>
                     </div>
                     <div class="b-product-lines__cart-name">
-                      <span>Roun Line</span>
+                      <span> ROUND LINE</span>
                     </div>
                   </div>
                   <div class="b-product-lines__cart" style="background-color: #BDD3AE; border-color: #BDD3AE;">
@@ -1154,13 +1142,13 @@
                       </div>
                     </div>
                     <div class="b-product-lines__cart-name">
-                      <span>SANDWICH LINE</span>
+                      <span> SANDWICH LINE</span>
                     </div>
                   </div>
                   <div class="b-product-lines__cart" style="background-color: #C5DFCC; border-color: #C5DFCC;">
                     <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
                       <div class="b-product-lines__cart-title">
-                        SANDWICH LINE
+                        SHOWCASE LINE
                       </div>
                       <div class="b-product-lines__cart-description">
                         Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
@@ -1179,353 +1167,13 @@
                       </div>
                     </div>
                     <div class="b-product-lines__cart-name">
-                      <span>SANDWICH LINE</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- /Элемент таба  -->
-
-              <!-- Элемент таба  -->
-              <div class="b-product-lines__switch-item-wrap">
-                <div class="b-product-lines__switch-item">
-
-                  <!-- Карточка внутри таба -->
-                  <!-- Задано через style чтобы проще сажать на CMS -->
-                  <div class="b-product-lines__cart active" style="background-color: #AC9ABE; border-color: #AC9ABE;">
-                    <!-- Контеннт карточки -->
-                    <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
-                      <!-- Заголовок карточки-->
-                      <div class="b-product-lines__cart-title">
-                        BAKERY LINE
-                      </div>
-                      <!-- /Заголовок карточки-->
-                      <div class="b-product-lines__cart-description">
-                        Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
-                        экоупаковки.
-                      </div>
-
-                      <!-- Кнопки действия карточки -->
-
-                      <div class="b-product-lines__cart-footer">
-                        <!-- Кнопка скачать -->
-                        <a href="#" download="BAKERY_LINE.pdf" class="b-product-lines__cart-btn">
-                          Скачать каталог
-                        </a>
-                        <!-- /Кнопка скачать -->
-
-                        <!-- Кнопки переключатели катрочек -->
-                        <div class="b-product-lines__cart-arrow-wrap">
-                          <button class="b-product-lines__cart-arrow_prev b-product-lines__cart-arrow">
-                          </button>
-                          <button class="b-product-lines__cart-arrow_next b-product-lines__cart-arrow">
-                          </button>
-                        </div>
-                        <!-- /Кнопки переключатели катрочек -->
-
-                      </div>
-                      <!-- /Кнопки действия карточки -->
-
-
-                    </div>
-                    <!-- /Контеннт карточки -->
-
-                    <!-- Название линейки карточки -->
-                    <div class="b-product-lines__cart-name">
-                      <span>BAKERY LINE</span>
-                    </div>
-                    <!-- /Название линейки карточки -->
-
-                  </div>
-                  <!--/Карточка внутри таба -->
-
-                  <div class="b-product-lines__cart" style="background-color: #CAA29C; border-color: #CAA29C;">
-                    <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
-                      <div class="b-product-lines__cart-title">
-                        BAKERY LINE
-                      </div>
-                      <div class="b-product-lines__cart-description">
-                        Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
-                        экоупаковки.
-                      </div>
-                      <div class="b-product-lines__cart-footer">
-                        <a href="#" download="BAKERY_LINE.pdf" class="b-product-lines__cart-btn">
-                          Скачать каталог
-                        </a>
-                        <div class="b-product-lines__cart-arrow-wrap">
-                          <button class="b-product-lines__cart-arrow_prev b-product-lines__cart-arrow">
-                          </button>
-                          <button class="b-product-lines__cart-arrow_next b-product-lines__cart-arrow">
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="b-product-lines__cart-name">
-                      <span>BAKERY LINE</span>
-                    </div>
-                  </div>
-                  <div class="b-product-lines__cart" style="background-color: #F8AB9C; border-color: #F8AB9C;">
-                    <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
-                      <div class="b-product-lines__cart-title">
-                        FAST FOOD LINE
-                      </div>
-                      <div class="b-product-lines__cart-description">
-                        Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
-                        экоупаковки.
-                      </div>
-                      <div class="b-product-lines__cart-footer">
-                        <a href="#" download="BAKERY_LINE.pdf" class="b-product-lines__cart-btn">
-                          Скачать каталог
-                        </a>
-                        <div class="b-product-lines__cart-arrow-wrap">
-                          <button class="b-product-lines__cart-arrow_prev b-product-lines__cart-arrow">
-                          </button>
-                          <button class="b-product-lines__cart-arrow_next b-product-lines__cart-arrow">
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="b-product-lines__cart-name">
-                      <span>FAST FOOD LINEE</span>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <!-- /Элемент таба  -->
-
-              <!-- Элемент таба  -->
-              <div class="b-product-lines__switch-item-wrap">
-                <div class="b-product-lines__switch-item">
-
-                  <!-- Карточка внутри таба -->
-                  <!-- Задано через style чтобы проще сажать на CMS -->
-                  <div class="b-product-lines__cart active" style="background-color: #AC9ABE; border-color: #AC9ABE;">
-                    <!-- Контеннт карточки -->
-                    <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
-                      <!-- Заголовок карточки-->
-                      <div class="b-product-lines__cart-title">
-                        BAKERY LINE
-                      </div>
-                      <!-- /Заголовок карточки-->
-                      <div class="b-product-lines__cart-description">
-                        Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
-                        экоупаковки.
-                      </div>
-
-                      <!-- Кнопки действия карточки -->
-
-                      <div class="b-product-lines__cart-footer">
-                        <!-- Кнопка скачать -->
-                        <a href="#" download="BAKERY_LINE.pdf" class="b-product-lines__cart-btn">
-                          Скачать каталог
-                        </a>
-                        <!-- /Кнопка скачать -->
-
-                        <!-- Кнопки переключатели катрочек -->
-                        <div class="b-product-lines__cart-arrow-wrap">
-                          <button class="b-product-lines__cart-arrow_prev b-product-lines__cart-arrow">
-                          </button>
-                          <button class="b-product-lines__cart-arrow_next b-product-lines__cart-arrow">
-                          </button>
-                        </div>
-                        <!-- /Кнопки переключатели катрочек -->
-
-                      </div>
-                      <!-- /Кнопки действия карточки -->
-
-
-                    </div>
-                    <!-- /Контеннт карточки -->
-
-                    <!-- Название линейки карточки -->
-                    <div class="b-product-lines__cart-name">
-                      <span>BAKERY LINE</span>
-                    </div>
-                    <!-- /Название линейки карточки -->
-
-                  </div>
-                  <!--/Карточка внутри таба -->
-
-                  <div class="b-product-lines__cart" style="background-color: #CAA29C; border-color: #CAA29C;">
-                    <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
-                      <div class="b-product-lines__cart-title">
-                        BAKERY LINE
-                      </div>
-                      <div class="b-product-lines__cart-description">
-                        Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
-                        экоупаковки.
-                      </div>
-                      <div class="b-product-lines__cart-footer">
-                        <a href="#" download="BAKERY_LINE.pdf" class="b-product-lines__cart-btn">
-                          Скачать каталог
-                        </a>
-                        <div class="b-product-lines__cart-arrow-wrap">
-                          <button class="b-product-lines__cart-arrow_prev b-product-lines__cart-arrow">
-                          </button>
-                          <button class="b-product-lines__cart-arrow_next b-product-lines__cart-arrow">
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="b-product-lines__cart-name">
-                      <span>BAKERY LINE</span>
-                    </div>
-                  </div>
-                  <div class="b-product-lines__cart" style="background-color: #F8AB9C; border-color: #F8AB9C;">
-                    <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
-                      <div class="b-product-lines__cart-title">
-                        FAST FOOD LINE
-                      </div>
-                      <div class="b-product-lines__cart-description">
-                        Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
-                        экоупаковки.
-                      </div>
-                      <div class="b-product-lines__cart-footer">
-                        <a href="#" download="BAKERY_LINE.pdf" class="b-product-lines__cart-btn">
-                          Скачать каталог
-                        </a>
-                        <div class="b-product-lines__cart-arrow-wrap">
-                          <button class="b-product-lines__cart-arrow_prev b-product-lines__cart-arrow">
-                          </button>
-                          <button class="b-product-lines__cart-arrow_next b-product-lines__cart-arrow">
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="b-product-lines__cart-name">
-                      <span>FAST FOOD LINEE</span>
-                    </div>
-                  </div>
-                  <div class="b-product-lines__cart" style="background-color: #DDA0AA; border-color: #DDA0AA;">
-                    <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
-                      <div class="b-product-lines__cart-title">
-                        Packing line
-                      </div>
-                      <div class="b-product-lines__cart-description">
-                        Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
-                        экоупаковки.
-                      </div>
-                      <div class="b-product-lines__cart-footer">
-                        <a href="#" download="BAKERY_LINE.pdf" class="b-product-lines__cart-btn">
-                          Скачать каталог
-                        </a>
-                        <div class="b-product-lines__cart-arrow-wrap">
-                          <button class="b-product-lines__cart-arrow_prev b-product-lines__cart-arrow">
-                          </button>
-                          <button class="b-product-lines__cart-arrow_next b-product-lines__cart-arrow">
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="b-product-lines__cart-name">
-                      <span>Packing line</span>
-                    </div>
-                  </div>
-                  <div class="b-product-lines__cart" style="background-color: #E3BB9B; border-color: #E3BB9B;">
-                    <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
-                      <div class="b-product-lines__cart-title">
-                        Ready to go line
-                      </div>
-                      <div class="b-product-lines__cart-description">
-                        Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
-                        экоупаковки.
-                      </div>
-                      <div class="b-product-lines__cart-footer">
-                        <a href="#" download="BAKERY_LINE.pdf" class="b-product-lines__cart-btn">
-                          Скачать каталог
-                        </a>
-                        <div class="b-product-lines__cart-arrow-wrap">
-                          <button class="b-product-lines__cart-arrow_prev b-product-lines__cart-arrow">
-                          </button>
-                          <button class="b-product-lines__cart-arrow_next b-product-lines__cart-arrow">
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="b-product-lines__cart-name">
-                      <span>Ready to go line</span>
-                    </div>
-                  </div>
-                  <div class="b-product-lines__cart" style="background-color: #D691AA; border-color: #D691AA;">
-                    <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
-                      <div class="b-product-lines__cart-title">
-                        Retail Line
-                      </div>
-                      <div class="b-product-lines__cart-description">
-                        Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
-                        экоупаковки.
-                      </div>
-                      <div class="b-product-lines__cart-footer">
-                        <a href="#" download="BAKERY_LINE.pdf" class="b-product-lines__cart-btn">
-                          Скачать каталог
-                        </a>
-                        <div class="b-product-lines__cart-arrow-wrap">
-                          <button class="b-product-lines__cart-arrow_prev b-product-lines__cart-arrow">
-                          </button>
-                          <button class="b-product-lines__cart-arrow_next b-product-lines__cart-arrow">
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="b-product-lines__cart-name">
-                      <span>Retail Line</span>
-                    </div>
-                  </div>
-                  <div class="b-product-lines__cart" style="background-color: #D3BBA2; border-color: #D3BBA2;">
-                    <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
-                      <div class="b-product-lines__cart-title">
-                        Roun Line
-                      </div>
-                      <div class="b-product-lines__cart-description">
-                        Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
-                        экоупаковки.
-                      </div>
-                      <div class="b-product-lines__cart-footer">
-                        <a href="#" download="BAKERY_LINE.pdf" class="b-product-lines__cart-btn">
-                          Скачать каталог
-                        </a>
-                        <div class="b-product-lines__cart-arrow-wrap">
-                          <button class="b-product-lines__cart-arrow_prev b-product-lines__cart-arrow">
-                          </button>
-                          <button class="b-product-lines__cart-arrow_next b-product-lines__cart-arrow">
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="b-product-lines__cart-name">
-                      <span>Roun Line</span>
-                    </div>
-                  </div>
-                  <div class="b-product-lines__cart" style="background-color: #BDD3AE; border-color: #BDD3AE;">
-                    <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
-                      <div class="b-product-lines__cart-title">
-                        SANDWICH LINE
-                      </div>
-                      <div class="b-product-lines__cart-description">
-                        Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
-                        экоупаковки.
-                      </div>
-                      <div class="b-product-lines__cart-footer">
-                        <a href="#" download="BAKERY_LINE.pdf" class="b-product-lines__cart-btn">
-                          Скачать каталог
-                        </a>
-                        <div class="b-product-lines__cart-arrow-wrap">
-                          <button class="b-product-lines__cart-arrow_prev b-product-lines__cart-arrow">
-                          </button>
-                          <button class="b-product-lines__cart-arrow_next b-product-lines__cart-arrow">
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="b-product-lines__cart-name">
-                      <span>SANDWICH LINE</span>
+                      <span> SHOWCASE LINE</span>
                     </div>
                   </div>
                   <div class="b-product-lines__cart" style="background-color: #C5DFCC; border-color: #C5DFCC;">
                     <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
                       <div class="b-product-lines__cart-title">
-                        SANDWICH LINE
+                        TABLEWARE LINE
                       </div>
                       <div class="b-product-lines__cart-description">
                         Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
@@ -1544,7 +1192,32 @@
                       </div>
                     </div>
                     <div class="b-product-lines__cart-name">
-                      <span>SANDWICH LINE</span>
+                      <span> TABLEWARE LINE</span>
+                    </div>
+                  </div>
+                  <div class="b-product-lines__cart" style="background-color: #2a6099; border-color: #2a6099;">
+                    <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
+                      <div class="b-product-lines__cart-title">
+                        Forgenika
+                      </div>
+                      <div class="b-product-lines__cart-description">
+                        Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
+                        экоупаковки.
+                      </div>
+                      <div class="b-product-lines__cart-footer">
+                        <a href="#" download="BAKERY_LINE.pdf" class="b-product-lines__cart-btn">
+                          Скачать каталог
+                        </a>
+                        <div class="b-product-lines__cart-arrow-wrap">
+                          <button class="b-product-lines__cart-arrow_prev b-product-lines__cart-arrow">
+                          </button>
+                          <button class="b-product-lines__cart-arrow_next b-product-lines__cart-arrow">
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="b-product-lines__cart-name">
+                      <span>Forgenika</span>
                     </div>
                   </div>
                 </div>
@@ -1694,26 +1367,26 @@
               <div class="swiper production__slider">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <h2 class="caption caption--small">Мы являемся производителем и разработчиком предлагаемой нами
-                      высокотехнологичной экоупаковки.</h2>
-                    <p>OSQ представляет всеобъемлющий ассортимент решений для пищевой промышленности и ресторанного
-                      бизнеса которые на 100% разрабатываются и производятся в России на современном высокотехнологичном
-                      оборудовании в соответствии с передовыми мировыми нормами и стандартами. Наша упаковка – это
-                      идеально подходит для всех ресторанов, пекарен, ретейла, кафе, уличной еды, ресторанов быстрого
-                      питания и сервисов доставки и кейтеринга.</p>
+                    <h2 class="caption caption--small">Мы являемся производителем и разработчиком упаковки для пищевого
+                      производства и
+                      ресторанного бизнеса
+                    </h2>
+                    <p>OSQ Group располагает двумя высокотехнологичными производственными площадками – в
+                      Видном (Московская область) и Калининграде – и является производителем полного цикла от
+                      сырья до готовой продукции.
+                    </p>
 
                     <div class="picture">
                       <img src="img/pic-production.jpg" alt="">
                     </div>
                   </div>
                   <div class="swiper-slide">
-                    <h2 class="caption caption--small">Мы являемся производителем и разработчиком предлагаемой нами
-                      высокотехнологичной экоупаковки.</h2>
-                    <p>OSQ представляет всеобъемлющий ассортимент решений для пищевой промышленности и ресторанного
-                      бизнеса которые на 100% разрабатываются и производятся в России на современном высокотехнологичном
-                      оборудовании в соответствии с передовыми мировыми нормами и стандартами. Наша упаковка – это
-                      идеально подходит для всех ресторанов, пекарен, ретейла, кафе, уличной еды, ресторанов быстрого
-                      питания и сервисов доставки и кейтеринга.</p>
+                    <h2 class="caption caption--small">
+                      Две производственные площадки
+                    </h2>
+                    <p>Благодаря многофункциональному парку станков мы успешно выполняем самые крупные
+                      заказы от клиентов из разных сфер пищевой промышленности.
+                    </p>
 
                     <div class="picture">
                       <img src="img/pic-production.jpg" alt="">
@@ -1855,9 +1528,9 @@
         <div class="container">
           <div class="subscribe-news__inner">
             <div class="subscribe-news__leftSide">
-              <h3 class="caption caption--middle" data-aos="fade-right" data-aos-delay="0" data-aos-offset="-10000">
+              <h3 class="caption caption--middle" data-aos="fade-right" data-aos-delay="0" data-aos-offset="-12000">
                 Подписаться на Новости</h3>
-              <span class="subscribe-news__desc" data-aos="fade-left" data-aos-delay="500" data-aos-offset="-10000">OSQ
+              <span class="subscribe-news__desc" data-aos="fade-left" data-aos-delay="500" data-aos-offset="-12000">OSQ
                 Group – один из
                 крупнейших в России производителей технологичной
                 упаковки.</span>
@@ -1865,9 +1538,9 @@
             <div class="subscribe-news__rightSide">
               <div class="input-wrapper">
                 <input type="text" placeholder="Электронная почта" data-aos="fade-right" data-aos-delay="0"
-                  data-aos-offset="-10000">
+                  data-aos-offset="-12000">
                 <button class="btn btn--green" data-aos="fade-left" data-aos-delay="500"
-                  data-aos-offset="-10000">Отправить заявку</button>
+                  data-aos-offset="-12000">Отправить заявку</button>
               </div>
             </div>
           </div>
@@ -1979,11 +1652,11 @@
             <ul class="menu-footer">
               <li><a href="#">О компании</a></li>
               <li><a href="#">Каталог</a></li>
-              <li><a href="#">Дистрибьюторы</a></li>
-              <li><a href="#">Новости</a></li>
-              <li><a href="#">СМИ о нас</a></li>
-              <li><a href="#">Упаковка под заказ</a></li>
+              <li><a href="#">Производство</a></li>
+              <li><a href="#">ESG</a></li>
               <li><a href="#">Доставка</a></li>
+              <li><a href="#">Дистрибьюторы</a></li>
+              <li><a href="#">Контакты</a></li>
             </ul>
             <div class="footer-info">
               <div class="footer-info__col">
@@ -2050,6 +1723,12 @@
       </svg>
 
       Избранные товары</a>
+
+    <button class="btn-top-page">
+      <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 1L7 7L1 13" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
   </div>
 
   <div class="micromodal-slide modal" id="modal-call" aria-hidden="true">

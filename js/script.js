@@ -6,40 +6,40 @@ addEventListener("scroll", (event) => {
   console.log(currentScroll);
 
   if ($(".animation-main").length > 0) {
-    if (currentScroll >= "3600") {
+    if (currentScroll >= "3700") {
       $("#lottie-1").addClass("show");
     } else {
       $("#lottie-1").removeClass("show");
     }
 
-    if (currentScroll >= "7000") {
+    if (currentScroll >= "5000") {
       $("#lottie-1").removeClass("show");
       $("#lottie-2").addClass("show");
     } else {
       $("#lottie-2").removeClass("show");
     }
 
-    if (currentScroll >= "10000") {
+    if (currentScroll >= "6200") {
       $(".animation-text").addClass("hide");
     } else {
       $(".animation-text").removeClass("hide");
     }
 
     if ($(".incision").length > 0) {
-      if (currentScroll >= "14000") {
+      if (currentScroll >= "9200") {
         $(".incision").addClass("hide");
       } else {
         $(".incision").removeClass("hide");
       }
     }
 
-    if (currentScroll >= "14000") {
+    if (currentScroll >= "9200") {
       $(".production").addClass("fixed");
     } else {
       $(".production").removeClass("fixed");
     }
 
-    if (currentScroll >= "20000") {
+    if (currentScroll >= "13800") {
       $("#lottie-2").addClass("hide");
       $("#lottie-3").addClass("visible");
       $(".production").addClass("show");
@@ -51,7 +51,7 @@ addEventListener("scroll", (event) => {
       $(".delivery--v1").removeClass("fixed");
     }
 
-    if (currentScroll >= "25000") {
+    if (currentScroll >= "16400") {
       $(".delivery--v1").addClass("show");
       $("#lottie-3").removeClass("visible");
       $("#lottie-3").addClass("show");
@@ -60,17 +60,28 @@ addEventListener("scroll", (event) => {
       $("#lottie-3").removeClass("show");
     }
 
-    if (currentScroll >= "25300") {
-      $(".news-main").addClass("show");
-      $(".news-main").addClass("fixed");
-    } else {
-      $(".news-main").removeClass("show");
-    }
+    // if (currentScroll >= "25300") {
+    //   $(".news-main").addClass("show");
+    //   $(".news-main").addClass("fixed");
+    // } else {
+    //   $(".news-main").removeClass("show");
+    // }
 
-    if (currentScroll >= "25900") {
-      $(".news-main").addClass("hide");
+    // if (currentScroll >= "25900") {
+    //   $(".news-main").addClass("hide");
+    // } else {
+    //   $(".news-main").removeClass("hide");
+    // }
+  }
+
+  if ($(".btn-top-page").length > 0) {
+    let btnTopPage = $(".btn-top-page");
+    let scrollWhich = 700;
+
+    if (currentScroll > scrollWhich) {
+      !btnTopPage.hasClass("show") && btnTopPage.addClass("show");
     } else {
-      $(".news-main").removeClass("hide");
+      btnTopPage.hasClass("show") && btnTopPage.removeClass("show");
     }
   }
 });
@@ -181,6 +192,10 @@ $(document).ready(function () {
       centeredSlides: true,
       spaceBetween: 60,
       autoHeight: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
       navigation: {
         nextEl: ".sertificate__slider .swiper-button-next",
         prevEl: ".sertificate__slider .swiper-button-prev",
@@ -855,16 +870,19 @@ $(document).ready(function () {
       let than = $(this);
       let block = than.attr("data-open");
 
-      if (than.hasClass("active")) return false;
+      if (than.hasClass("active")) {
+        console.log("back");
+        return false;
+      }
 
       if ($(".js-action-link").hasClass("active")) {
         $(".js-action-link").removeClass("active");
-        $(".invis-block").removeClass("open").stop().slideUp();
+        $(".invis-block").removeClass("open").slideUp(200);
         $(".invis-block").off("mouseover");
         isLeave = false;
         setTimeout(function () {
           openInvisBlock(than, block, isLeave);
-        }, 500);
+        }, 200);
       } else {
         openInvisBlock(than, block, isLeave);
       }
@@ -872,25 +890,38 @@ $(document).ready(function () {
   }
 
   if ($(".btn-search").length > 0) {
-    // $(".btn-search").on("click", function () {
-    //   initSearchBlock()
-    // });
-
     $(".btn-search").mouseover(function () {
       initSearchBlock();
     });
 
     function initSearchBlock() {
-      $(".search-invis").toggleClass("opened");
+      let searchBlock = $(".search-invis");
+      let searchInput = searchBlock.find("input");
+
+      searchBlock.toggleClass("opened");
+
+      searchBlock.mouseleave(function () {
+        let timer = setTimeout(function () {
+          searchBlock.removeClass("opened").off("mouseleave");
+          clearInterval(timer);
+        }, 5000);
+
+        searchInput.off("input");
+
+        searchInput.on("input", function () {
+          clearInterval(timer);
+        });
+      });
+
+      searchInput.on("input", function () {});
 
       $(document).mouseup(function (e) {
-        let div = $(".search-invis");
         if (
-          !div.is(e.target) &&
-          div.has(e.target).length === 0 &&
+          !searchBlock.is(e.target) &&
+          searchBlock.has(e.target).length === 0 &&
           !$(".btn-search").is(e.target)
         ) {
-          div.removeClass("opened");
+          searchBlock.removeClass("opened");
           $(document).off("mouseup");
         }
       });
@@ -945,7 +976,7 @@ $(document).ready(function () {
 
     let theWindow = $(window);
     let winHeight = theWindow.height();
-    let animDuration = 4000;
+    let animDuration = 1500;
     let animData = {
       container: document.getElementById("lottie-1"),
       renderer: "svg",
@@ -978,11 +1009,11 @@ $(document).ready(function () {
   }
 
   if ($("#lottie-2").length > 0) {
-    let number = 7000;
+    let number = 5000;
 
     let theWindow = $(window);
     let winHeight = theWindow.height();
-    let animDuration = 10000;
+    let animDuration = 4000;
     let animData = {
       container: document.getElementById("lottie-2"),
       renderer: "svg",
@@ -1001,38 +1032,38 @@ $(document).ready(function () {
     }
 
     $(window).scroll(function () {
-      if ($(this).scrollTop() > number && currentScroll < "12800") {
+      if ($(this).scrollTop() > number && currentScroll < "7200") {
         animatebodymovin(animDuration, anim);
       }
 
-      if (currentScroll >= "12800" && currentScroll <= "13800") {
+      if (currentScroll >= "7200" && currentScroll <= "9200") {
         $("#lottie-2").addClass("paused");
         anim.pause();
       }
 
-      if (currentScroll >= "14000" && currentScroll < "18200") {
+      if (currentScroll >= "9400" && currentScroll < "13000") {
         $("#lottie-2").removeClass("paused");
         $("#lottie-2").addClass("back");
         anim.pause();
-        animatebodymovin(animDuration, anim, 1500);
+        animatebodymovin(8000, anim, 300);
       }
 
-      if (currentScroll < "12800") {
+      if (currentScroll < "7200") {
         $("#lottie-2").removeClass("paused");
       }
 
-      if (currentScroll < "14000") {
+      if (currentScroll < "9200") {
         $("#lottie-2").removeClass("back");
       }
     });
   }
 
   if ($("#lottie-3").length > 0) {
-    let number = 20000;
+    let number = 13800;
 
     let theWindow = $(window);
     let winHeight = theWindow.height();
-    let animDuration = 5000;
+    let animDuration = 2500;
     let animData = {
       container: document.getElementById("lottie-3"),
       renderer: "svg",
@@ -1057,11 +1088,11 @@ $(document).ready(function () {
     });
 
     $(window).scroll(function () {
-      if ($(this).scrollTop() > number && currentScroll < "25000") {
+      if ($(this).scrollTop() > number && currentScroll < "16200") {
         animatebodymovin(animDuration, anim);
       }
 
-      if (currentScroll >= "25000") {
+      if (currentScroll >= "16200") {
         anim.pause();
       }
     });
@@ -1092,8 +1123,8 @@ $(document).ready(function () {
           position: "fixed",
           scrollTrigger: {
             trigger: ".animation-text",
-            start: "3000",
-            end: "3500",
+            start: "1000",
+            end: "1500",
             scrub: true,
           },
         }
@@ -1109,8 +1140,8 @@ $(document).ready(function () {
           position: "fixed",
           scrollTrigger: {
             trigger: ".animation-main",
-            start: "7000",
-            end: "9500",
+            start: "3000",
+            end: "5000",
             scrub: true,
           },
         }
@@ -1123,8 +1154,8 @@ $(document).ready(function () {
           opacity: 1,
           scrollTrigger: {
             trigger: ".animation-main",
-            start: "8500",
-            end: "9500",
+            start: "3500",
+            end: "5000",
             scrub: true,
           },
         }
@@ -1139,8 +1170,8 @@ $(document).ready(function () {
           opacity: 1,
           scrollTrigger: {
             trigger: ".production",
-            start: "-3500",
-            end: "-2500",
+            start: "-5500",
+            end: "-4500",
             scrub: true,
           },
         }
@@ -1153,8 +1184,8 @@ $(document).ready(function () {
           opacity: 1,
           scrollTrigger: {
             trigger: ".production",
-            start: "-3500",
-            end: "-2500",
+            start: "-5500",
+            end: "-4500",
             scrub: true,
           },
         }
@@ -1168,8 +1199,8 @@ $(document).ready(function () {
         {
           opacity: 1,
           scrollTrigger: {
-            trigger: ".delivery",
-            start: "800",
+            trigger: ".animation-main",
+            start: "12000",
             end: "1000",
             scrub: true,
           },
@@ -1182,9 +1213,9 @@ $(document).ready(function () {
         {
           opacity: 1,
           scrollTrigger: {
-            trigger: ".delivery",
-            start: "800",
-            end: "1000",
+            trigger: ".animation-main",
+            start: "12000",
+            end: "500",
             scrub: true,
           },
         }
@@ -1196,9 +1227,9 @@ $(document).ready(function () {
         {
           x: 700,
           scrollTrigger: {
-            trigger: ".delivery",
-            start: "-500",
-            end: "1000",
+            trigger: ".animation-main",
+            start: "12000",
+            end: "0",
             scrub: true,
           },
         }
@@ -1210,9 +1241,9 @@ $(document).ready(function () {
         {
           x: 700,
           scrollTrigger: {
-            trigger: ".delivery",
-            start: "-500",
-            end: "1000",
+            trigger: ".animation-main",
+            start: "12000",
+            end: "0",
             scrub: true,
           },
         }
@@ -1272,9 +1303,6 @@ $(document).ready(function () {
       }
     });
 
-    $(".b-product-lines__switch-btn").eq(0).addClass("active");
-    $(".b-product-lines__switch-item-wrap").eq(0).addClass("active").fadeIn();
-
     let cartWidth = $(".b-product-lines__cart.active").width(),
       bodyWidth = cartWidth - 16 * 9;
 
@@ -1282,38 +1310,9 @@ $(document).ready(function () {
     $(".b-product-lines__cart-body").css("min-width", bodyWidth + "px");
 
     $(".b-product-lines__switch-btn").on("click", function (e) {
-      if (
-        !$(".b-product-lines__cart-arrow-wrap").is(e.target) &&
-        $(".b-product-lines__cart-arrow-wrap").has(e.target).length === 0
-      ) {
-        let cartWidth = $(".b-product-lines__cart.active").width(),
-          bodyWidth = cartWidth - 16 * 9;
+      let index = $(this).attr("data-index");
 
-        $(".b-product-lines__switch-btn").removeClass("active");
-        $(this).addClass("active");
-
-        $(".b-product-lines__switch-item-wrap")
-          .fadeOut(0)
-          .removeClass("active");
-        $(".b-product-lines__switch-item-wrap")
-          .eq($(this).index())
-          .fadeIn()
-          .addClass("active");
-
-        let parentT = $(".b-product-lines__switch-item-wrap.active"),
-          parentTchildren = parentT.find(".b-product-lines__cart");
-
-        $(".b-product-lines__cart").removeClass("active");
-        parentTchildren.eq(0).addClass("active");
-        $(".b-product-lines__cart").css("transition", "0s");
-        setTimeout(
-          () => $(".b-product-lines__cart").css("transition", "0.4s"),
-          400
-        );
-
-        $(".b-product-lines__cart-body").css("width", bodyWidth + "px");
-        $(".b-product-lines__cart-body").css("min-width", bodyWidth + "px");
-      }
+      $(".b-product-lines__cart").eq(index).trigger("click");
     });
 
     $(".b-product-lines__cart-arrow_next").on("click", function () {
@@ -1378,6 +1377,12 @@ $(document).ready(function () {
       }
     });
   }
+
+  if ($(".btn-top-page").length > 0) {
+    $(".btn-top-page").on("click", function () {
+      $(window).scrollTop(0);
+    });
+  }
 });
 
 function isVisibleMapBlock() {
@@ -1403,39 +1408,46 @@ function isVisibleMapBlock() {
 function openInvisBlock(than, block, isLeave) {
   than.addClass("active");
 
-  $(`.${block}`).addClass("open").slideDown();
+  $(`.${block}`).addClass("open").slideDown(200);
 
-  $(`.${block}`).mouseleave(function () {
-    if (!isLeave) {
-      isLeave = true;
-
-      let timer = setTimeout(function () {
-        closeInvis(block, timer);
-      }, 500);
-
-      $(`.${block}`).mouseover(function () {
-        timer && clearTimeout(timer);
-        isLeave = false;
-      });
-    }
+  $(than).mouseleave(function () {
+    mouseLeaveHandle();
   });
 
-  $(`.${block}`).mouseover(function () {
-    isLeave = false;
+  $(`.${block}`).mouseleave(function () {
+    mouseLeaveHandle();
   });
 
   $(document).mouseup(function (e) {
     let div = $(`.${block}`);
     if (!div.is(e.target) && div.has(e.target).length === 0) {
       $(".js-action-link").removeClass("active");
-      div.removeClass("open").stop().slideUp();
+      div.removeClass("open").slideUp(200);
       $(document).off("mouseup");
     }
   });
 
+  function mouseLeaveHandle() {
+    $(than).off("mouseleave");
+    $(block).off("mouseleave");
+
+    if (!isLeave) {
+      isLeave = true;
+
+      let timer = setTimeout(function () {
+        closeInvis(block, timer);
+      }, 200);
+
+      $(`.${block}`).mouseover(function () {
+        timer && clearTimeout(timer);
+        isLeave = false;
+      });
+    }
+  }
+
   function closeInvis(block, timer = undefined) {
     $(".js-action-link").removeClass("active");
-    $(`.${block}`).removeClass("open").stop().slideUp();
+    $(`.${block}`).removeClass("open").slideUp(200);
     $(`.${block}`).off("mouseover");
     $(document).off("mouseup");
     isLeave = false;
