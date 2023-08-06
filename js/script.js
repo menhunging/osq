@@ -976,7 +976,7 @@ $(document).ready(function () {
 
     let theWindow = $(window);
     let winHeight = theWindow.height();
-    let animDuration = 1500;
+    let animDuration = 1600;
     let animData = {
       container: document.getElementById("lottie-1"),
       renderer: "svg",
