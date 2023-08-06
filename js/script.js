@@ -1101,20 +1101,6 @@ $(document).ready(function () {
   if ($(".animation-main").length > 0) {
     if (ScrollTrigger.isTouch !== 1) {
       gsap.fromTo(
-        "#lottie-1",
-        { x: 100 },
-        {
-          x: 100,
-          scrollTrigger: {
-            trigger: ".animation-main",
-            start: "700",
-            end: "2000",
-            scrub: true,
-          },
-        }
-      );
-
-      gsap.fromTo(
         ".animation-text",
         { x: 0, opacity: 0, position: "relative" },
         {
@@ -1170,8 +1156,8 @@ $(document).ready(function () {
           opacity: 1,
           scrollTrigger: {
             trigger: ".production",
-            start: "-5500",
-            end: "-4500",
+            start: "-4500",
+            end: "-3500",
             scrub: true,
           },
         }
@@ -1184,8 +1170,8 @@ $(document).ready(function () {
           opacity: 1,
           scrollTrigger: {
             trigger: ".production",
-            start: "-5500",
-            end: "-4500",
+            start: "-4500",
+            end: "-3500",
             scrub: true,
           },
         }

@@ -737,7 +737,7 @@ div {
   $trans: opacity 0.3s;
   @include transition($trans);
   opacity: 0;
-  margin-left: -1010px;
+  margin-left: -940px;
 
   &.show {
     opacity: 1;
