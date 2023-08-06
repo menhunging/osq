@@ -1216,6 +1216,7 @@
   &.show {
     opacity: 0;
     top: -1000px;
+    pointer-events: none;
   }
 }
 
@@ -1422,6 +1423,7 @@
 
   &.hide {
     opacity: 0 !important;
+    pointer-events: none;
   }
 
   @include before {
