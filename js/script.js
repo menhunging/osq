@@ -1156,7 +1156,7 @@ $(document).ready(function () {
           opacity: 1,
           scrollTrigger: {
             trigger: ".production",
-            start: "-4500",
+            start: "-4000",
             end: "-3500",
             scrub: true,
           },
@@ -1170,7 +1170,7 @@ $(document).ready(function () {
           opacity: 1,
           scrollTrigger: {
             trigger: ".production",
-            start: "-4500",
+            start: "-4000",
             end: "-3500",
             scrub: true,
           },
