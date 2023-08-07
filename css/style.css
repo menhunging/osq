@@ -1970,9 +1970,8 @@ div::-webkit-scrollbar-thumb {
 
 .sertificate__slider {
   max-width: 100%;
-  width: 100%;
   margin-top: 90px;
-  max-width: 891px;
+  width: 891px;
   overflow: visible;
   -webkit-transition: opacity 0.3s 0.5s;
   -moz-transition: opacity 0.3s 0.5s;
