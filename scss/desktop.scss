@@ -7806,7 +7806,7 @@ $fontSize: (
     width: 1572px;
     background-image: url(../img/line-your-line.svg);
     height: 477px;
-    top: -40px;
+    top: -90px;
     position: absolute;
     z-index: -1;
     left: 50%;
@@ -7822,8 +7822,9 @@ $fontSize: (
 
   &__title {
     max-width: fit-content;
-    font-size: 3.8rem;
     font-weight: 700;
+    font-size: 60px;
+    line-height: 54px;
     text-transform: uppercase;
   }
 
