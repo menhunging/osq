@@ -1253,7 +1253,7 @@
 
 .production__rightSide {
   width: 682px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .production__slider {
@@ -8266,4 +8266,13 @@ $fontSize: (
       stroke: $colorWhite;
     }
   }
+}
+
+.dop-dev .b-product-lines__cart-btn.link{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.dop-dev .b-product-lines__cart-btn.link::before{
+  display: none;
 }

@@ -3111,7 +3111,7 @@ div::-webkit-scrollbar-thumb {
 
 .production__rightSide {
   width: 682px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .production__slider .swiper-pagination {
@@ -9952,6 +9952,15 @@ div::-webkit-scrollbar-thumb {
 }
 .btn-top-page svg path {
   stroke: rgb(255, 255, 255);
+}
+
+.dop-dev .b-product-lines__cart-btn.link {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.dop-dev .b-product-lines__cart-btn.link::before {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
