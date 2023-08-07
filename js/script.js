@@ -188,14 +188,14 @@ $(document).ready(function () {
 
   if ($(".sertificate__slider").length > 0) {
     const swiper = new Swiper(".sertificate__slider", {
-      slidesPerView: "auto",
-      centeredSlides: true,
-      spaceBetween: 60,
+      spaceBetween: 200,
       autoHeight: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
+      // autoplay: {
+      //   delay: 5000,
+      //   disableOnInteraction: false,
+      // },
+      centeredSlides: true,
+			slidesPerView: 'auto',
       navigation: {
         nextEl: ".sertificate__slider .swiper-button-next",
         prevEl: ".sertificate__slider .swiper-button-prev",
