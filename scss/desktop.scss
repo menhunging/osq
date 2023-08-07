@@ -7809,7 +7809,8 @@ $fontSize: (
     top: -40px;
     position: absolute;
     z-index: -1;
-    left: -90px;
+    left: 50%;
+    margin-left: -786px;
   }
 
   &__header {
