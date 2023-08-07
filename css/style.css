@@ -9529,7 +9529,7 @@ div::-webkit-scrollbar-thumb {
   position: absolute;
   z-index: -1;
   left: 50%;
-  margin-left: -786px;
+  margin-left: -784px;
 }
 .dop-dev .b-product-lines__header {
   display: flex;
