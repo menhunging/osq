@@ -1953,6 +1953,7 @@ div::-webkit-scrollbar-thumb {
   width: 100%;
   max-width: 500px;
   position: relative;
+  position: relative;
 }
 
 .grettings__caption {
@@ -2013,10 +2014,6 @@ div::-webkit-scrollbar-thumb {
 .sertificate__slider .swiper-slide-active {
   opacity: 1;
   width: 650px !important;
-}
-.sertificate__slider .swiper-slide-active:first-child {
-  left: -250px;
-  margin-right: -40px !important;
 }
 .sertificate__slider .swiper-slide-active .sertificate-item {
   width: 650px !important;
