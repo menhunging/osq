@@ -1982,9 +1982,6 @@ div::-webkit-scrollbar-thumb {
 .sertificate__slider.init {
   opacity: 1;
 }
-.sertificate__slider .swiper-wrapper {
-  left: 240px;
-}
 .sertificate__slider .swiper-slide {
   width: 190px !important;
   opacity: 0;
