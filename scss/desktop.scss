@@ -52,17 +52,6 @@
   overflow: hidden;
   @include border-radius(27px);
 
-  // @include before {
-  //   position: absolute;
-  //   width: 684px;
-  //   height: 684px;
-  //   left: -88px;
-  //   top: 176px;
-  //   background-color: $colorSite;
-  //   @include border-radius(50%);
-  //   z-index: 0;
-  // }
-
   .btn {
     margin-top: 60px;
     position: relative;
