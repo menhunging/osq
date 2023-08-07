@@ -195,7 +195,7 @@ $(document).ready(function () {
         disableOnInteraction: false,
       },
       centeredSlides: true,
-			slidesPerView: 'auto',
+      slidesPerView: "auto",
       navigation: {
         nextEl: ".sertificate__slider .swiper-button-next",
         prevEl: ".sertificate__slider .swiper-button-prev",
@@ -1367,6 +1367,53 @@ $(document).ready(function () {
   if ($(".btn-top-page").length > 0) {
     $(".btn-top-page").on("click", function () {
       $(window).scrollTop(0);
+    });
+  }
+
+  if ($(".lineap").length > 0) {
+    const items = $(".lineap-item");
+    const itemsLenght = $(".lineap-item").length;
+
+    items.each((idx, item) => {
+      $(item).css("z-index", itemsLenght - idx);
+    });
+
+    $(".lineap-item").click(function () {
+      $(".lineap-item").removeClass("lineap-item--active");
+      $(".lineap-item").removeClass("lineap-item--prev");
+      $(".lineap-item").css("z-index", "");
+
+      $(this).addClass("lineap-item--active");
+
+      const prevElements = $(this).prevAll(".lineap-item");
+
+      prevElements.addClass("lineap-item--prev");
+
+      const nextElements = $(this).nextAll(".lineap-item");
+
+      nextElements.each((idx, item) => {
+        $(item).css("z-index", nextElements.length - idx);
+      });
+    });
+
+    $(".lineap-item__control--next").click(function () {
+      const parent = $(this).closest(".lineap-item");
+
+      const nextItem = parent.next(".lineap-item");
+
+      if (nextItem.length !== 0) {
+        $(nextItem).click();
+      }
+    });
+
+    $(".lineap-item__control--prev").click(function () {
+      const parent = $(this).closest(".lineap-item");
+
+      const prevItem = parent.prev(".lineap-item");
+
+      if (prevItem.length !== 0) {
+        $(prevItem).click();
+      }
     });
   }
 });
