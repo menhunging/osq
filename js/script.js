@@ -1378,22 +1378,27 @@ $(document).ready(function () {
       $(item).css("z-index", itemsLenght - idx);
     });
 
-    $(".lineap-item").click(function () {
+    function setActiveLineapItem($item) {
       $(".lineap-item").removeClass("lineap-item--active");
       $(".lineap-item").removeClass("lineap-item--prev");
       $(".lineap-item").css("z-index", "");
 
-      $(this).addClass("lineap-item--active");
+      $item.addClass("lineap-item--active");
 
-      const prevElements = $(this).prevAll(".lineap-item");
+      const prevElements = $item.prevAll(".lineap-item");
 
       prevElements.addClass("lineap-item--prev");
 
-      const nextElements = $(this).nextAll(".lineap-item");
+      const nextElements = $item.nextAll(".lineap-item");
 
       nextElements.each((idx, item) => {
         $(item).css("z-index", nextElements.length - idx);
       });
+    }
+
+    $(".lineap-item__title").click(function () {
+      const parent = $(this).closest(".lineap-item");
+      setActiveLineapItem($(parent));
     });
 
     $(".lineap-item__control--next").click(function () {
@@ -1402,7 +1407,7 @@ $(document).ready(function () {
       const nextItem = parent.next(".lineap-item");
 
       if (nextItem.length !== 0) {
-        $(nextItem).click();
+        setActiveLineapItem($(nextItem));
       }
     });
 
@@ -1412,7 +1417,7 @@ $(document).ready(function () {
       const prevItem = parent.prev(".lineap-item");
 
       if (prevItem.length !== 0) {
-        $(prevItem).click();
+        setActiveLineapItem($(prevItem));
       }
     });
   }
