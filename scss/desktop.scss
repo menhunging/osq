@@ -7939,7 +7939,6 @@ $fontSize: (
         color: #fff;
       }
     }
-
     &:nth-child(11) {
       background-color: #242021;
       border-color: #242021;
@@ -7954,12 +7953,10 @@ $fontSize: (
         color: #fff;
       }
     }
-
     &:nth-child(12) {
       background-color: #3e76ff;
       border-color: #3e76ff;
     }
-
     &:hover:not([class*="active"]) {
       bottom: 5px;
       box-shadow: var(--shadow);
@@ -8394,7 +8391,7 @@ $fontSize: (
 .lineap-item__title-text {
   transform: rotate(90deg);
   white-space: nowrap;
-  color: #2e2e2e;
+  color: rgba(255,255,255,.8);
   font-family: Circe;
   font-size: 24px;
   font-weight: 400;
