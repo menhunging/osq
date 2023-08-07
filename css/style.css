@@ -1984,11 +1984,14 @@ div::-webkit-scrollbar-thumb {
   opacity: 1;
 }
 .sertificate__slider .swiper-wrapper {
-  left: 190px;
+  left: 240px;
 }
 .sertificate__slider .swiper-slide {
   width: 190px !important;
   opacity: 0;
+}
+.sertificate__slider .swiper-slide:first-child {
+  margin-left: -380px;
 }
 .sertificate__slider .swiper-slide .picture {
   width: 190px;

@@ -130,12 +130,16 @@
   }
 
   .swiper-wrapper {
-    left: 190px;
+    left: 240px;
   }
 
   .swiper-slide {
     width: 190px!important;
     opacity: 0;
+
+    &:first-child {
+      margin-left: -380px;
+    }
 
     .picture {
       width: 190px;
@@ -168,9 +172,6 @@
     opacity: 1;
     width: 650px !important;
 
-    &:first-child {
-
-    }
 
     .sertificate-item {
       width: 650px !important;
