@@ -1296,9 +1296,8 @@ $(document).ready(function () {
     $(".b-product-lines__cart-body").css("min-width", bodyWidth + "px");
 
     $(".b-product-lines__switch-btn").on("click", function (e) {
-      let index = $(this).attr("data-index");
-
-      $(".b-product-lines__cart").eq(index).trigger("click");
+      let id = $(this).attr("data-id");
+      pickLineapItemByDataId(id);
     });
 
     $(".b-product-lines__cart-arrow_next").on("click", function () {
@@ -1377,24 +1376,6 @@ $(document).ready(function () {
     items.each((idx, item) => {
       $(item).css("z-index", itemsLenght - idx);
     });
-
-    function setActiveLineapItem($item) {
-      $(".lineap-item").removeClass("lineap-item--active");
-      $(".lineap-item").removeClass("lineap-item--prev");
-      $(".lineap-item").css("z-index", "");
-
-      $item.addClass("lineap-item--active");
-
-      const prevElements = $item.prevAll(".lineap-item");
-
-      prevElements.addClass("lineap-item--prev");
-
-      const nextElements = $item.nextAll(".lineap-item");
-
-      nextElements.each((idx, item) => {
-        $(item).css("z-index", nextElements.length - idx);
-      });
-    }
 
     $(".lineap-item__title").click(function () {
       const parent = $(this).closest(".lineap-item");
@@ -1491,4 +1472,29 @@ function openInvisBlock(than, block, isLeave) {
     isLeave = false;
     timer && clearTimeout(timer);
   }
+}
+
+function pickLineapItemByDataId(id) {
+  const item = $(`.lineap-item[data-item=${id}]`);
+  if (item.length !== 0) {
+    setActiveLineapItem($(item));
+  }
+}
+
+function setActiveLineapItem($item) {
+  $(".lineap-item").removeClass("lineap-item--active");
+  $(".lineap-item").removeClass("lineap-item--prev");
+  $(".lineap-item").css("z-index", "");
+
+  $item.addClass("lineap-item--active");
+
+  const prevElements = $item.prevAll(".lineap-item");
+
+  prevElements.addClass("lineap-item--prev");
+
+  const nextElements = $item.nextAll(".lineap-item");
+
+  nextElements.each((idx, item) => {
+    $(item).css("z-index", nextElements.length - idx);
+  });
 }
