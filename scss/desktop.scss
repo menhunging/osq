@@ -7898,16 +7898,16 @@ $fontSize: (
     border-radius: 0 10px 10px 0px;
 
     &:nth-child(1) {
-      background-color: rgb(217, 29, 92);
-      border-color: rgb(217, 29, 92);
+      background-color: rgb(174, 29, 92);
+      border-color: rgb(174, 29, 92);
     }
     &:nth-child(2) {
-      background-color: rgb(97, 96, 171);
-      border-color: rgb(97, 96, 171);
+      background-color: rgb(58, 56, 171);
+      border-color: rgb(58, 56, 171);
     }
     &:nth-child(3) {
-      background-color: rgb(247, 148, 29);
-      border-color: rgb(247, 148, 29);
+      background-color: rgb(204, 148, 29);
+      border-color: rgb(204, 148, 29);
     }
     &:nth-child(4) {
       background-color: rgb(179, 148, 104);
@@ -7922,20 +7922,20 @@ $fontSize: (
       border-color: rgb(158, 31, 98);
     }
     &:nth-child(7) {
-      background-color: rgb(239, 63, 54);
-      border-color: rgb(239, 63, 54);
+      background-color: rgb(187, 63, 54);
+      border-color: rgb(187, 63, 54);
     }
     &:nth-child(8) {
       background-color: rgb(242, 107, 71);
       border-color: rgb(242, 107, 71);
     }
     &:nth-child(9) {
-      background-color: rgb(55, 180, 73);
-      border-color: rgb(55, 180, 73);
+      background-color: rgb(40, 180, 73);
+      border-color: rgb(40, 180, 73);
     }
     &:nth-child(10) {
-      background-color: rgb(40, 57, 145);
-      border-color: rgb(40, 57, 145);
+      background-color: rgb(52, 57, 145);
+      border-color: rgb(52, 57, 145);
 
       .your-lines__content .caption__invis {
         color: #fff;
@@ -7949,6 +7949,7 @@ $fontSize: (
 
       span {
         color: $colorWhite;
+        opacity: .7;
       }
 
       .your-lines__content .caption__invis {
