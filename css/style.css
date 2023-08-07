@@ -1986,9 +1986,6 @@ div::-webkit-scrollbar-thumb {
   width: 190px !important;
   opacity: 0;
 }
-.sertificate__slider .swiper-slide:first-child {
-  margin-left: -410px;
-}
 .sertificate__slider .swiper-slide .picture {
   width: 190px;
   height: 160px;
