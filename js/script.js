@@ -190,10 +190,10 @@ $(document).ready(function () {
     const swiper = new Swiper(".sertificate__slider", {
       spaceBetween: 200,
       autoHeight: true,
-      // autoplay: {
-      //   delay: 5000,
-      //   disableOnInteraction: false,
-      // },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
       centeredSlides: true,
 			slidesPerView: 'auto',
       navigation: {
