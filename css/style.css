@@ -1970,6 +1970,7 @@ div::-webkit-scrollbar-thumb {
 
 .sertificate__slider {
   max-width: 100%;
+  width: 100%;
   margin-top: 90px;
   width: 891px;
   overflow: visible;
@@ -1982,9 +1983,15 @@ div::-webkit-scrollbar-thumb {
 .sertificate__slider.init {
   opacity: 1;
 }
+.sertificate__slider .swiper-wrapper {
+  left: 240px;
+}
 .sertificate__slider .swiper-slide {
   width: 190px !important;
   opacity: 0;
+}
+.sertificate__slider .swiper-slide:first-child {
+  margin-left: -410px;
 }
 .sertificate__slider .swiper-slide .picture {
   width: 190px;

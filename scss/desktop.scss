@@ -118,6 +118,7 @@
 
 .sertificate__slider {
   max-width: 100%;
+  width: 100%;
   margin-top: 90px;
   width: 891px;
   overflow: visible;
@@ -129,6 +130,7 @@
   }
 
   .swiper-wrapper {
+    left: 240px;
   }
 
   .swiper-slide {
@@ -136,6 +138,7 @@
     opacity: 0;
 
     &:first-child {
+      margin-left: -410px;
     }
 
     .picture {
