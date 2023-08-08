@@ -891,6 +891,7 @@ $(document).ready(function () {
 
   if ($(".btn-search").length > 0) {
     $(".btn-search").mouseover(function () {
+      console.log("mouseover");
       initSearchBlock();
     });
 
@@ -898,13 +899,20 @@ $(document).ready(function () {
       let searchBlock = $(".search-invis");
       let searchInput = searchBlock.find("input");
 
-      searchBlock.toggleClass("opened");
+      let timer = setTimeout(function () {
+        searchBlock.removeClass("opened").off("mouseleave");
+      }, 5000);
+
+      searchBlock.addClass("opened");
+
+      searchBlock.mouseover(function () {
+        clearInterval(timer);
+      });
 
       searchBlock.mouseleave(function () {
         let timer = setTimeout(function () {
           searchBlock.removeClass("opened").off("mouseleave");
-          clearInterval(timer);
-        }, 5000);
+         }, 5000);
 
         searchInput.off("input");
 
@@ -912,8 +920,6 @@ $(document).ready(function () {
           clearInterval(timer);
         });
       });
-
-      searchInput.on("input", function () {});
 
       $(document).mouseup(function (e) {
         if (

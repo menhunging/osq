@@ -1427,6 +1427,7 @@ div::-webkit-scrollbar-thumb {
   -moz-transition: opacity 0.3s;
   -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  display: block;
 }
 .btn-search:hover {
   opacity: 0.5;

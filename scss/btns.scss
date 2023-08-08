@@ -260,6 +260,7 @@
 
 .btn-search {
   @include transition(opacity 0.3s);
+  display: block;
 
   &:hover {
     opacity: 0.5;
