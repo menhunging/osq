@@ -10073,6 +10073,22 @@ div::-webkit-scrollbar-thumb {
   cursor: pointer;
 }
 
+.lineap-item__control--large {
+  cursor: pointer;
+  text-decoration: none;
+  width: auto;
+  padding: 0 30px;
+  border-radius: 35px;
+  margin-right: auto;
+  gap: 20px;
+  color: #fff;
+  font-family: Circe;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 .lineap-item__control:hover {
   background-color: #00a19a;
   border-color: #00a19a;
