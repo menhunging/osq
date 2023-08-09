@@ -6,7 +6,7 @@ addEventListener("scroll", (event) => {
   console.log(currentScroll);
 
   if ($(".animation-main").length > 0) {
-    if (currentScroll >= "3700") {
+    if (currentScroll >= "3600") {
       $("#lottie-1").addClass("show");
     } else {
       $("#lottie-1").removeClass("show");
@@ -188,14 +188,15 @@ $(document).ready(function () {
 
   if ($(".sertificate__slider").length > 0) {
     const swiper = new Swiper(".sertificate__slider", {
-      spaceBetween: 200,
+      spaceBetween: 80,
       autoHeight: true,
       autoplay: {
         delay: 5000,
         disableOnInteraction: false,
       },
+      loop:true,
       centeredSlides: true,
-      slidesPerView: "auto",
+      slidesPerView: 1,
       navigation: {
         nextEl: ".sertificate__slider .swiper-button-next",
         prevEl: ".sertificate__slider .swiper-button-prev",
@@ -217,23 +218,25 @@ $(document).ready(function () {
 
   if ($(".catalog-main__slider").length > 0) {
     const swiper = new Swiper(".catalog-main__slider", {
-      slidesPerView: 3,
+      slidesPerView: 5,
+      loop: true,
       spaceBetween: 0,
       centeredSlides: true,
-      initialSlide: 1,
+      initialSlide: 2,
       autoplay: {
         delay: 5000,
         disableOnInteraction: false,
       },
       autoHeight: true,
       effect: "creative",
+      slideToClickedSlide: true,
       creativeEffect: {
         prev: {
-          translate: ["-150%", 0, -210],
+          translate: ["-200%", 25, 0],
           rotate: [0, 0, 0],
         },
         next: {
-          translate: ["150%", 0, -210],
+          translate: ["200%", 25, 0],
           rotate: [0, 0, 0],
         },
       },
@@ -245,6 +248,17 @@ $(document).ready(function () {
         el: ".catalog-main__slider .swiper-pagination",
         type: "progressbar",
       },
+    });
+
+    swiper.on("slideChange", function () {
+      let title = $(".catalog-main__slider")
+        .find(".swiper-slide.swiper-slide-active")
+        .attr("data-title");
+      let text = $(".catalog-main__slider")
+        .find(".swiper-slide.swiper-slide-active")
+        .attr("data-text");
+
+      changeTextCatalog(title, text);
     });
   }
 
@@ -912,7 +926,7 @@ $(document).ready(function () {
       searchBlock.mouseleave(function () {
         let timer = setTimeout(function () {
           searchBlock.removeClass("opened").off("mouseleave");
-         }, 5000);
+        }, 5000);
 
         searchInput.off("input");
 
@@ -1383,6 +1397,31 @@ $(document).ready(function () {
       $(item).css("z-index", itemsLenght - idx);
     });
 
+    function pickLineapItemByDataId(id) {
+      const item = $(`.lineap-item[data-item=${id}]`);
+      if (item.length !== 0) {
+        setActiveLineapItem($(item));
+      }
+    }
+
+    function setActiveLineapItem($item) {
+      $(".lineap-item").removeClass("lineap-item--active");
+      $(".lineap-item").removeClass("lineap-item--prev");
+      $(".lineap-item").css("z-index", "");
+
+      $item.addClass("lineap-item--active");
+
+      const prevElements = $item.prevAll(".lineap-item");
+
+      prevElements.addClass("lineap-item--prev");
+
+      const nextElements = $item.nextAll(".lineap-item");
+
+      nextElements.each((idx, item) => {
+        $(item).css("z-index", nextElements.length - idx);
+      });
+    }
+
     $(".lineap-item__title").click(function () {
       const parent = $(this).closest(".lineap-item");
       setActiveLineapItem($(parent));
@@ -1503,4 +1542,9 @@ function setActiveLineapItem($item) {
   nextElements.each((idx, item) => {
     $(item).css("z-index", nextElements.length - idx);
   });
+}
+
+function changeTextCatalog(title, text) {
+  $(".catalog-main__right .caption").text(title);
+  $(".catalog-main__right p").text(text);
 }

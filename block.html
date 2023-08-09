@@ -21,6 +21,29 @@
 
 </head>
 
+<style>
+
+  .newFont{
+    font-family: "Qanelas";
+    letter-spacing: 0px;
+  }
+
+  .dop-dev .b-product-lines__title{
+    font-family: "Qanelas";
+    letter-spacing: 0px;
+  }
+
+  .lineap-item__title-text{
+    font-family: "Qanelas";
+    letter-spacing: 0px;
+  }
+
+  .dop-dev .b-product-lines__switch-btn{
+    font-family: "Qanelas";
+    letter-spacing: 0px;
+  }
+</style>
+
 <body>
 
   <div class="siteWrapper ">
@@ -598,7 +621,7 @@
     </header>
 
     <main class="main">
-      <div class="your-lines" data-aos="fade-up" data-aos-offset="0">
+      <div class="your-lines newFont" data-aos="fade-up" data-aos-offset="0">
         <div class="dop-dev">
 
           <!-- Аналог .container в Bootstrap -->
@@ -619,353 +642,410 @@
                 <!-- Переключатели табов -->
                 <div class="b-product-lines__switch">
                   <!-- Кнопка переключения таба -->
-                  <button class="b-product-lines__switch-btn" data-index="0">OSQ Essential</button>
+                  <button class="b-product-lines__switch-btn">OSQ Essential</button>
                   <!-- /Кнопка переключения таба -->
 
-                  <button class="b-product-lines__switch-btn" data-index="10">Black Edition</button>
-                  <button class="b-product-lines__switch-btn" data-index="11">Forgenika</button>
+                  <button class="b-product-lines__switch-btn" data-id="black_edition">Black Edition</button>
+                  <a href="https://forgenika.ru/" target="_blank" class="b-product-lines__switch-btn">Forgenika</a>
                 </div>
                 <!-- /Переключатели табов -->
               </div>
               <!-- /Верхняя часть блока -->
 
               <!-- Элемент таба  -->
-              <div class="b-product-lines__switch-item-wrap active">
-                <div class="b-product-lines__switch-item">
+                <div class="lineap">
+                  <div class="lineap-item lineap-item--active" style="background-color: #d91d5c;" data-item="1">
+                    <div class="lineap-item__content">
+                      <div class="lineap-item__content-image">
+                        <img
+                          src="https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-980x653.jpg"
+                          alt="" class="lineap-item__image">
+                      </div>
+                      <div class="lineap-item__content-title">BAKERY LINE</div>
+                      <div class="lineap-item__content-description">Мы являемся производителем и разработчиком
+                        предлагаемой нами высокотехнологичной экоупаковки.</div>
+                      <div class="lineap-item__content-controls">
+                        <a href="#" class="lineap-item__control lineap-item__control--large">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="23" viewBox="0 0 19 23"
+                            fill="none">
+                            <path
+                              d="M1 8.03335L9.36811 16.4015M9.36811 16.4015L17.7362 8.03335M9.36811 16.4015V1.14453M1 21.8545H17.7362"
+                              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                          <span>Скачать каталог</span>
+                        </a>
+                        <button type="button" class="lineap-item__control lineap-item__control--prev">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 8 11" fill="none">
+                            <path opacity="0.8" d="M6.53711 9.70996L2.18928 5.36213L6.53711 1.01431" stroke="white"
+                              stroke-width="2" stroke-linecap="round" />
+                          </svg></button>
+                        <button type="button" class="lineap-item__control lineap-item__control--next"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="7" height="11" viewBox="0 0 7 11" fill="none">
+                            <path d="M1.1875 9.70996L5.53533 5.36213L1.1875 1.01431" stroke="white" stroke-width="2"
+                              stroke-linecap="round" />
+                          </svg></button>
+                      </div>
+                    </div>
+                    <div class="lineap-item__title"><span class="lineap-item__title-text">BAKERY LINE</span></div>
+                  </div>
 
-                  <!-- Карточка внутри таба -->
-                  <!-- Задано через style чтобы проще сажать на CMS -->
-                  <div class="b-product-lines__cart active">
-                    <!-- Контеннт карточки -->
-                    <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
-                      <!-- Заголовок карточки-->
-                      <div class="b-product-lines__cart-title">
-                        BAKERY LINE
+                  <div class="lineap-item" style="background-color: #6160ab;" data-item="black">
+                    <div class="lineap-item__content">
+                      <div class="lineap-item__content-image">
+                        <img
+                          src="https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-980x653.jpg"
+                          alt="" class="lineap-item__image">
                       </div>
-                      <!-- /Заголовок карточки-->
-                      <div class="b-product-lines__cart-description">
-                        Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
-                        экоупаковки.
+                      <div class="lineap-item__content-title">COFFEE LINE</div>
+                      <div class="lineap-item__content-description">Мы являемся производителем и разработчиком
+                        предлагаемой нами высокотехнологичной экоупаковки.</div>
+                      <div class="lineap-item__content-controls">
+                        <a href="#" class="lineap-item__control lineap-item__control--large">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="23" viewBox="0 0 19 23"
+                            fill="none">
+                            <path
+                              d="M1 8.03335L9.36811 16.4015M9.36811 16.4015L17.7362 8.03335M9.36811 16.4015V1.14453M1 21.8545H17.7362"
+                              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                          <span>Скачать каталог</span>
+                        </a>
+                        <button type="button" class="lineap-item__control lineap-item__control--prev">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 8 11" fill="none">
+                            <path opacity="0.8" d="M6.53711 9.70996L2.18928 5.36213L6.53711 1.01431" stroke="white"
+                              stroke-width="2" stroke-linecap="round" />
+                          </svg></button>
+                        <button type="button" class="lineap-item__control lineap-item__control--next"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="7" height="11" viewBox="0 0 7 11" fill="none">
+                            <path d="M1.1875 9.70996L5.53533 5.36213L1.1875 1.01431" stroke="white" stroke-width="2"
+                              stroke-linecap="round" />
+                          </svg></button>
                       </div>
+                    </div>
+                    <div class="lineap-item__title"><span class="lineap-item__title-text">COFFEE LINE</span></div>
+                  </div>
 
-                      <!-- Кнопки действия карточки -->
+                  <div class="lineap-item" style="background-color: #b39468;" data-item="green">
+                    <div class="lineap-item__content">
+                      <div class="lineap-item__content-image">
+                        <img
+                          src="https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-980x653.jpg"
+                          alt="" class="lineap-item__image">
+                      </div>
+                      <div class="lineap-item__content-title">PACKAGING LINE</div>
+                      <div class="lineap-item__content-description">Мы являемся производителем и разработчиком
+                        предлагаемой нами высокотехнологичной экоупаковки.</div>
+                      <div class="lineap-item__content-controls">
+                        <a href="#" class="lineap-item__control lineap-item__control--large">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="23" viewBox="0 0 19 23"
+                            fill="none">
+                            <path
+                              d="M1 8.03335L9.36811 16.4015M9.36811 16.4015L17.7362 8.03335M9.36811 16.4015V1.14453M1 21.8545H17.7362"
+                              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                          <span>Скачать каталог</span>
+                        </a>
+                        <button type="button" class="lineap-item__control lineap-item__control--prev">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 8 11" fill="none">
+                            <path opacity="0.8" d="M6.53711 9.70996L2.18928 5.36213L6.53711 1.01431" stroke="white"
+                              stroke-width="2" stroke-linecap="round" />
+                          </svg></button>
+                        <button type="button" class="lineap-item__control lineap-item__control--next"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="7" height="11" viewBox="0 0 7 11" fill="none">
+                            <path d="M1.1875 9.70996L5.53533 5.36213L1.1875 1.01431" stroke="white" stroke-width="2"
+                              stroke-linecap="round" />
+                          </svg></button>
+                      </div>
+                    </div>
+                    <div class="lineap-item__title"><span class="lineap-item__title-text">PACKAGING LINE</span></div>
+                  </div>
 
-                      <div class="b-product-lines__cart-footer">
-                        <!-- Кнопка скачать -->
-                        <a href="#" download="BAKERY_LINE.pdf" class="b-product-lines__cart-btn">
-                          Скачать каталог
+                  <div class="lineap-item" style="background-color: #f7941d;" data-item="1">
+                    <div class="lineap-item__content">
+                      <div class="lineap-item__content-image">
+                        <img
+                          src="https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-980x653.jpg"
+                          alt="" class="lineap-item__image">
+                      </div>
+                      <div class="lineap-item__content-title">FAST FOOD LINE</div>
+                      <div class="lineap-item__content-description">Мы являемся производителем и разработчиком
+                        предлагаемой нами высокотехнологичной экоупаковки.</div>
+                      <div class="lineap-item__content-controls">
+                        <a href="#" class="lineap-item__control lineap-item__control--large">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="23" viewBox="0 0 19 23"
+                            fill="none">
+                            <path
+                              d="M1 8.03335L9.36811 16.4015M9.36811 16.4015L17.7362 8.03335M9.36811 16.4015V1.14453M1 21.8545H17.7362"
+                              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                          <span>Скачать каталог</span>
                         </a>
-                        <!-- /Кнопка скачать -->
+                        <button type="button" class="lineap-item__control lineap-item__control--prev">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 8 11" fill="none">
+                            <path opacity="0.8" d="M6.53711 9.70996L2.18928 5.36213L6.53711 1.01431" stroke="white"
+                              stroke-width="2" stroke-linecap="round" />
+                          </svg></button>
+                        <button type="button" class="lineap-item__control lineap-item__control--next"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="7" height="11" viewBox="0 0 7 11" fill="none">
+                            <path d="M1.1875 9.70996L5.53533 5.36213L1.1875 1.01431" stroke="white" stroke-width="2"
+                              stroke-linecap="round" />
+                          </svg></button>
+                      </div>
+                    </div>
+                    <div class="lineap-item__title"><span class="lineap-item__title-text">FAST FOOD LINE</span></div>
+                  </div>
 
-                        <!-- Кнопки переключатели катрочек -->
-                        <div class="b-product-lines__cart-arrow-wrap">
-                          <button class="b-product-lines__cart-arrow_prev b-product-lines__cart-arrow">
-                          </button>
-                          <button class="b-product-lines__cart-arrow_next b-product-lines__cart-arrow">
-                          </button>
-                        </div>
-                        <!-- /Кнопки переключатели катрочек -->
+                  <div class="lineap-item" style="background-color: #f3c520;" data-item="3">
+                    <div class="lineap-item__content">
+                      <div class="lineap-item__content-image">
+                        <img
+                          src="https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-980x653.jpg"
+                          alt="" class="lineap-item__image">
+                      </div>
+                      <div class="lineap-item__content-title">READY TO GO LINE</div>
+                      <div class="lineap-item__content-description">Мы являемся производителем и разработчиком
+                        предлагаемой нами высокотехнологичной экоупаковки.</div>
+                      <div class="lineap-item__content-controls">
+                        <a href="#" class="lineap-item__control lineap-item__control--large">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="23" viewBox="0 0 19 23"
+                            fill="none">
+                            <path
+                              d="M1 8.03335L9.36811 16.4015M9.36811 16.4015L17.7362 8.03335M9.36811 16.4015V1.14453M1 21.8545H17.7362"
+                              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                          <span>Скачать каталог</span>
+                        </a>
+                        <button type="button" class="lineap-item__control lineap-item__control--prev">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 8 11" fill="none">
+                            <path opacity="0.8" d="M6.53711 9.70996L2.18928 5.36213L6.53711 1.01431" stroke="white"
+                              stroke-width="2" stroke-linecap="round" />
+                          </svg></button>
+                        <button type="button" class="lineap-item__control lineap-item__control--next"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="7" height="11" viewBox="0 0 7 11" fill="none">
+                            <path d="M1.1875 9.70996L5.53533 5.36213L1.1875 1.01431" stroke="white" stroke-width="2"
+                              stroke-linecap="round" />
+                          </svg></button>
+                      </div>
+                    </div>
+                    <div class="lineap-item__title"><span class="lineap-item__title-text">READY TO GO LINE</span></div>
+                  </div>
 
+                  <div class="lineap-item" style="background-color: #9e1f62;" data-item="4">
+                    <div class="lineap-item__content">
+                      <div class="lineap-item__content-image">
+                        <img
+                          src="https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-980x653.jpg"
+                          alt="" class="lineap-item__image">
                       </div>
-                      <!-- /Кнопки действия карточки -->
+                      <div class="lineap-item__content-title">RETAIL LINE</div>
+                      <div class="lineap-item__content-description">Мы являемся производителем и разработчиком
+                        предлагаемой нами высокотехнологичной экоупаковки.</div>
+                      <div class="lineap-item__content-controls">
+                        <a href="#" class="lineap-item__control lineap-item__control--large">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="23" viewBox="0 0 19 23"
+                            fill="none">
+                            <path
+                              d="M1 8.03335L9.36811 16.4015M9.36811 16.4015L17.7362 8.03335M9.36811 16.4015V1.14453M1 21.8545H17.7362"
+                              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                          <span>Скачать каталог</span>
+                        </a>
+                        <button type="button" class="lineap-item__control lineap-item__control--prev">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 8 11" fill="none">
+                            <path opacity="0.8" d="M6.53711 9.70996L2.18928 5.36213L6.53711 1.01431" stroke="white"
+                              stroke-width="2" stroke-linecap="round" />
+                          </svg></button>
+                        <button type="button" class="lineap-item__control lineap-item__control--next"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="7" height="11" viewBox="0 0 7 11" fill="none">
+                            <path d="M1.1875 9.70996L5.53533 5.36213L1.1875 1.01431" stroke="white" stroke-width="2"
+                              stroke-linecap="round" />
+                          </svg></button>
+                      </div>
+                    </div>
+                    <div class="lineap-item__title"><span class="lineap-item__title-text">RETAIL LINE</span></div>
+                  </div>
 
+                  <div class="lineap-item" style="background-color: #ef3f36;" data-item="5">
+                    <div class="lineap-item__content">
+                      <div class="lineap-item__content-image">
+                        <img
+                          src="https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-980x653.jpg"
+                          alt="" class="lineap-item__image">
+                      </div>
+                      <div class="lineap-item__content-title">ROUND LINE</div>
+                      <div class="lineap-item__content-description">Мы являемся производителем и разработчиком
+                        предлагаемой нами высокотехнологичной экоупаковки.</div>
+                      <div class="lineap-item__content-controls">
+                        <a href="#" class="lineap-item__control lineap-item__control--large">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="23" viewBox="0 0 19 23"
+                            fill="none">
+                            <path
+                              d="M1 8.03335L9.36811 16.4015M9.36811 16.4015L17.7362 8.03335M9.36811 16.4015V1.14453M1 21.8545H17.7362"
+                              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                          <span>Скачать каталог</span>
+                        </a>
+                        <button type="button" class="lineap-item__control lineap-item__control--prev">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 8 11" fill="none">
+                            <path opacity="0.8" d="M6.53711 9.70996L2.18928 5.36213L6.53711 1.01431" stroke="white"
+                              stroke-width="2" stroke-linecap="round" />
+                          </svg></button>
+                        <button type="button" class="lineap-item__control lineap-item__control--next"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="7" height="11" viewBox="0 0 7 11" fill="none">
+                            <path d="M1.1875 9.70996L5.53533 5.36213L1.1875 1.01431" stroke="white" stroke-width="2"
+                              stroke-linecap="round" />
+                          </svg></button>
+                      </div>
+                    </div>
+                    <div class="lineap-item__title"><span class="lineap-item__title-text">ROUND LINE</span></div>
+                  </div>
 
+                  <div class="lineap-item" style="background-color: #f26b47;" data-item="6">
+                    <div class="lineap-item__content">
+                      <div class="lineap-item__content-image">
+                        <img
+                          src="https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-980x653.jpg"
+                          alt="" class="lineap-item__image">
+                      </div>
+                      <div class="lineap-item__content-title">SANDWICH LINE</div>
+                      <div class="lineap-item__content-description">Мы являемся производителем и разработчиком
+                        предлагаемой нами высокотехнологичной экоупаковки.</div>
+                      <div class="lineap-item__content-controls">
+                        <a href="#" class="lineap-item__control lineap-item__control--large">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="23" viewBox="0 0 19 23"
+                            fill="none">
+                            <path
+                              d="M1 8.03335L9.36811 16.4015M9.36811 16.4015L17.7362 8.03335M9.36811 16.4015V1.14453M1 21.8545H17.7362"
+                              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                          <span>Скачать каталог</span>
+                        </a>
+                        <button type="button" class="lineap-item__control lineap-item__control--prev">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 8 11" fill="none">
+                            <path opacity="0.8" d="M6.53711 9.70996L2.18928 5.36213L6.53711 1.01431" stroke="white"
+                              stroke-width="2" stroke-linecap="round" />
+                          </svg></button>
+                        <button type="button" class="lineap-item__control lineap-item__control--next"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="7" height="11" viewBox="0 0 7 11" fill="none">
+                            <path d="M1.1875 9.70996L5.53533 5.36213L1.1875 1.01431" stroke="white" stroke-width="2"
+                              stroke-linecap="round" />
+                          </svg></button>
+                      </div>
                     </div>
-                    <!-- /Контеннт карточки -->
+                    <div class="lineap-item__title"><span class="lineap-item__title-text">SANDWICH LINE</span></div>
+                  </div>
 
-                    <!-- Название линейки карточки -->
-                    <div class="b-product-lines__cart-name">
-                      <span>BAKERY LINE</span>
+                  <div class="lineap-item" style="background-color: #37b449;" data-item="7">
+                    <div class="lineap-item__content">
+                      <div class="lineap-item__content-image">
+                        <img
+                          src="https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-980x653.jpg"
+                          alt="" class="lineap-item__image">
+                      </div>
+                      <div class="lineap-item__content-title">SHOWCASE LINE</div>
+                      <div class="lineap-item__content-description">Мы являемся производителем и разработчиком
+                        предлагаемой нами высокотехнологичной экоупаковки.</div>
+                      <div class="lineap-item__content-controls">
+                        <a href="#" class="lineap-item__control lineap-item__control--large">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="23" viewBox="0 0 19 23"
+                            fill="none">
+                            <path
+                              d="M1 8.03335L9.36811 16.4015M9.36811 16.4015L17.7362 8.03335M9.36811 16.4015V1.14453M1 21.8545H17.7362"
+                              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                          <span>Скачать каталог</span>
+                        </a>
+                        <button type="button" class="lineap-item__control lineap-item__control--prev">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 8 11" fill="none">
+                            <path opacity="0.8" d="M6.53711 9.70996L2.18928 5.36213L6.53711 1.01431" stroke="white"
+                              stroke-width="2" stroke-linecap="round" />
+                          </svg></button>
+                        <button type="button" class="lineap-item__control lineap-item__control--next"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="7" height="11" viewBox="0 0 7 11" fill="none">
+                            <path d="M1.1875 9.70996L5.53533 5.36213L1.1875 1.01431" stroke="white" stroke-width="2"
+                              stroke-linecap="round" />
+                          </svg></button>
+                      </div>
                     </div>
-                    <!-- /Название линейки карточки -->
+                    <div class="lineap-item__title"><span class="lineap-item__title-text">SHOWCASE LINE</span></div>
+                  </div>
 
+                  <div class="lineap-item" style="background-color: #273991;" data-item="8">
+                    <div class="lineap-item__content">
+                      <div class="lineap-item__content-image">
+                        <img
+                          src="https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-980x653.jpg"
+                          alt="" class="lineap-item__image">
+                      </div>
+                      <div class="lineap-item__content-title">TABLEWARE LINE</div>
+                      <div class="lineap-item__content-description">Мы являемся производителем и разработчиком
+                        предлагаемой нами высокотехнологичной экоупаковки.</div>
+                      <div class="lineap-item__content-controls">
+                        <a href="#" class="lineap-item__control lineap-item__control--large">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="23" viewBox="0 0 19 23"
+                            fill="none">
+                            <path
+                              d="M1 8.03335L9.36811 16.4015M9.36811 16.4015L17.7362 8.03335M9.36811 16.4015V1.14453M1 21.8545H17.7362"
+                              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                          <span>Скачать каталог</span>
+                        </a>
+                        <button type="button" class="lineap-item__control lineap-item__control--prev">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 8 11" fill="none">
+                            <path opacity="0.8" d="M6.53711 9.70996L2.18928 5.36213L6.53711 1.01431" stroke="white"
+                              stroke-width="2" stroke-linecap="round" />
+                          </svg></button>
+                        <button type="button" class="lineap-item__control lineap-item__control--next"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="7" height="11" viewBox="0 0 7 11" fill="none">
+                            <path d="M1.1875 9.70996L5.53533 5.36213L1.1875 1.01431" stroke="white" stroke-width="2"
+                              stroke-linecap="round" />
+                          </svg></button>
+                      </div>
+                    </div>
+                    <div class="lineap-item__title"><span class="lineap-item__title-text">TABLEWARE LINE</span></div>
                   </div>
-                  <!--/Карточка внутри таба -->
 
-                  <div class="b-product-lines__cart">
-                    <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
-                      <div class="b-product-lines__cart-title">
-                        COFFEE LINE
+                  <div class="lineap-item" style="background-color: #242021;" data-item="black_edition">
+                    <div class="lineap-item__content">
+                      <div class="lineap-item__content-image">
+                        <img
+                          src="https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-980x653.jpg"
+                          alt="" class="lineap-item__image">
                       </div>
-                      <div class="b-product-lines__cart-description">
-                        Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
-                        экоупаковки.
-                      </div>
-                      <div class="b-product-lines__cart-footer">
-                        <a href="#" download="BAKERY_LINE.pdf" class="b-product-lines__cart-btn">
-                          Скачать каталог
+                      <div class="lineap-item__content-title">BLACK EDITION</div>
+                      <div class="lineap-item__content-description">Мы являемся производителем и разработчиком
+                        предлагаемой нами высокотехнологичной экоупаковки.</div>
+                      <div class="lineap-item__content-controls">
+                        <a href="#" class="lineap-item__control lineap-item__control--large">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="23" viewBox="0 0 19 23"
+                            fill="none">
+                            <path
+                              d="M1 8.03335L9.36811 16.4015M9.36811 16.4015L17.7362 8.03335M9.36811 16.4015V1.14453M1 21.8545H17.7362"
+                              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                          <span>Скачать каталог</span>
                         </a>
-                        <div class="b-product-lines__cart-arrow-wrap">
-                          <button class="b-product-lines__cart-arrow_prev b-product-lines__cart-arrow">
-                          </button>
-                          <button class="b-product-lines__cart-arrow_next b-product-lines__cart-arrow">
-                          </button>
-                        </div>
+                        <button type="button" class="lineap-item__control lineap-item__control--prev">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 8 11" fill="none">
+                            <path opacity="0.8" d="M6.53711 9.70996L2.18928 5.36213L6.53711 1.01431" stroke="white"
+                              stroke-width="2" stroke-linecap="round" />
+                          </svg></button>
+                        <button type="button" class="lineap-item__control lineap-item__control--next"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="7" height="11" viewBox="0 0 7 11" fill="none">
+                            <path d="M1.1875 9.70996L5.53533 5.36213L1.1875 1.01431" stroke="white" stroke-width="2"
+                              stroke-linecap="round" />
+                          </svg></button>
                       </div>
                     </div>
-                    <div class="b-product-lines__cart-name">
-                      <span> COFFEE LINE</span>
-                    </div>
-                  </div>
-                  <div class="b-product-lines__cart">
-                    <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
-                      <div class="b-product-lines__cart-title">
-                        PACKAGING LINE
-                      </div>
-                      <div class="b-product-lines__cart-description">
-                        Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
-                        экоупаковки.
-                      </div>
-                      <div class="b-product-lines__cart-footer">
-                        <a href="#" download="BAKERY_LINE.pdf" class="b-product-lines__cart-btn">
-                          Скачать каталог
-                        </a>
-                        <div class="b-product-lines__cart-arrow-wrap">
-                          <button class="b-product-lines__cart-arrow_prev b-product-lines__cart-arrow">
-                          </button>
-                          <button class="b-product-lines__cart-arrow_next b-product-lines__cart-arrow">
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="b-product-lines__cart-name">
-                      <span> PACKAGING LINE</span>
-                    </div>
-                  </div>
-                  <div class="b-product-lines__cart">
-                    <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
-                      <div class="b-product-lines__cart-title">
-                        FAST FOOD LINE
-                      </div>
-                      <div class="b-product-lines__cart-description">
-                        Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
-                        экоупаковки.
-                      </div>
-                      <div class="b-product-lines__cart-footer">
-                        <a href="#" download="BAKERY_LINE.pdf" class="b-product-lines__cart-btn">
-                          Скачать каталог
-                        </a>
-                        <div class="b-product-lines__cart-arrow-wrap">
-                          <button class="b-product-lines__cart-arrow_prev b-product-lines__cart-arrow">
-                          </button>
-                          <button class="b-product-lines__cart-arrow_next b-product-lines__cart-arrow">
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="b-product-lines__cart-name">
-                      <span> FAST FOOD LINE</span>
-                    </div>
-                  </div>
-                  <div class="b-product-lines__cart">
-                    <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
-                      <div class="b-product-lines__cart-title">
-                        READY TO GO LINE
-                      </div>
-                      <div class="b-product-lines__cart-description">
-                        Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
-                        экоупаковки.
-                      </div>
-                      <div class="b-product-lines__cart-footer">
-                        <a href="#" download="BAKERY_LINE.pdf" class="b-product-lines__cart-btn">
-                          Скачать каталог
-                        </a>
-                        <div class="b-product-lines__cart-arrow-wrap">
-                          <button class="b-product-lines__cart-arrow_prev b-product-lines__cart-arrow">
-                          </button>
-                          <button class="b-product-lines__cart-arrow_next b-product-lines__cart-arrow">
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="b-product-lines__cart-name">
-                      <span>Ready to go line</span>
-                    </div>
-                  </div>
-                  <div class="b-product-lines__cart">
-                    <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
-                      <div class="b-product-lines__cart-title">
-                        RETAIL LINE
-                      </div>
-                      <div class="b-product-lines__cart-description">
-                        Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
-                        экоупаковки.
-                      </div>
-                      <div class="b-product-lines__cart-footer">
-                        <a href="#" download="BAKERY_LINE.pdf" class="b-product-lines__cart-btn">
-                          Скачать каталог
-                        </a>
-                        <div class="b-product-lines__cart-arrow-wrap">
-                          <button class="b-product-lines__cart-arrow_prev b-product-lines__cart-arrow">
-                          </button>
-                          <button class="b-product-lines__cart-arrow_next b-product-lines__cart-arrow">
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="b-product-lines__cart-name">
-                      <span>Retail Line</span>
-                    </div>
-                  </div>
-                  <div class="b-product-lines__cart">
-                    <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
-                      <div class="b-product-lines__cart-title">
-                        ROUND LINE
-                      </div>
-                      <div class="b-product-lines__cart-description">
-                        Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
-                        экоупаковки.
-                      </div>
-                      <div class="b-product-lines__cart-footer">
-                        <a href="#" download="BAKERY_LINE.pdf" class="b-product-lines__cart-btn">
-                          Скачать каталог
-                        </a>
-                        <div class="b-product-lines__cart-arrow-wrap">
-                          <button class="b-product-lines__cart-arrow_prev b-product-lines__cart-arrow">
-                          </button>
-                          <button class="b-product-lines__cart-arrow_next b-product-lines__cart-arrow">
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="b-product-lines__cart-name">
-                      <span> ROUND LINE</span>
-                    </div>
-                  </div>
-                  <div class="b-product-lines__cart">
-                    <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
-                      <div class="b-product-lines__cart-title">
-                        SANDWICH LINE
-                      </div>
-                      <div class="b-product-lines__cart-description">
-                        Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
-                        экоупаковки.
-                      </div>
-                      <div class="b-product-lines__cart-footer">
-                        <a href="#" download="BAKERY_LINE.pdf" class="b-product-lines__cart-btn">
-                          Скачать каталог
-                        </a>
-                        <div class="b-product-lines__cart-arrow-wrap">
-                          <button class="b-product-lines__cart-arrow_prev b-product-lines__cart-arrow">
-                          </button>
-                          <button class="b-product-lines__cart-arrow_next b-product-lines__cart-arrow">
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="b-product-lines__cart-name">
-                      <span> SANDWICH LINE</span>
-                    </div>
-                  </div>
-                  <div class="b-product-lines__cart">
-                    <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
-                      <div class="b-product-lines__cart-title">
-                        SHOWCASE LINE
-                      </div>
-                      <div class="b-product-lines__cart-description">
-                        Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
-                        экоупаковки.
-                      </div>
-                      <div class="b-product-lines__cart-footer">
-                        <a href="#" download="BAKERY_LINE.pdf" class="b-product-lines__cart-btn">
-                          Скачать каталог
-                        </a>
-                        <div class="b-product-lines__cart-arrow-wrap">
-                          <button class="b-product-lines__cart-arrow_prev b-product-lines__cart-arrow">
-                          </button>
-                          <button class="b-product-lines__cart-arrow_next b-product-lines__cart-arrow">
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="b-product-lines__cart-name">
-                      <span> SHOWCASE LINE</span>
-                    </div>
-                  </div>
-                  <div class="b-product-lines__cart">
-                    <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
-                      <div class="b-product-lines__cart-title">
-                        TABLEWARE LINE
-                      </div>
-                      <div class="b-product-lines__cart-description">
-                        Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
-                        экоупаковки.
-                      </div>
-                      <div class="b-product-lines__cart-footer">
-                        <a href="#" download="BAKERY_LINE.pdf" class="b-product-lines__cart-btn">
-                          Скачать каталог
-                        </a>
-                        <div class="b-product-lines__cart-arrow-wrap">
-                          <button class="b-product-lines__cart-arrow_prev b-product-lines__cart-arrow">
-                          </button>
-                          <button class="b-product-lines__cart-arrow_next b-product-lines__cart-arrow">
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="b-product-lines__cart-name">
-                      <span> TABLEWARE LINE</span>
-                    </div>
-                  </div>
-                  <div class="b-product-lines__cart">
-                    <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
-                      <div class="b-product-lines__cart-title">
-                        BLACK EDITION
-                      </div>
-                      <div class="b-product-lines__cart-description">
-                        Мы являемся производителем и разработчиком предлагаемой нами высокотехнологичной
-                        экоупаковки.
-                      </div>
-                      <div class="b-product-lines__cart-footer">
-                        <a href="#" download="BAKERY_LINE.pdf" class="b-product-lines__cart-btn">
-                          Скачать каталог
-                        </a>
-                        <div class="b-product-lines__cart-arrow-wrap">
-                          <button class="b-product-lines__cart-arrow_prev b-product-lines__cart-arrow">
-                          </button>
-                          <button class="b-product-lines__cart-arrow_next b-product-lines__cart-arrow">
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="b-product-lines__cart-name">
-                      <span>BLACK EDITION</span>
-                    </div>
-                  </div>
-                  <div class="b-product-lines__cart">
-                    <div class="b-product-lines__cart-body" style="background-image: url('./img/image\ 178.png');">
-                      <div class="b-product-lines__cart-title">
-                        Forgenika
-                      </div>
-                      <div class="b-product-lines__cart-description">
-                        Бренд для творцов кондитерской индустрии. Входит в семью брендов
-                        OSQ Group. В ассортименте представлена упаковка, расходный инвентарь и декор.
-                      </div>
-                      <div class="b-product-lines__cart-footer ">
-                        <a href="https://forgenika.ru/" target="_blank" class="b-product-lines__cart-btn link">
-                          Подрообнее
-                        </a>
-                        <div class="b-product-lines__cart-arrow-wrap">
-                          <button class="b-product-lines__cart-arrow_prev b-product-lines__cart-arrow">
-                          </button>
-                          <button class="b-product-lines__cart-arrow_next b-product-lines__cart-arrow">
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="b-product-lines__cart-name">
-                      <span>Forgenika</span>
-                    </div>
+                    <div class="lineap-item__title"><span class="lineap-item__title-text">BLACK EDITION</span></div>
                   </div>
                 </div>
-              </div>
-              <!-- /Элемент таба  -->
             </div>
-
+            <!-- /Элемент таба  -->
           </div>
-          <!-- /Блок product-lines -->
 
         </div>
+        <!-- /Блок product-lines -->
+
       </div>
     </main>
 
