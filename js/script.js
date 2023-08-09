@@ -21,8 +21,10 @@ addEventListener("scroll", (event) => {
 
     if (currentScroll >= "6200") {
       $(".animation-text").addClass("hide");
+      $("#lottie-2").addClass("back");
     } else {
       $(".animation-text").removeClass("hide");
+      $("#lottie-2").removeClass("back");
     }
 
     if ($(".incision").length > 0) {
@@ -194,7 +196,7 @@ $(document).ready(function () {
         delay: 5000,
         disableOnInteraction: false,
       },
-      loop:true,
+      // loop:true,
       centeredSlides: true,
       slidesPerView: 1,
       navigation: {
@@ -1072,7 +1074,7 @@ $(document).ready(function () {
         $("#lottie-2").removeClass("paused");
       }
 
-      if (currentScroll < "9200") {
+      if (currentScroll < "9200" && currentScroll >= "7200") {
         $("#lottie-2").removeClass("back");
       }
     });
