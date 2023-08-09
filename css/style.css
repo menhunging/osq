@@ -2704,9 +2704,9 @@ div::-webkit-scrollbar-thumb {
 }
 
 .catalog-main__slider .swiper-wrapper {
-  min-height: 600px;
+  min-height: 648px;
   padding-top: 200px;
-  margin-bottom: -70px;
+  margin-bottom: -110px;
 }
 
 .catalog-main__slider .swiper-slide {
