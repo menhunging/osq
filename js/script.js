@@ -1192,8 +1192,8 @@ $(document).ready(function () {
           opacity: 1,
           scrollTrigger: {
             trigger: ".production",
-            start: "-4000",
-            end: "-3500",
+            start: "-6000",
+            end: "-5000",
             scrub: true,
           },
         }
