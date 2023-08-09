@@ -2704,7 +2704,7 @@ div::-webkit-scrollbar-thumb {
 }
 
 .catalog-main__slider .swiper-wrapper {
-  min-height: 648px;
+  min-height: 650px;
   padding-top: 200px;
   margin-bottom: -110px;
 }
