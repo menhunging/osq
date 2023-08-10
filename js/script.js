@@ -196,7 +196,7 @@ $(document).ready(function () {
         delay: 5000,
         disableOnInteraction: false,
       },
-      // loop:true,
+      loop:true,
       centeredSlides: true,
       slidesPerView: 1,
       navigation: {
